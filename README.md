@@ -2,7 +2,7 @@
 
 # 🦊 Fursec
 
-**Trilha completa de cibersegurança — do zero ao mercado, com material gratuito.**
+**Trilha completa de cibersegurança com material gratuito.**
 
 Cursos · Labs · Livros · Projetos · Repositórios · Método de estudo
 
