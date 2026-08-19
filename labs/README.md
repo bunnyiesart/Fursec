@@ -8,6 +8,7 @@ Onde você realmente aprende. **50% do seu tempo de estudo deve estar aqui.**
 
 | Arquivo | Conteúdo |
 |---|---|
+| [home-lab.md](./home-lab.md) | **Como montar um home lab barato** — do R$ 0 ao mini PC usado |
 | [blue-team.md](./blue-team.md) | LetsDefend, CyberDefenders, BTLO, Splunk BOTS |
 | [red-team-ctf.md](./red-team-ctf.md) | picoCTF, OverTheWire, HTB, VulnHub, Juice Shop |
 

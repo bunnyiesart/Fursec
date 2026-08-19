@@ -19,7 +19,7 @@ Cursos · Labs · Livros · Projetos · Repositórios · Método de estudo
 1. Leia o [método de estudo](./docs/metodo-de-estudo.md) — 10 minutos que economizam meses
 2. Abra o [roadmap](./ROADMAP.md) e descubra em que fase você está
 3. Pegue **um** curso em [`cursos/01-introducao-seguranca.md`](./cursos/01-introducao-seguranca.md)
-4. Monte o [projeto P1 — Home Lab](./projetos/01-fundamentais.md)
+4. Monte seu [home lab](./labs/home-lab.md) — dá para começar com R$ 0
 5. Registre no [checklist](./progresso/checklist.md)
 
 > Não tente ler tudo. Este repositório é um **menu**, não uma lista de tarefas.
@@ -46,7 +46,7 @@ Separar essas três coisas é o que permite o repositório crescer sem virar bag
 |---|---|---|---|
 | 📍 [`ROADMAP.md`](./ROADMAP.md) | O **quando** — fases em horas de estudo | 5 fases | Aqui |
 | 📚 [`cursos/`](./cursos/) | Cursos gratuitos em 8 áreas | **154 cursos** | [Introdução](./cursos/01-introducao-seguranca.md) |
-| 🧪 [`labs/`](./labs/) | Plataformas práticas, CTFs, wargames | **20 plataformas** | [Blue](./labs/blue-team.md) · [Red](./labs/red-team-ctf.md) |
+| 🧪 [`labs/`](./labs/) | Home lab + plataformas práticas, CTFs, wargames | **20 plataformas** | [Home lab](./labs/home-lab.md) · [Blue](./labs/blue-team.md) · [Red](./labs/red-team-ctf.md) |
 | 🏗️ [`projetos/`](./projetos/) | Projetos de portfólio (P1–P33) | **33 projetos + 3 templates** | [Regras](./projetos/00-regras.md) |
 | 🔧 [`repositorios/`](./repositorios/) | Ferramentas, labs vulneráveis, awesome lists | **51 repositórios** | [Awesome lists](./repositorios/awesome-lists.md) |
 | 📖 [`livros/`](./livros/) | Gratuitos (legais) e pagos recomendados | **44 livros** | [Gratuitos 🇧🇷](./livros/gratuitos-pt.md) |
