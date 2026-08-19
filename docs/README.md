@@ -6,6 +6,7 @@
 
 | Arquivo | Conteúdo |
 |---|---|
+| [como-funciona.md](./como-funciona.md) | Como o repositório é organizado e como usar |
 | [metodo-de-estudo.md](./metodo-de-estudo.md) | Como estudar: active recall, Anki, notas, armadilhas |
 | [como-documentar.md](./como-documentar.md) | Como transformar lab em portfólio |
 | [certificacoes.md](./certificacoes.md) | Certificados gratuitos e ordem de compra dos pagos |

@@ -17,7 +17,7 @@ Cursos · Labs · Livros · Projetos · Repositórios · Método de estudo
 **Nunca estudou segurança?** Faça exatamente isto, nesta ordem:
 
 1. Leia o [método de estudo](./docs/metodo-de-estudo.md) — 10 minutos que economizam meses
-2. Abra o [roadmap](./ROADMAP.md) e descubra em que fase você está
+2. Entenda [como o repo funciona](./docs/como-funciona.md) e abra o [roadmap](./ROADMAP.md) e descubra em que fase você está
 3. Pegue **um** curso em [`cursos/01-introducao-seguranca.md`](./cursos/01-introducao-seguranca.md)
 4. Monte o [projeto P1 — Home Lab](./projetos/01-fundamentais.md)
 5. Registre no [checklist](./progresso/checklist.md)
@@ -31,10 +31,10 @@ Cursos · Labs · Livros · Projetos · Repositórios · Método de estudo
 | Pasta | O que tem | Comece por |
 |---|---|---|
 | 📍 [`ROADMAP.md`](./ROADMAP.md) | O **quando** — fases medidas em horas de estudo | Aqui |
-| 📚 [`cursos/`](./cursos/) | ~200 cursos gratuitos por área | [Introdução](./cursos/01-introducao-seguranca.md) |
+| 📚 [`cursos/`](./cursos/) | 154 cursos gratuitos por área | [Introdução](./cursos/01-introducao-seguranca.md) |
 | 🧪 [`labs/`](./labs/) | Plataformas práticas, CTFs, wargames | [Blue](./labs/blue-team.md) · [Red](./labs/red-team-ctf.md) |
 | 🏗️ [`projetos/`](./projetos/) | 33 projetos de portfólio + templates | [Regras](./projetos/00-regras.md) |
-| 🔧 [`repositorios/`](./repositorios/) | ~60 repos: ferramentas, labs, awesome lists | [Awesome lists](./repositorios/awesome-lists.md) |
+| 🔧 [`repositorios/`](./repositorios/) | 51 repos: ferramentas, labs, awesome lists | [Awesome lists](./repositorios/awesome-lists.md) |
 | 📖 [`livros/`](./livros/) | Livros gratuitos (legais) e pagos que valem | [Gratuitos 🇧🇷](./livros/gratuitos-pt.md) |
 | 📄 [`docs/`](./docs/) | Método de estudo, certificações, trilha PT-BR | [Método](./docs/metodo-de-estudo.md) |
 | 🎧 [`recursos/`](./recursos/) | Canais, podcasts, comunidades | [YouTube](./recursos/youtube.md) |

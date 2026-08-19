@@ -4,7 +4,7 @@
 
 ---
 
-Catálogo de cursos gratuitos por área. 🇧🇷 = português · 🇺🇸 = inglês · 🎓 = emite certificado
+Catálogo com **154 cursos gratuitos** por área. 🇧🇷 = português · 🇺🇸 = inglês · 🎓 = emite certificado
 
 | Arquivo | Conteúdo |
 |---|---|

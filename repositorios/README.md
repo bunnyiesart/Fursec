@@ -4,7 +4,7 @@
 
 ---
 
-~60 repositórios organizados por função.
+51 repositórios organizados por função.
 
 | Arquivo | Conteúdo |
 |---|---|
