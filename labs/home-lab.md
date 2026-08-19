@@ -16,6 +16,7 @@ O home lab é o **projeto P1** e a base de todo o resto. A boa notícia: dá par
 | **0.5 — Nuvem gratuita** | R$ 0 | Servidor Linux 24/7, honeypot, SIEM leve | Complementa o nível 0 |
 | **1 — Mini PC usado** | ~US$ 80–180 | 5–8 VMs, lab de AD, SIEM completo | Quando o notebook travar |
 | **2 — Upgrade de RAM** | ~US$ 30–60 | 10+ VMs, GOAD, malware analysis | Quando 16 GB acabar |
+| **3 — Mini servidor dedicado 24/7** | ~US$ 150–300 | Topologia corporativa completa, detecção com histórico | Quando quiser cenário realista |
 
 > **Não pule direto para o nível 1.** Passe pelo menos 2 meses no nível 0. Muita gente compra hardware e nunca usa — o gargalo quase sempre é tempo, não máquina.
 
@@ -175,6 +176,95 @@ Ao comprar, confirme: geração da CPU, quantidade de RAM, se acompanha SSD e se
 
 ---
 
+## 🏢 O salto: mini servidor para cenários realistas
+
+Os níveis anteriores resolvem estudo pontual — subir um Kali, quebrar um alvo, desligar. Mas existe um teto: **VM isolada não é ambiente real.** Empresa de verdade tem domínio, segmentação, vários hosts conversando e log acumulando há semanas. Nada disso cabe num lab que você liga por duas horas e desliga.
+
+Um mini servidor dedicado, ligado 24/7, muda o tipo de coisa que você consegue estudar.
+
+### O que só existe com máquina dedicada
+
+| Cenário | Por que precisa de servidor dedicado |
+|---|---|
+| **Cadeia de ataque completa** | Phishing → foothold → escalada em AD → movimento lateral → exfiltração. São 5+ máquinas ligadas ao mesmo tempo |
+| **Detecção com histórico real** | Regra de detecção só se prova com semanas de log. Baseline de comportamento não existe em lab que liga e desliga |
+| **Resposta a incidente de verdade** | Você ataca hoje, investiga daqui a três dias, sem saber mais exatamente o que fez. É assim que é no trabalho |
+| **Falso positivo** | Só aparece com tráfego contínuo. É o que separa quem escreve regra de quem escreve regra que funciona |
+| **Segmentação de rede** | VLAN, firewall entre zonas, regras leste-oeste — precisa de topologia real, não de "host-only" |
+| **Evidência para GRC** | CIS Controls IG1 aplicado e mantido ao longo do tempo, com evidência (projeto P30) |
+
+### Especificação alvo
+
+| Item | Mínimo viável | Confortável |
+|---|---|---|
+| RAM | 32 GB | 64 GB |
+| CPU | i5 8ª gen (4c/8t) | i7 (6c/12t) |
+| Disco | 512 GB NVMe | 1 TB NVMe + HD para backup |
+| Rede | 1 NIC + VLANs no switch | 2 NICs |
+| Hypervisor | **Proxmox VE** (grátis) | Proxmox VE |
+| Consumo | ~10–15W idle | — |
+
+**RAM é o que decide.** Com 32 GB você roda a topologia corporativa abaixo inteira. Com 16 GB você roda metade dela por vez — funciona, mas mata justamente a parte de "tudo conversando ao mesmo tempo", que é o motivo de ter o servidor.
+
+> A mesma linha do nível 1 (ThinkCentre Tiny, OptiPlex Micro, EliteDesk Mini) serve aqui — só que com 32 GB. Os dois slots SO-DIMM aceitam 2×16 GB. Comprar a máquina com 16 GB e fazer o upgrade depois costuma sair mais barato que comprar já com 32.
+
+### Topologia de referência — "empresa fictícia"
+
+Este é o layout que simula uma PME real e cabe em 32 GB:
+
+```
+                    INTERNET
+                        │
+              [ pfSense / OPNsense ]  2GB
+                  firewall + VLANs
+                        │
+    ┌───────────────┬───┴────────┬──────────────┐
+    │ VLAN 10       │ VLAN 20    │ VLAN 30      │ VLAN 99
+    │ SERVIDORES    │ ESTAÇÕES   │ DMZ          │ ATACANTE
+    │               │            │              │
+[ DC Windows    ]  [ Win10 #1 ]  [ Web server ]  [ Kali    ]
+[ Server  4GB   ]  [    4GB   ]  [   1GB      ]  [   4GB   ]
+                                                          
+[ File server   ]  [ Win10 #2 ]
+[     2GB       ]  [    4GB   ]
+
+[ Wazuh SIEM 8GB ] ← recebe log de todos
+```
+
+**Total: ~29 GB.** Sobra folga para o Proxmox (~2 GB).
+
+Versão enxuta para 16 GB: pfSense + DC + 1 workstation + Wazuh, sem DMZ e sem file server.
+
+### O que fazer com essa topologia
+
+1. **Ataque encadeado:** comprometa a workstation, escale para Domain Admin, alcance o file server — e depois vá ver o que o Wazuh registrou de cada etapa.
+2. **Escreva a detecção do que passou batido.** É literalmente o projeto [P6](../projetos/02-blue-team.md), e o mais valioso da lista.
+3. **Segmente e reteste.** Aplique regra de firewall entre VLANs e refaça o ataque. O que ainda funciona? Isso é purple team.
+4. **Deixe rodando duas semanas** antes de julgar suas regras. Falso positivo só aparece com tempo.
+5. **Documente como incidente**, não como CTF — usando [`templates/relatorio-pentest.md`](../projetos/templates/relatorio-pentest.md) e o playbook do [P10](../projetos/02-blue-team.md).
+
+### Automação — não monte tudo na mão
+
+Montar isso clicando leva um fim de semana. Montar com código leva uma tarde, e você pode destruir e recriar quando quiser:
+
+| Ferramenta | O que entrega |
+|---|---|
+| [**Ludus**](https://github.com/badsectorlabs/ludus) | Lab inteiro sobre Proxmox, definido em YAML. Feito exatamente para este caso |
+| [**GOAD**](https://github.com/Orange-Cyberdefense/GOAD) | Floresta AD vulnerável pronta. Use `GOAD-Light` se tiver 16 GB |
+| [**Splunk Attack Range**](https://github.com/splunk/attack_range) | Ataque + detecção já integrados |
+| [**Atomic Red Team**](https://github.com/redcanaryco/atomic-red-team) | Dispara técnicas ATT&CK específicas para testar suas regras |
+
+Infra como código também **vira projeto de portfólio** — o repositório com a definição do seu lab é evidência de skill.
+
+### Antes de comprar, seja honesto
+
+- Você já esgotou o que dá para fazer em 16 GB? Se não, o upgrade é RAM, não máquina nova.
+- Vai deixar ligado 24/7 de verdade? Se for desligar todo dia, o ganho principal (log com histórico) some.
+- Tem onde colocar? Barulho é mínimo nesses modelos, mas precisa de tomada e rede fixa.
+- **O maior erro deste guia inteiro é montar o lab e não usar.** Escolha o cenário antes de comprar o hardware.
+
+---
+
 ## 🌐 Topologias prontas por trilha
 
 ### 🔴 Red Team — o lab mínimo (roda em 8 GB)
@@ -262,6 +352,7 @@ Sem snapshot, cada erro custa uma reinstalação. Com snapshot, custa 10 segundo
 | \+ nuvem gratuita (Oracle) | **R$ 0** |
 | \+ mini PC usado 16 GB | ~US$ 80–180, uma vez |
 | \+ upgrade para 32 GB | ~US$ 30–60, uma vez |
+| Mini servidor dedicado 24/7 (32 GB, Proxmox) | ~US$ 150–300, uma vez |
 | Energia de um mini PC 24/7 (~10W) | Alguns reais por mês |
 
 **Software: R$ 0 em todos os cenários.** Todo hypervisor, sistema operacional e ferramenta deste guia é gratuito ou tem avaliação legal e renovável.
