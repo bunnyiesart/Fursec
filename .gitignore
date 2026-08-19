@@ -1,0 +1,21 @@
+# Notas pessoais (não versionar)
+notas-pessoais/
+*.local.md
+.obsidian/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Ambientes e segredos
+.env
+*.pem
+*.key
+credentials*
+venv/
+__pycache__/
