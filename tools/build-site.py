@@ -81,10 +81,13 @@ def reescreve(corpo, caminho):
                 return f'href="{subir or "./"}index.html{frag}"'
         if arq.endswith(".md"):
             return f'href="{arq[:-3]}.html{frag}"'
-        # Relativo para algo que não é .md (workflow, .lycheeignore, pasta):
-        # esses arquivos não existem no site. Aponta para o GitHub, senão
-        # viraria link quebrado.
         resolvido = os.path.normpath(os.path.join(os.path.dirname(caminho), arq))
+        # Link para pasta: no site quem faz esse papel é o README dela.
+        if os.path.isdir(os.path.join(RAIZ, resolvido)) and \
+           os.path.exists(os.path.join(RAIZ, resolvido, "README.md")):
+            return f'href="{arq.rstrip("/")}/README.html{frag}"'
+        # Relativo para algo que não é .md nem pasta com índice (workflow,
+        # .lycheeignore): não existe no site, então aponta para o GitHub.
         return f'href="https://github.com/{REPO}/blob/main/{resolvido}{frag}"'
 
     corpo = re.sub(r'href="([^"]+)"', link, corpo)

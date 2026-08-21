@@ -2,10 +2,13 @@
 """Confere os links internos do site gerado.
 
 Não toca em link externo — disso cuida o workflow de verificação de links.
-Aqui o alvo é o que o build pode quebrar sozinho: página que não existe e,
-principalmente, âncora que aponta para um id inexistente. Âncora quebrada
-devolve 200 e leva a pessoa para o topo em silêncio, então nenhum verificador
-de status pega.
+Aqui o alvo é o que o build pode quebrar sozinho:
+
+- página que não existe;
+- âncora que aponta para um id inexistente (devolve 200 e leva ao topo em
+  silêncio, então nenhum verificador de status pega);
+- página gerada que ninguém alcança a partir do índice. Órfã não aparece
+  para quem navega nem para buscador, e é invisível num teste de links.
 
 Uso:
     python3 tools/check-site.py [_site]
@@ -52,10 +55,30 @@ def main():
             elif frag and frag not in ids.get(alvo, set()):
                 problemas.append(f"{p}: âncora inexistente -> {href}")
 
+    # Alcançabilidade: navega a partir do índice e vê o que sobra.
+    inicio = os.path.normpath(os.path.join(raiz, "index.html"))
+    alcancadas, fila = set(), [inicio]
+    while fila:
+        atual = fila.pop()
+        if atual in alcancadas or not os.path.exists(atual):
+            continue
+        alcancadas.add(atual)
+        base = os.path.dirname(atual)
+        for href in HREF.findall(open(atual, encoding="utf-8").read()):
+            if href.startswith(("http://", "https://", "mailto:", "data:", "#")):
+                continue
+            alvo = os.path.normpath(
+                os.path.join(base, urllib.parse.unquote(href.split("#")[0])))
+            if alvo.endswith(".html"):
+                fila.append(alvo)
+    orfas = sorted(set(map(os.path.normpath, paginas)) - alcancadas)
+    problemas += [f"{o}: página órfã, não se chega nela a partir do índice"
+                  for o in orfas]
+
     for x in problemas:
         print(f"::error::{x}")
     print(f"{total} links internos verificados em {len(paginas)} páginas; "
-          f"{len(problemas)} quebrado(s)")
+          f"{len(alcancadas)} alcançáveis; {len(problemas)} problema(s)")
     return 1 if problemas else 0
 
 
