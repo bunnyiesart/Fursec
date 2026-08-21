@@ -118,32 +118,28 @@ li span {
 /* Destaque discreto para o ponto de partida */
 .start li a { font-weight: 600; }
 
-/* Imagem lateral.
-   Fica fixa na margem direita e só aparece quando existe margem sobrando —
-   abaixo de 1280px ela some, para nunca espremer nem cobrir o texto.
-   Para deixá-la em preto e branco, descomente o filter. */
-.lado {
-  display: none;
+/* Fundo: alguém encarando de trás do texto.
+   Decorativo — por isso é background em CSS e não <img>: leitor de tela
+   ignora, em vez de anunciar a descrição no meio da navegação.
+   A opacidade é o único número que importa aqui; mexa nela à vontade. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("assets/mascote.jpg") no-repeat center 42% / auto min(88vh, 700px);
+  /* A máscara dissolve as bordas da foto. Sem ela o retângulo da imagem fica
+     visível como um bloco mais claro, e o efeito vira "retângulo translúcido"
+     em vez de "alguém espreitando". */
+  -webkit-mask-image: radial-gradient(ellipse 42% 46% at 50% 42%, #000 30%, transparent 78%);
+          mask-image: radial-gradient(ellipse 42% 46% at 50% 42%, #000 30%, transparent 78%);
+  filter: grayscale(.55);
+  opacity: .07;
 }
-@media (min-width: 1280px) {
-  .lado {
-    display: block;
-    position: fixed;
-    top: 50%;
-    /* 50% = centro da janela; 23rem = metade da coluna de texto; 2rem = respiro.
-       Ancorar na borda do conteúdo (e não na da janela) impede que as linhas
-       divisórias das seções cruzem por cima da imagem. */
-    left: calc(50% + 23rem + 2rem);
-    transform: translateY(-50%);
-    width: 200px;
-  }
-  .lado img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    /* filter: grayscale(1); */
-  }
+@media (prefers-color-scheme: dark) {
+  /* no escuro é o claro da imagem que aparece, e ele salta mais */
+  body::before { opacity: .09; }
 }
 
 footer {
@@ -158,10 +154,6 @@ footer a { color: inherit; }
 </style>
 </head>
 <body>
-
-<figure class="lado">
-  <img src="assets/mascote.jpg" width="400" height="500" alt="Cabeça de fursuit azul e branca, feita à mão, sobre a bancada de trabalho." decoding="async">
-</figure>
 
 <h1>Fursec</h1>
 <p class="sub">Trilha de cibersegurança com material gratuito · <a href="https://github.com/bunnyiesart/Fursec">repositório</a></p>
