@@ -1,27 +1,22 @@
-# Hosts que NÃO dá para verificar automaticamente.
+# Exceções da verificação de links.
 #
-# Critério estrito para entrar aqui: o host devolve o MESMO resultado para um
-# caminho válido e para um caminho inventado. Se ele devolve 404 para caminho
-# inexistente, ele é verificável e NÃO entra — senão a gente perde de graça a
-# única proteção contra link morto naquele host.
+# A lista é curta de propósito. Bloqueio de bot (403), rate limit (429) e
+# redirect de bot detection (307) NÃO entram aqui: são tratados globalmente
+# pelo `--accept` do workflow, porque dependem do IP de origem e não do link.
 #
-# Rate limit (429) e redirect de bot (307) não entram: o workflow trata com
-# `--accept`. Instabilidade momentânea também não: `--max-retries` cobre.
+# Aqui só entra host que o runner do GitHub simplesmente não consegue
+# verificar — seja porque está quebrado, seja porque descarta tráfego de
+# datacenter de um jeito que não vira código de status.
 #
-# Cada entrada foi medida par-a-par (caminho real vs. inventado) em ago/2026.
-# Revise a cada 6 meses: WAF muda, e host que voltou a ser verificável deve sair.
-
-# Cloudflare WAF — 403 para /cursos/linux-fundamentos/ e para /cursos/zzz-nada/
-^https://www\.eucapacito\.com\.br/
-
-# Cloudflare com desafio JS ("Just a moment...") — 403 em qualquer caminho
-^https://www\.mentebinaria\.com\.br/
-
-# 403 para qualquer requisição sem navegador real, em qualquer caminho
-^https://labex\.io/
-^https://www\.iso\.org/
+# Toda entrada tem a medição e a data. Revise a cada 6 meses.
 
 # Origem devolvendo 502 em TODOS os caminhos, inclusive inventados, desde
-# ago/2026. O site é legítimo (Oracle); o servidor deles é que está quebrado.
-# Remover desta lista assim que voltar a responder.
+# ago/2026. O site é legítimo (Oracle); o servidor deles é que está fora.
+# Remover assim que voltar a responder.
 ^https://www\.virtualbox\.org/
+
+# Timeout no runner mesmo com 30s e 3 tentativas (ago/2026), enquanto de IP
+# residencial responde 200 em 1,3s e devolve 404 correto para caminho
+# inventado. É bloqueio de datacenter que se manifesta como pacote descartado
+# em vez de 403 — por isso o --accept não alcança este caso.
+^https://opnsense\.org/

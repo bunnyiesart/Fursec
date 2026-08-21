@@ -56,9 +56,9 @@ Qualificadores que acompanham o `🆓` quando a gratuidade tem ressalva: `parcia
 
 Todo PR que toca em `.md` dispara a [verificação de links](.github/workflows/link-check.yml). Ela também roda toda segunda-feira e abre uma issue se algo quebrou.
 
-Rate limit (429) e redirect de bot detection (307) são aceitos pelo próprio check — não precisam de exceção.
+Bloqueio de bot (403), rate limit (429) e redirect de bot detection (307) são aceitos pelo próprio check — não precisam de exceção nenhuma. Isso não é preguiça: os runners do GitHub são datacenter, e muito WAF bloqueia datacenter enquanto deixa passar IP residencial. Um link que abre no seu navegador pode dar 403 no CI sem estar quebrado. O sinal que importa é **404**, e esse continua falhando.
 
-O [`.lycheeignore`](.lycheeignore) é só para hosts que **não dá para verificar**: aqueles que devolvem o mesmo resultado para um caminho válido e para um inventado, então nenhuma automação consegue distinguir link vivo de link morto. Antes de adicionar um host ali, meça o par: se o caminho inventado devolver 404, o host **é** verificável e não entra — colocá-lo na lista desligaria a única proteção que aquele host teria. Se entrar mesmo, escreva o comentário com a medição.
+Por isso o [`.lycheeignore`](.lycheeignore) é curto: ele é só para host genuinamente quebrado do lado de lá (uma origem devolvendo 502, por exemplo). Se você for adicionar algo, escreva o comentário dizendo o que mediu e quando — e prefira aceitar um código no workflow a listar host, porque a lista envelhece e ninguém revisa.
 
 ---
 

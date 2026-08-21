@@ -28,17 +28,24 @@ jobs:
           # não passe --exclude-file, que está depreciado e já foi removido
           # do master do lychee.
           #
+          # --accept 403: os runners do GitHub são datacenter, e vários WAF
+          #   bloqueiam datacenter mesmo deixando passar IP residencial. Na
+          #   primeira execução deram 403 aqui, e 200 de uma máquina caseira:
+          #   tcm-sec.com, cursoemvideo.com, owaspsamm.thinkific.com e
+          #   reddit.com. É propriedade do IP de origem, não do link — tratar
+          #   host a host no .lycheeignore seria curar uma lista que descreve
+          #   a internet errada.
+          # --accept 429: rate limit (TryHackMe). --accept 307: redirect de
+          #   bot detection (OffSec, que devolve 307 com qualquer user-agent).
+          # 404 continua falhando, que é o sinal que realmente indica link morto.
+          #
           # --user-agent: sem ele, university.recordedfuture.com devolve 403.
-          #   Não resolve o OffSec, que devolve 307 com qualquer user-agent —
-          #   por isso 307 está no --accept, e não no .lycheeignore.
-          # --accept: 429 é rate limit (TryHackMe) e 307 é redirect de bot
-          #   detection. Nenhum dos dois é link morto. 404 continua falhando.
           args: >-
             --no-progress
             --max-concurrency 8
-            --timeout 25
-            --max-retries 2
-            --accept 200..=299,307,429
+            --timeout 30
+            --max-retries 3
+            --accept 200..=299,307,403,429
             --user-agent "Mozilla/5.0 (compatible; Fursec link-check; +https://github.com/${{ github.repository }})"
             './**/*.md'
           output: lychee-report.md
