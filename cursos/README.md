@@ -4,7 +4,9 @@
 
 ---
 
-Catálogo com **154 cursos gratuitos** por área. 🇧🇷 = português · 🇺🇸 = inglês · 🎓 = emite certificado
+Catálogo com **155 cursos** por área — 154 gratuitos e 1 pago.
+
+<sub>🇧🇷 português · 🇺🇸 inglês · 🆓 gratuito · 💸 pago · 🎓 emite certificado · 🧪 prático · ⭐ prioridade alta · *parcial / tier / audit / Financial Aid* = gratuito com ressalva</sub>
 
 | Arquivo | Conteúdo |
 |---|---|
@@ -22,6 +24,3 @@ Catálogo com **154 cursos gratuitos** por área. 🇧🇷 = português · 🇺�
 ---
 
 [⬅️ Voltar ao índice](../README.md)
-
----
-

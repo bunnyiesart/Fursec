@@ -47,11 +47,6 @@ A ordem importa. Compre **nesta sequência**, e só quando o gatilho for atingid
 5. **Seguro de retake** normalmente só vale a pena no seu primeiro exame de certificação.
 6. **Programas para veteranos / desempregados**: CompTIA, ISC2 e SANS mantêm programas periódicos de acesso subsidiado — verifique se você se encaixa.
 
-
----
-
 ---
 
 [⬅️ Voltar ao índice](../README.md)
-
----

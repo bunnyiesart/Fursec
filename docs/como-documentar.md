@@ -52,6 +52,4 @@ As duas seções que quase todo mundo pula — e que são exatamente as que impr
 
 ---
 
----
-
 [⬅️ Voltar ao índice](../README.md)

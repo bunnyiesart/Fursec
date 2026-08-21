@@ -1,5 +1,11 @@
 # [Máquina / Desafio] — Writeup
 
+> Template — copie para o seu repositório de projeto.
+
+[⬅️ Voltar aos projetos](../README.md)
+
+---
+
 | | |
 |---|---|
 | **Plataforma** | |
@@ -30,3 +36,7 @@ Como o administrador teria evitado esta falha. **Não pule esta parte** — é o
 
 ## 💡 Lições
 O que você levou deste desafio para o próximo.
+
+---
+
+[⬅️ Voltar aos projetos](../README.md)

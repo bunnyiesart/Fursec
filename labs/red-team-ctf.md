@@ -4,6 +4,8 @@
 
 ---
 
+<sub>🇧🇷 português · 🇺🇸 inglês · 🆓 gratuito · 💸 pago · 🎓 emite certificado · 🧪 prático · ⭐ prioridade alta · *parcial / tier / audit / Financial Aid* = gratuito com ressalva</sub>
+
 | Plataforma | Lang | Tags | Nota |
 |---|---|---|---|
 | ⭐ [picoCTF](https://picoctf.org/) | 🇺🇸 | 🆓 🧪 | Melhor CTF para começar |

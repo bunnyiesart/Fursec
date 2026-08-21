@@ -1,5 +1,11 @@
 # [Nome do Projeto]
 
+> Template — copie para o seu repositório de projeto.
+
+[⬅️ Voltar aos projetos](../README.md)
+
+---
+
 > **O que este projeto prova:** [uma frase — a skill demonstrada]
 
 ![status](https://img.shields.io/badge/status-concluído-brightgreen)
@@ -42,3 +48,7 @@ O que quebrou e como você resolveu. Mostra raciocínio real, não roteiro decor
 Honesto e específico — inclusive o que faria diferente numa próxima vez.
 
 ## 🔗 Referências
+
+---
+
+[⬅️ Voltar aos projetos](../README.md)

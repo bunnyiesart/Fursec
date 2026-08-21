@@ -123,6 +123,4 @@ Se você estudar algo e não usar em 30 dias, você perde. Por isso o home lab i
 
 ---
 
----
-
 [⬅️ Voltar ao índice](../README.md)

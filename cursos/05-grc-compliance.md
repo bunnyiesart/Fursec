@@ -4,6 +4,8 @@
 
 ---
 
+<sub>🇧🇷 português · 🇺🇸 inglês · 🆓 gratuito · 💸 pago · 🎓 emite certificado · 🧪 prático · ⭐ prioridade alta · *parcial / tier / audit / Financial Aid* = gratuito com ressalva</sub>
+
 | Curso | Provedor | Lang | Tags |
 |---|---|---|---|
 | ⭐ Fundamentos da Lei Geral de Proteção de Dados (LGPD) | [Escola Virtual Gov](https://www.escolavirtual.gov.br/curso/603) | 🇧🇷 | 🆓 🎓 |
@@ -23,8 +25,6 @@
 | API Security for PCI Compliance | [APIsec University](https://au.apisec.ai/courses/api-security-for-pci-compliance) | 🇺🇸 | 🆓 🎓 |
 | ISO/IEC 27001 — visão geral | [iso.org](https://www.iso.org/standard/27001) | 🇺🇸 | 🆓 |
 | Guias e cartilhas ANPD (LGPD oficial) | [gov.br/anpd](https://www.gov.br/anpd/pt-br) | 🇧🇷 | 🆓 |
-
----
 
 ---
 

@@ -1,5 +1,7 @@
 # 🗺️ Roadmap — Fursec
 
+[⬅️ Voltar ao índice](./README.md)
+
 > O **quando**. Fases medidas em horas de estudo, não em datas.
 > Catálogo completo do que existe: [`cursos/`](./cursos/) · Certificações: [`docs/certificacoes.md`](./docs/certificacoes.md)
 
@@ -148,3 +150,6 @@ Se você quiser apenas **uma lista sequencial** sem pensar muito:
 - Como estudar de forma eficiente → [`docs/metodo-de-estudo.md`](./docs/metodo-de-estudo.md)
 - Acompanhar progresso → [`progresso/checklist.md`](./progresso/checklist.md)
 
+---
+
+[⬅️ Voltar ao índice](./README.md)

@@ -4,6 +4,8 @@
 
 ---
 
+<sub>🇧🇷 português · 🇺🇸 inglês · 🆓 gratuito · 💸 pago · 🎓 emite certificado · 🧪 prático · ⭐ prioridade alta · *parcial / tier / audit / Financial Aid* = gratuito com ressalva</sub>
+
 | Curso | Provedor | Lang | Tags |
 |---|---|---|---|
 | ⭐ OWASP Top 10 — 2021 | [Cybrary](https://app.cybrary.it/browse/course/owasp) | 🇺🇸 | 🆓 🎓 |
@@ -29,8 +31,6 @@
 | OWASP Top 10 for LLM Applications | [owasp.org](https://owasp.org/www-project-top-10-for-large-language-model-applications/) | 🇺🇸 | 🆓 |
 | Secure Code Warrior — free tier | [securecodewarrior.com](https://www.securecodewarrior.com/) | 🇺🇸 | 🆓 parcial 🧪 |
 | Snyk Learn | [learn.snyk.io](https://learn.snyk.io/) | 🇺🇸 | 🆓 🧪 |
-
----
 
 ---
 

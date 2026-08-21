@@ -28,6 +28,3 @@ O **passo 4** é o que separa quem aprendeu de quem copiou.
 ---
 
 [⬅️ Voltar ao índice](../README.md)
-
----
-

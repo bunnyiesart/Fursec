@@ -4,6 +4,8 @@
 
 ---
 
+<sub>🇧🇷 português · 🇺🇸 inglês · 🆓 gratuito · 💸 pago · 🎓 emite certificado · 🧪 prático · ⭐ prioridade alta · *parcial / tier / audit / Financial Aid* = gratuito com ressalva</sub>
+
 | Curso | Provedor | Lang | Tags |
 |---|---|---|---|
 | ⭐ Introdução à Cibersegurança | [Cisco NetAcad](https://www.netacad.com/pt/courses/introduction-to-cybersecurity) | 🇧🇷 | 🆓 🎓 |
@@ -24,8 +26,6 @@
 | SC-900: Security, Compliance & Identity Fundamentals | [Microsoft Learn](https://learn.microsoft.com/training/) | 🇺🇸🇧🇷 | 🆓 |
 | Pre-Security Path | [TryHackMe](https://tryhackme.com/path/outline/presecurity) | 🇺🇸 | 🆓 parcial 🧪 |
 | MITRE ATT&CK Training | [attack.mitre.org](https://attack.mitre.org/resources/training/) | 🇺🇸 | 🆓 |
-
----
 
 ---
 
