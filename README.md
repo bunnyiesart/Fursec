@@ -1,6 +1,17 @@
 <div align="center">
 
-# 🦊 Fursec
+<pre align="center">
+🦊
+
+███████╗██╗   ██╗██████╗ ███████╗███████╗ ██████╗
+██╔════╝██║   ██║██╔══██╗██╔════╝██╔════╝██╔════╝
+█████╗  ██║   ██║██████╔╝███████╗█████╗  ██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+██╔══╝  ██║   ██║██╔══██╗╚════██║██╔══╝  ██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+██║     ╚██████╔╝██║  ██║███████║███████╗╚██████╗
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝
+</pre>
+
+# Fursec
 
 **Trilha completa de cibersegurança com material gratuito.**
 
@@ -17,12 +28,21 @@ Cursos · Labs · Livros · Projetos · Repositórios · Método de estudo
 **Nunca estudou segurança?** Faça exatamente isto, nesta ordem:
 
 1. Leia o [método de estudo](./docs/metodo-de-estudo.md) — 10 minutos que economizam meses
-2. Abra o [roadmap](./ROADMAP.md) e descubra em que fase você está
-3. Pegue **um** curso em [`cursos/01-introducao-seguranca.md`](./cursos/01-introducao-seguranca.md)
-4. Monte seu [home lab](./labs/home-lab.md) — dá para começar com R$ 0
+2. Abra o [roadmap](./ROADMAP.md) e comece pela **Fase 0**
+3. Pegue **um** curso: [`cursos/00-fundamentos.md`](./cursos/00-fundamentos.md) se você é novo em TI, ou [`cursos/01-introducao-seguranca.md`](./cursos/01-introducao-seguranca.md) se já sabe o básico
+4. Monte seu [home lab](./labs/home-lab.md) — dá para começar com R$ 0. Documentá-lo **é** o [projeto P1](./projetos/01-fundamentais.md), não a preparação para ele
 5. Registre no [checklist](./progresso/checklist.md)
 
-> Não tente ler tudo. Este repositório é um **menu**, não uma lista de tarefas.
+> Não tente ler tudo. Este repositório é um **menu**, não uma lista de tarefas. Ninguém termina tudo, nem deveria.
+
+**Não é o seu caso?** Escolha o atalho:
+
+| Se você… | Vá direto para |
+|---|---|
+| Já sabe o básico e quer especializar | [`ROADMAP.md`](./ROADMAP.md) Fase 2 → escolha a trilha → `cursos/` + `labs/` + `projetos/` da trilha |
+| Quer montar portfólio agora | [`projetos/00-regras.md`](./projetos/00-regras.md) → 3 projetos de trilhas diferentes → [`templates/`](./projetos/templates/) → [`docs/como-documentar.md`](./docs/como-documentar.md) |
+| Só quer material em português | [`docs/trilha-pt-br.md`](./docs/trilha-pt-br.md) — é a trilha inteira, do zero, sem inglês |
+| Quer saber o que vale pagar | [`docs/certificacoes.md`](./docs/certificacoes.md) — camada gratuita e ordem de compra dos exames |
 
 ---
 
@@ -42,19 +62,21 @@ Separar essas três coisas é o que permite o repositório crescer sem virar bag
 
 ## 🗺️ Mapa do repositório
 
-| Pasta | Conteúdo | Quantidade | Comece por |
+| Pasta | O que é — e o detalhe que importa | Quantidade | Comece por |
 |---|---|---|---|
-| 📍 [`ROADMAP.md`](./ROADMAP.md) | O **quando** — fases em horas de estudo | 5 fases | Aqui |
-| 📚 [`cursos/`](./cursos/) | Cursos gratuitos em 8 áreas | **154 cursos** | [Introdução](./cursos/01-introducao-seguranca.md) |
-| 🧪 [`labs/`](./labs/) | Home lab + plataformas práticas, CTFs, wargames | **20 plataformas** | [Home lab](./labs/home-lab.md) · [Blue](./labs/blue-team.md) · [Red](./labs/red-team-ctf.md) |
-| 🏗️ [`projetos/`](./projetos/) | Projetos de portfólio (P1–P33) | **33 projetos + 3 templates** | [Regras](./projetos/00-regras.md) |
-| 🔧 [`repositorios/`](./repositorios/) | Ferramentas, labs vulneráveis, awesome lists | **51 repositórios** | [Awesome lists](./repositorios/awesome-lists.md) |
-| 📖 [`livros/`](./livros/) | Gratuitos (legais) e pagos recomendados | **44 livros** | [Gratuitos 🇧🇷](./livros/gratuitos-pt.md) |
-| 📄 [`docs/`](./docs/) | Método, certificações, trilha PT-BR | 4 documentos | [Método](./docs/metodo-de-estudo.md) |
-| 🎧 [`recursos/`](./recursos/) | Canais, podcasts, comunidades | **27 recursos** | [YouTube](./recursos/youtube.md) |
-| 📈 [`progresso/`](./progresso/) | Checklist e log semanal | 2 ferramentas | [Checklist](./progresso/checklist.md) |
+| 📍 [`ROADMAP.md`](./ROADMAP.md) | O **quando**. Cinco fases (0 a 4), medidas em **horas, não em datas** — 5h/semana ≈ 30 meses, 20h/semana ≈ 8 meses. Cada fase tem um **teste de saída** objetivo: não é "terminei o curso", é "consigo fazer X sem consultar nada". | 5 fases | Aqui |
+| 📚 [`cursos/`](./cursos/) | O catálogo: oito arquivos, um por área. Todo curso vem marcado com idioma, gratuidade, certificado e prioridade. | **155 cursos** (154 gratuitos) | [Introdução](./cursos/01-introducao-seguranca.md) |
+| 🧪 [`labs/`](./labs/) | Onde você realmente aprende — **50% do seu tempo deveria estar aqui**, não assistindo aula. Traz o "loop correto" de resolver um lab, cujo passo mais importante é o 4: *refazer do zero no dia seguinte, sem consultar nada*. | **20 plataformas** | [Home lab](./labs/home-lab.md) · [Blue](./labs/blue-team.md) · [Red](./labs/red-team-ctf.md) |
+| 🏗️ [`projetos/`](./projetos/) | O que gera entrevista. P1–P33, cada um com: o que prova, tempo estimado, entregável e repositórios de apoio. `templates/` tem 3 modelos prontos: README de projeto, writeup de CTF e relatório de pentest no formato de consultoria. Começa por [`00-regras.md`](./projetos/00-regras.md): testar sistema de terceiros sem autorização é crime, e publicar isso é red flag, não portfólio. | **33 projetos + 3 templates** | [Regras](./projetos/00-regras.md) — **obrigatório** |
+| 🔧 [`repositorios/`](./repositorios/) | Ferramentas organizadas por **função, não por popularidade**: índices mestres, consulta diária, labs para atacar, blue team, appsec/cloud, e exemplos de portfólio alheio. | **51 repositórios** | [Awesome lists](./repositorios/awesome-lists.md) |
+| 📖 [`livros/`](./livros/) | Gratuitos-EN, gratuitos-PT e pagos, separados. Todo link gratuito é **distribuição autorizada** pelo autor ou instituição. | **45 livros** | [Gratuitos 🇧🇷](./livros/gratuitos-pt.md) |
+| 📄 [`docs/`](./docs/) | O método. [`metodo-de-estudo.md`](./docs/metodo-de-estudo.md) é o arquivo mais importante do repositório: por que vídeo retém ~29% e testar-se retém ~57%, como configurar Anki, e as 7 armadilhas que travam quase todo mundo. | 4 documentos | [Método](./docs/metodo-de-estudo.md) |
+| 🎧 [`recursos/`](./recursos/) | Canais, podcasts e comunidades. | **27 recursos** | [YouTube](./recursos/youtube.md) |
+| 📈 [`progresso/`](./progresso/) | Checklist por fase com campo de data, e um log semanal de 3 minutos. Parece bobo, mas é o que mostra seu ritmo real em vez do ritmo que você imagina ter. | 2 ferramentas | [Checklist](./progresso/checklist.md) |
 
-**Total:** 47 arquivos markdown · ~260 links externos · ~12.600 palavras.
+**Total:** 48 arquivos de conteúdo · 276 links externos · ~17.000 palavras.
+
+<sub>**Legenda usada nos catálogos:** 🇧🇷 português · 🇺🇸 inglês · 🆓 gratuito · 💸 pago · 🎓 emite certificado · 🧪 prático · ⭐ prioridade alta · *parcial / tier / audit / Financial Aid* = gratuito com ressalva</sub>
 
 ---
 
@@ -75,121 +97,21 @@ Escolha **uma** por vez. Os fundamentos são ~70% comuns entre elas.
 
 ---
 
-## 📂 Como cada pasta funciona
+## 💡 Como este repositório pensa
 
-### 📍 `ROADMAP.md` — o esqueleto
+Cinco princípios, e o que cada um implica na prática:
 
-Cinco fases (0 a 4) medidas em **horas de estudo, não em datas**. Existe uma tabela de conversão: 5h/semana = ~30 meses; 20h/semana = ~8 meses. Você escolhe seu ritmo e o roadmap se ajusta.
+| Princípio | Na prática |
+|---|---|
+| **Fazer > assistir** | Vídeo passivo retém ~29%; testar-se retém ~57%. Metade do seu tempo tem que ser lab. |
+| **Documentar é aprender** | Se você não consegue explicar por escrito, você reconheceu — não aprendeu. |
+| **Projeto > certificado** | Um projeto bem documentado vale mais que três certificados básicos. Certificado passa pelo RH; o writeup passa pela entrevista técnica. |
+| **Gratuito primeiro** | Nunca pague pelo aprendizado; pague no máximo pelo **exame**. Gratuito e pago são camadas separadas, nunca misturadas na mesma lista. Ver [certificações](./docs/certificacoes.md). |
+| **Ética não é negociável** | Só teste o que é seu ou o que você tem autorização escrita para testar. |
 
-Cada fase tem um **teste de saída** — a condição objetiva para avançar. Não é "terminei o curso", é "consigo fazer X sem consultar nada".
+E o que ele **não** é: não garante emprego (é material organizado — o trabalho continua seu), não é atalho (a trilha completa leva de 8 a 30 meses), e não substitui prática — se você só ler isto e não abrir um terminal, não aprendeu nada.
 
-### 📚 `cursos/` — o catálogo
-
-Oito arquivos, um por área. Todo curso vem marcado com:
-
-`🇧🇷` português · `🇺🇸` inglês · `🆓` gratuito · `💸` pago · `🎓` emite certificado · `🧪` prático · `⭐` prioridade alta
-
-Se você quer só material em português, existe um atalho: [`docs/trilha-pt-br.md`](./docs/trilha-pt-br.md).
-
-### 🧪 `labs/` — onde você realmente aprende
-
-Separado dos cursos de propósito, porque **50% do seu tempo deveria estar aqui**, não assistindo aula. Contém o "loop correto" de resolver um lab — cujo passo mais importante é o 4: *refazer do zero no dia seguinte, sem consultar nada*.
-
-### 🏗️ `projetos/` — o que gera entrevista
-
-33 projetos numerados P1–P33, cada um com: o que prova, tempo estimado, entregável e repositórios de apoio.
-
-Começa obrigatoriamente por [`00-regras.md`](./projetos/00-regras.md) — ética e legalidade. Testar sistema de terceiros sem autorização é crime, e publicar isso é red flag, não portfólio.
-
-A pasta `templates/` tem três modelos prontos para copiar: README de projeto, writeup de CTF e relatório de pentest no formato de consultoria.
-
-### 🔧 `repositorios/` — as ferramentas
-
-Organizado por **função**, não por popularidade: índices mestres, consulta diária, labs para atacar, ferramentas blue team, ferramentas appsec/cloud, e exemplos de portfólio alheio.
-
-### 📖 `livros/` — leitura
-
-Separado em gratuitos-EN, gratuitos-PT e pagos. Todo link gratuito é **distribuição autorizada** pelo autor ou instituição — nada de site pirata.
-
-### 📄 `docs/` — o método
-
-O arquivo mais importante do repositório inteiro é [`metodo-de-estudo.md`](./docs/metodo-de-estudo.md). Ele responde por que assistir vídeo retém ~29% e testar-se retém ~57%, como configurar Anki, e as 7 armadilhas que travam quase todo mundo.
-
-Também aqui: [`certificacoes.md`](./docs/certificacoes.md) (o que é gratuito de verdade e em que ordem comprar exame) e [`como-documentar.md`](./docs/como-documentar.md).
-
-### 📈 `progresso/` — o acompanhamento
-
-Checklist por fase com campo de data, e um log semanal de 3 minutos. Parece bobo, mas é o que mostra seu ritmo real em vez do ritmo que você imagina ter.
-
----
-
-## 🔀 Fluxos de uso
-
-### 🌱 Nunca estudei segurança
-
-```
-docs/metodo-de-estudo.md  →  ROADMAP.md (Fase 0)
-   →  cursos/00-fundamentos.md  →  cursos/01-introducao-seguranca.md
-   →  projetos/01-fundamentais.md (P1: home lab)
-   →  progresso/checklist.md
-```
-
-### 🎯 Já sei o básico, quero especializar
-
-```
-ROADMAP.md (Fase 2, escolha a trilha)
-   →  cursos/0X-<trilha>.md  →  labs/<trilha>.md
-   →  projetos/0X-<trilha>.md  →  templates/
-```
-
-### 💼 Quero montar portfólio agora
-
-```
-projetos/00-regras.md  →  escolha 3 projetos de trilhas diferentes
-   →  projetos/templates/README-projeto.md
-   →  docs/como-documentar.md
-```
-
-### 🇧🇷 Só quero material em português
-
-```
-docs/trilha-pt-br.md  →  é a trilha inteira, do zero, sem inglês
-```
-
-### 💳 Quero saber o que vale pagar
-
-```
-docs/certificacoes.md  →  camada gratuita e ordem de compra dos exames
-```
-
----
-
-## 💡 Os 5 princípios do Fursec
-
-1. **Fazer > assistir.** Vídeo passivo retém ~29%. Testar-se retém ~57%. 50% do seu tempo tem que ser lab.
-2. **Documentar é aprender.** Se você não consegue explicar por escrito, você reconheceu — não aprendeu.
-3. **Projeto > certificado.** Um projeto bem documentado vale mais que três certificados básicos.
-4. **Gratuito primeiro.** Nunca pague pelo aprendizado; pague no máximo pelo **exame**. Ver [certificações](./docs/certificacoes.md).
-5. **Ética não é negociável.** Só teste o que é seu ou o que você tem autorização escrita para testar.
-
----
-
-## 📐 Convenções do repositório
-
-- **Toda pasta tem um `README.md`** que serve de índice
-- **Todo arquivo tem navegação** de volta ao índice, no topo e no rodapé
-- **Nada de link pirata** — se é gratuito, é porque o autor liberou
-- **Preço e disponibilidade mudam** — confira antes de se inscrever
-- **Gratuito e pago são camadas separadas**, nunca misturadas na mesma lista
-
----
-
-## 🚫 O que o Fursec NÃO é
-
-- ❌ Não é uma lista de tarefas — é um **menu**. Ninguém termina tudo, nem deveria.
-- ❌ Não é garantia de emprego — é material organizado. O trabalho continua sendo seu.
-- ❌ Não é atalho — a trilha completa é de 8 a 30 meses, dependendo do seu ritmo.
-- ❌ Não substitui prática — se você só ler este repositório e não abrir um terminal, não aprendeu nada.
+**Convenções:** toda pasta tem um `README.md` de índice · todo arquivo tem navegação de volta ao índice, no topo e no rodapé · nada de link pirata · preço e disponibilidade mudam, confira antes de se inscrever.
 
 ---
 
@@ -199,11 +121,13 @@ Todo o conteúdo aqui é para **fins educacionais e defensivos**. Testar sistema
 
 ## 🤝 Contribuindo
 
-Achou um curso gratuito que não está aqui? Um link quebrado? Abra uma issue ou um PR. Critérios:
+Achou um curso gratuito que não está aqui? Um link quebrado? Abra uma issue ou um PR — o [`CONTRIBUTING.md`](./CONTRIBUTING.md) tem os critérios e o formato das tabelas. Em resumo:
 
 - Precisa ser **gratuito de verdade** (ou ter uma camada gratuita substancial — e marcada como tal)
 - Nada de link para material pirateado
 - Cursos em português são especialmente bem-vindos — é onde a área tem menos conteúdo bom e organizado
+
+Os links do repositório são [verificados automaticamente](./.github/workflows/link-check.yml) toda semana.
 
 ## 📄 Licença
 
