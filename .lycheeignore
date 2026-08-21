@@ -4,9 +4,19 @@
 # redirect de bot detection (307) NÃO entram aqui: são tratados globalmente
 # pelo `--accept` do workflow, porque dependem do IP de origem e não do link.
 #
-# Aqui só entra host que está genuinamente quebrado do lado de lá.
+# Aqui só entra host que o runner do GitHub simplesmente não consegue
+# verificar — seja porque está quebrado, seja porque descarta tráfego de
+# datacenter de um jeito que não vira código de status.
+#
+# Toda entrada tem a medição e a data. Revise a cada 6 meses.
 
 # Origem devolvendo 502 em TODOS os caminhos, inclusive inventados, desde
 # ago/2026. O site é legítimo (Oracle); o servidor deles é que está fora.
 # Remover assim que voltar a responder.
 ^https://www\.virtualbox\.org/
+
+# Timeout no runner mesmo com 30s e 3 tentativas (ago/2026), enquanto de IP
+# residencial responde 200 em 1,3s e devolve 404 correto para caminho
+# inventado. É bloqueio de datacenter que se manifesta como pacote descartado
+# em vez de 403 — por isso o --accept não alcança este caso.
+^https://opnsense\.org/
