@@ -35,8 +35,8 @@ Se você prefere estudar em português, esta é a sequência usando **apenas** m
 
 **🔵 Defensiva / Baixo nível**
 - [CERO — Curso de Engenharia Reversa Online](https://www.mentebinaria.com.br/cursos/curso-de-engenharia-reversa-online-cero-r6/) — Mente Binária
-- [AMO — Análise de Malware Online](https://www.mentebinaria.com.br/cursos/) — Mente Binária
-- [Curso de Programação em C](https://www.mentebinaria.com.br/cursos/) — Mente Binária
+- [AMO — Análise de Malware Online](https://www.mentebinaria.com.br/cursos/an%C3%A1lise-de-malware-online-amo-r11/) — Mente Binária
+- [Programação Moderna em C](https://www.mentebinaria.com.br/cursos/programa%C3%A7%C3%A3o-moderna-em-c/) — Mente Binária
 
 **📋 GRC / LGPD** — a área com mais material gratuito em português
 - [Fundamentos da LGPD](https://www.escolavirtual.gov.br/curso/603)

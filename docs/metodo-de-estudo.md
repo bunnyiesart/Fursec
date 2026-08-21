@@ -77,8 +77,8 @@ Independente de quantas horas você tem:
 
 | Fatia | % do tempo | O que é |
 |---|---|---|
-| Conteúdo novo | 50% | Curso, vídeo, livro |
-| Mão na massa | 30% | Lab, CTF, home lab |
+| Conteúdo novo | 30% | Curso, vídeo, livro |
+| Mão na massa | 50% | Lab, CTF, home lab |
 | Documentação | 15% | Notas, writeup, Anki |
 | Comunidade/notícias | 5% | Newsletter, Discord, LinkedIn |
 

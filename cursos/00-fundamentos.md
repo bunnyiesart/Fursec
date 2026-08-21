@@ -47,7 +47,7 @@
 | Crie um site com HTML, CSS e JavaScript | [Fundação Bradesco](https://www.ev.org.br/cursos/crie-um-site-simples-usando-html-css-e-javascript) | 🇧🇷 | 🆓 🎓 |
 | Curso de HTML5 e CSS3 (módulo 1) | [Curso em Vídeo](https://www.cursoemvideo.com/curso/html5-css3-modulo1/) | 🇧🇷 | 🆓 🎓 |
 | Java Development / Python Development / Android | [FIAP / Eu Capacito](https://www.eucapacito.com.br/cursos/) | 🇧🇷 | 🆓 🎓 |
-| ⭐ Curso de Programação em C | [Mente Binária](https://www.mentebinaria.com.br/cursos/) | 🇧🇷 | 🆓 🎓 |
+| ⭐ Programação Moderna em C | [Mente Binária](https://www.mentebinaria.com.br/cursos/programa%C3%A7%C3%A3o-moderna-em-c/) | 🇧🇷 | 🆓 🎓 |
 
 ---
 

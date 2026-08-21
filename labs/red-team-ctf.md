@@ -17,7 +17,7 @@
 | [Metasploitable](https://sourceforge.net/projects/metasploitable/) | 🇺🇸 | 🆓 🧪 | VM alvo clássica |
 | [TryHackMe](https://tryhackme.com/) | 🇺🇸 | 🆓 parcial 🧪 | Salas grátis diárias |
 | [HackerOne CTF](https://ctf.hacker101.com/) | 🇺🇸 | 🆓 🧪 | Leva a convites de bug bounty |
-| [Bugcrowd University](https://www.bugcrowd.com/hackers/bugcrowd-university/) | 🇺🇸 | 🆓 | |
+| [Bugcrowd University](https://www.bugcrowd.com/hackers/bugcrowd-university/) | 🇺🇸 | 🆓 | Currículo de bug bounty, do recon ao report |
 
 ---
 
