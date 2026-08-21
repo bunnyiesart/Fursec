@@ -1,0 +1,195 @@
+/* ─────────────────────────────────────────────────────────
+   MEXA AQUI. São só estas cinco cores.
+   ───────────────────────────────────────────────────────── */
+:root {
+  --bg:     #ffffff;   /* fundo                       */
+  --fg:     #16171a;   /* texto principal             */
+  --muted:  #6e7178;   /* descrições, rótulos         */
+  --line:   #e6e7e9;   /* linhas divisórias           */
+  --accent: #1a4fd6;   /* links no hover e no foco    */
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:     #131417;
+    --fg:     #e7e8ea;
+    --muted:  #8b8f97;
+    --line:   #26282d;
+    --accent: #8fb0ff;
+  }
+}
+/* ───────────────────────────────────────────────────────── */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+  max-width: 46rem;
+  background: var(--bg);
+  color: var(--fg);
+  font: 15px/1.6 ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Cabeçalho */
+h1 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.sub {
+  margin: .4rem 0 0;
+  color: var(--muted);
+}
+.sub a { color: inherit; }
+
+/* Busca — apague este bloco e o <input> e o <script> se não quiser */
+#f {
+  width: 100%;
+  margin: 2.5rem 0 0;
+  padding: .6rem .75rem;
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font: inherit;
+}
+#f:focus { outline: none; border-color: var(--accent); }
+#f::placeholder { color: var(--muted); }
+
+/* Seções */
+section { margin-top: 2.75rem; }
+h2 {
+  margin: 0 0 .9rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* Lista de links */
+ul { margin: 0; padding: 0; list-style: none; }
+li { padding: .3rem 0; }
+li a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+li a:hover, li a:focus {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  outline: none;
+}
+li span {
+  display: block;
+  color: var(--muted);
+  font-size: .875rem;
+}
+@media (min-width: 34rem) {
+  /* column-gap só: o gap de linha empurraria a sublista para longe do item */
+  section > ul > li { display: flex; flex-wrap: wrap; column-gap: 1rem; row-gap: 0; align-items: baseline; }
+  section > ul > li > a { flex: 0 0 15rem; }
+  section > ul > li > span { flex: 1; }
+  /* a sublista ocupa a linha inteira, alinhada à coluna da descrição */
+  .sec { flex: 0 0 100%; padding-left: 16rem; }
+}
+
+/* Seções dentro de cada arquivo */
+.sec { margin: .15rem 0 .55rem; }
+.sec li { padding: .12rem 0; }
+.sec a { font-size: .875rem; color: var(--muted); }
+.sec a::before { content: "· "; }
+.sec a:hover, .sec a:focus { color: var(--accent); }
+
+/* Destaque discreto para o ponto de partida */
+.start li a { font-weight: 600; }
+
+/* Fundo: alguém encarando de trás do texto.
+   Decorativo — por isso é background em CSS e não <img>: leitor de tela
+   ignora, em vez de anunciar a descrição no meio da navegação.
+   A opacidade é o único número que importa aqui; mexa nela à vontade. */
+body::before {
+  content: "";
+  position: fixed;
+  /* mais alto que a janela: a folga de 15% em cima e embaixo é exatamente
+     o curso que o parallax pode percorrer sem revelar borda */
+  inset: -15% 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("assets/mascote.jpg") no-repeat center 34% / cover;
+  filter: grayscale(.55);
+  opacity: .06;
+  /* --py é escrito pelo script de parallax; sem script fica 0 e nada se move */
+  transform: translate3d(0, var(--py, 0px), 0);
+  will-change: transform;
+}
+@media (prefers-color-scheme: dark) {
+  /* no escuro quem aparece é o claro da foto, e ele salta mais */
+  body::before { opacity: .08; }
+}
+/* Quem pediu menos movimento no sistema não recebe parallax. */
+@media (prefers-reduced-motion: reduce) {
+  body::before { transform: none !important; }
+}
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .85rem;
+}
+footer a { color: inherit; }
+.vazio { display: none; color: var(--muted); padding: .3rem 0; }
+
+/* ─────────────────────────────────────────────────────────
+   Conteúdo dos documentos (páginas geradas a partir dos .md)
+   ───────────────────────────────────────────────────────── */
+.crumb { margin: 0 0 2.5rem; color: var(--muted); font-size: .8rem;
+  letter-spacing: .1em; text-transform: uppercase; }
+.crumb a { color: inherit; }
+.crumb a:hover { color: var(--accent); }
+
+.md { overflow-wrap: break-word; }
+.md h1 { margin: 0 0 1.5rem; font-size: 1.5rem; line-height: 1.25;
+  /* o h1 do índice é caixa alta com tracking largo; título de documento não */
+  letter-spacing: normal; text-transform: none; font-weight: 600; }
+.md h2 { margin: 2.5rem 0 .9rem; padding-bottom: .5rem;
+  border-bottom: 1px solid var(--line); color: var(--fg);
+  font-size: 1.05rem; letter-spacing: 0; text-transform: none; }
+.md h3 { margin: 1.75rem 0 .5rem; font-size: .95rem; }
+.md p, .md li { line-height: 1.65; }
+.md a { color: var(--accent); text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+.md a:hover { border-bottom-color: var(--accent); }
+.md ul, .md ol { padding-left: 1.25rem; }
+.md ul { list-style: disc; }
+.md li { padding: .1rem 0; display: list-item; }
+.md blockquote { margin: 1.25rem 0; padding: .1rem 0 .1rem 1rem;
+  border-left: 2px solid var(--line); color: var(--muted); }
+.md code { font-size: .875em; padding: .15em .35em; border-radius: 3px;
+  background: color-mix(in srgb, var(--fg) 8%, transparent); }
+.md pre { overflow-x: auto; padding: .9rem 1rem; border-radius: 5px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--fg) 4%, transparent); }
+.md pre code { background: none; padding: 0; font-size: .82rem; line-height: 1.5; }
+.md hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
+.md img { max-width: 100%; height: auto; }
+
+/* Tabela: rola sozinha em tela estreita em vez de estourar a página */
+.md .table-wrap { overflow-x: auto; margin: 1rem 0; }
+.md table { border-collapse: collapse; font-size: .9rem; }
+.md th, .md td { padding: .45rem .7rem; border: 1px solid var(--line);
+  text-align: left; vertical-align: top; }
+.md th { font-weight: 600; white-space: nowrap; }
+
+.md .task-list-item { list-style: none; }
+.md .contains-task-list { padding-left: .2rem; }
+.md input[type="checkbox"] { margin-right: .5rem; }
+.md details { margin: 1rem 0; }
+.md summary { cursor: pointer; color: var(--muted); }

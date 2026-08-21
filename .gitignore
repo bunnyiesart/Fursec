@@ -22,3 +22,6 @@ __pycache__/
 
 # Worktrees criados pelo harness
 .claude/worktrees/
+
+# Site gerado pelo build (tools/build-site.py)
+_site/
