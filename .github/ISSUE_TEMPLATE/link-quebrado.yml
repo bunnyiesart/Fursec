@@ -1,0 +1,40 @@
+name: 🔗 Link quebrado
+description: Um link do catálogo dá 404, ou o curso saiu do ar / virou pago
+title: "🔗 Link quebrado: "
+labels: ["link-quebrado"]
+body:
+  - type: input
+    id: arquivo
+    attributes:
+      label: Arquivo e linha
+      description: Ex. `cursos/02-blue-team.md:14`
+      placeholder: "cursos/00-fundamentos.md:12"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL que está no repositório
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: O que acontece ao abrir?
+      options:
+        - 404 / página não existe
+        - Redireciona para outro lugar (a página original sumiu)
+        - A página abre, mas o curso agora é pago
+        - O domínio inteiro mudou
+        - Outro
+    validations:
+      required: true
+  - type: input
+    id: substituto
+    attributes:
+      label: URL correta, se você souber
+      description: Deixe em branco se não souber — achar o substituto também é contribuição.
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Mais alguma coisa?

@@ -1,0 +1,62 @@
+name: ➕ Sugerir curso, livro ou lab
+description: Indicar material novo para o catálogo
+title: "➕ Sugestão: "
+labels: ["sugestão"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de abrir: os critérios estão em [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md).
+        Material em **português** é especialmente bem-vindo.
+  - type: input
+    id: nome
+    attributes:
+      label: Nome do material
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL direta
+      description: A página do curso em si, não a home do provedor.
+    validations:
+      required: true
+  - type: dropdown
+    id: onde
+    attributes:
+      label: Em que arquivo entraria?
+      options:
+        - cursos/ (curso ou formação)
+        - labs/ (plataforma prática, CTF, wargame)
+        - livros/ (livro ou material de leitura)
+        - repositorios/ (ferramenta ou repo de conhecimento)
+        - recursos/ (canal, podcast, newsletter, comunidade)
+        - Não sei
+    validations:
+      required: true
+  - type: dropdown
+    id: gratuidade
+    attributes:
+      label: É gratuito?
+      options:
+        - Totalmente gratuito
+        - Camada gratuita substancial (diga o que é grátis abaixo)
+        - Pago (só para livros/pagos.md ou a faixa paga de certificações)
+    validations:
+      required: true
+  - type: checkboxes
+    id: criterios
+    attributes:
+      label: Confirmações
+      options:
+        - label: Não é material pirateado — é distribuição autorizada pelo autor ou instituição
+          required: true
+        - label: Eu abri o link e ele funciona
+          required: true
+  - type: textarea
+    id: porque
+    attributes:
+      label: Por que vale entrar?
+      description: Uma ou duas frases. O que ele ensina que o catálogo ainda não cobre?
+    validations:
+      required: true

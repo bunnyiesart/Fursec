@@ -1,0 +1,53 @@
+name: Verificação de links
+
+on:
+  schedule:
+    # Segunda-feira, 09:00 UTC (06:00 em Brasília)
+    - cron: "0 9 * * 1"
+  pull_request:
+    paths:
+      - "**.md"
+      - ".lycheeignore"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Testar todos os links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # O .lycheeignore é lido automaticamente do diretório de trabalho —
+          # não passe --exclude-file, que está depreciado e já foi removido
+          # do master do lychee.
+          #
+          # --user-agent: sem ele, university.recordedfuture.com devolve 403.
+          #   Não resolve o OffSec, que devolve 307 com qualquer user-agent —
+          #   por isso 307 está no --accept, e não no .lycheeignore.
+          # --accept: 429 é rate limit (TryHackMe) e 307 é redirect de bot
+          #   detection. Nenhum dos dois é link morto. 404 continua falhando.
+          args: >-
+            --no-progress
+            --max-concurrency 8
+            --timeout 25
+            --max-retries 2
+            --accept 200..=299,307,429
+            --user-agent "Mozilla/5.0 (compatible; Fursec link-check; +https://github.com/${{ github.repository }})"
+            './**/*.md'
+          output: lychee-report.md
+
+      # No agendamento semanal não há PR para reportar: abre/atualiza uma issue.
+      - name: Abrir issue quando algo quebrar
+        if: failure() && github.event_name == 'schedule'
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "🔗 Links quebrados encontrados na verificação semanal"
+          content-filepath: lychee-report.md
+          labels: link-quebrado, manutenção
