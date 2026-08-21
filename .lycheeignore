@@ -1,22 +1,18 @@
 # Exceções da verificação de links.
 #
-# A lista é curta de propósito. Bloqueio de bot (403), rate limit (429) e
-# redirect de bot detection (307) NÃO entram aqui: são tratados globalmente
-# pelo `--accept` do workflow, porque dependem do IP de origem e não do link.
+# Está vazio de propósito, e o ideal é que continue assim.
 #
-# Aqui só entra host que o runner do GitHub simplesmente não consegue
-# verificar — seja porque está quebrado, seja porque descarta tráfego de
-# datacenter de um jeito que não vira código de status.
+# Bloqueio de bot (403), rate limit (429) e redirect de bot detection (307)
+# são aceitos globalmente pelo `--accept` do workflow: dependem do IP de
+# origem, não do link. Timeout também não derruba o check — vira aviso.
 #
-# Toda entrada tem a medição e a data. Revise a cada 6 meses.
-
-# Origem devolvendo 502 em TODOS os caminhos, inclusive inventados, desde
-# ago/2026. O site é legítimo (Oracle); o servidor deles é que está fora.
-# Remover assim que voltar a responder.
-^https://www\.virtualbox\.org/
-
-# Timeout no runner mesmo com 30s e 3 tentativas (ago/2026), enquanto de IP
-# residencial responde 200 em 1,3s e devolve 404 correto para caminho
-# inventado. É bloqueio de datacenter que se manifesta como pacote descartado
-# em vez de 403 — por isso o --accept não alcança este caso.
-^https://opnsense\.org/
+# Então sobra pouquíssimo motivo para listar host aqui. Se for mesmo
+# necessário, o critério é: o host devolve o MESMO resultado para um caminho
+# válido e para um inventado, de forma que nenhuma automação consegue
+# distinguir link vivo de link morto. Meça o par antes de adicionar, e
+# escreva no comentário o que mediu e quando — cada host listado é um host
+# onde a gente deixa de detectar link quebrado.
+#
+# Histórico: virtualbox.org (502 na origem) e opnsense.org (timeout no
+# runner) estiveram aqui em ago/2026. Ambos voltaram a ser verificáveis
+# (200 no caminho real, 404 no inventado) e foram removidos.
