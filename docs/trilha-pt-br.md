@@ -60,6 +60,3 @@ O conteúdo avançado da área é majoritariamente em inglês. Esta trilha te le
 ---
 
 [⬅️ Voltar ao índice](../README.md)
-
----
-

@@ -4,6 +4,8 @@
 
 ---
 
+<sub>🇧🇷 português · 🇺🇸 inglês · 🆓 gratuito · 💸 pago · 🎓 emite certificado · 🧪 prático · ⭐ prioridade alta · *parcial / tier / audit / Financial Aid* = gratuito com ressalva</sub>
+
 | Curso | Provedor | Lang | Tags |
 |---|---|---|---|
 | ⭐ SOC Level 1 Path | [TryHackMe](https://tryhackme.com/path/outline/soclevel1) | 🇺🇸 | 🆓 parcial 🧪 🎓 |

@@ -4,6 +4,8 @@
 
 ---
 
+<sub>🇧🇷 português · 🇺🇸 inglês · 🆓 gratuito · 💸 pago · 🎓 emite certificado · 🧪 prático · ⭐ prioridade alta · *parcial / tier / audit / Financial Aid* = gratuito com ressalva</sub>
+
 | Curso / Lab | Provedor | Lang | Tags |
 |---|---|---|---|
 | ⭐ SC-200 Security Operations Analyst | [Microsoft Learn](https://learn.microsoft.com/training/) | 🇺🇸🇧🇷 | 🆓 |
@@ -23,8 +25,6 @@
 | Kubernetes — curso oficial gratuito (edX) | [edX / Linux Foundation](https://www.edx.org/) | 🇺🇸 | 🆓 audit |
 | AzureGoat / TerraGoat / CloudFoxable | [GitHub](https://github.com/ine-labs/AzureGoat) | 🇺🇸 | 🆓 🧪 |
 | CIS Benchmarks (hardening) | [cisecurity.org](https://www.cisecurity.org/cis-benchmarks) | 🇺🇸 | 🆓 |
-
----
 
 ---
 

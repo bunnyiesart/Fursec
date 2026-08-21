@@ -8,6 +8,28 @@ O home lab é o **projeto P1** e a base de todo o resto. A boa notícia: dá par
 
 ---
 
+<details>
+<summary><b>📑 Índice</b> — guia longo; use isto para pular direto</summary>
+
+- [Escolha seu nível — comparativo custo × capacidade](#niveis)
+- [🆓 Nível 0 — custo zero (comece aqui)](#nivel-0)
+- [☁️ Nível 0.5 — nuvem gratuita](#nivel-05)
+- [💻 Nível 1 — mini PC usado](#nivel-1)
+- [🔧 Nível 2 — upgrades por ordem de impacto](#nivel-2)
+- [🏢 Nível 3 — mini servidor dedicado](#nivel-3)
+- [🌐 Topologias prontas por trilha (red · blue · AD · malware)](#topologias)
+- [🔒 Segurança do lab — **não pule**](#seguranca)
+- [💸 Custo total, na real](#custos)
+- [❌ Os 7 erros mais comuns](#erros)
+- [✅ Próximos passos](#proximos-passos)
+- [Fontes](#fontes)
+
+</details>
+
+---
+
+<a id="niveis"></a>
+
 ## Escolha seu nível
 
 | Nível | Custo | O que dá para fazer | Para quem |
@@ -21,6 +43,8 @@ O home lab é o **projeto P1** e a base de todo o resto. A boa notícia: dá par
 > **Não pule direto para o nível 1.** Passe pelo menos 2 meses no nível 0. Muita gente compra hardware e nunca usa — o gargalo quase sempre é tempo, não máquina.
 
 ---
+
+<a id="nivel-0"></a>
 
 ## 🆓 Nível 0 — Custo zero (comece aqui)
 
@@ -104,6 +128,8 @@ Reserve **sempre** 4 GB para o seu sistema hospedeiro. O que sobra é o seu lab:
 
 ---
 
+<a id="nivel-05"></a>
+
 ## ☁️ Nível 0.5 — Nuvem gratuita (complemento ao nível 0)
 
 Serve para o que precisa ficar **ligado 24/7** e você não quer deixar o notebook aceso: honeypot, servidor de C2 de laboratório, coletor de logs.
@@ -123,6 +149,8 @@ Serve para o que precisa ficar **ligado 24/7** e você não quer deixar o notebo
 - Oracle: escolha a região certa na criação — **não dá para mudar depois**, e a capacidade ARM varia por região.
 
 ---
+
+<a id="nivel-1"></a>
 
 ## 💻 Nível 1 — Mini PC usado (o melhor custo-benefício)
 
@@ -166,6 +194,8 @@ Ao comprar, confirme: geração da CPU, quantidade de RAM, se acompanha SSD e se
 
 ---
 
+<a id="nivel-2"></a>
+
 ## 🔧 Nível 2 — Upgrades por ordem de impacto
 
 1. **RAM 16 → 32 GB** (~US$ 30–60 em DDR4 SO-DIMM usada). **É sempre o melhor upgrade.** Destrava GOAD, Security Onion e análise de malware.
@@ -174,6 +204,8 @@ Ao comprar, confirme: geração da CPU, quantidade de RAM, se acompanha SSD e se
 4. **Segundo mini PC** — para simular ambiente distribuído. Só na fase 3+.
 
 ---
+
+<a id="nivel-3"></a>
 
 ## 🏢 O salto: mini servidor para cenários realistas
 
@@ -264,6 +296,8 @@ Infra como código também **vira projeto de portfólio** — o repositório com
 
 ---
 
+<a id="topologias"></a>
+
 ## 🌐 Topologias prontas por trilha
 
 ### 🔴 Red Team — o lab mínimo (roda em 8 GB)
@@ -308,6 +342,8 @@ Para o [GOAD](https://github.com/Orange-Cyberdefense/GOAD) completo, planeje 32 
 
 ---
 
+<a id="seguranca"></a>
+
 ## 🔒 Segurança do lab (não pule esta parte)
 
 O maior risco de um home lab não é alguém te invadir — é **você mesmo infectar sua rede de casa**.
@@ -343,6 +379,8 @@ Sem snapshot, cada erro custa uma reinstalação. Com snapshot, custa 10 segundo
 
 ---
 
+<a id="custos"></a>
+
 ## 💸 Custo total, na real
 
 | Cenário | Investimento |
@@ -358,6 +396,8 @@ Sem snapshot, cada erro custa uma reinstalação. Com snapshot, custa 10 segundo
 
 ---
 
+<a id="erros"></a>
+
 ## ❌ Os 7 erros mais comuns
 
 | Erro | Consequência | Correção |
@@ -372,6 +412,8 @@ Sem snapshot, cada erro custa uma reinstalação. Com snapshot, custa 10 segundo
 
 ---
 
+<a id="proximos-passos"></a>
+
 ## ✅ Próximos passos
 
 Com o lab de pé, você já pode fazer:
@@ -384,6 +426,8 @@ Com o lab de pé, você já pode fazer:
 > **Documente enquanto monta**, não depois. Print de cada etapa, decisão de rede anotada, problema que apareceu e como resolveu. Isso é exatamente o conteúdo do P1 — e é o projeto que abre o seu portfólio.
 
 ---
+
+<a id="fontes"></a>
 
 ## Fontes
 

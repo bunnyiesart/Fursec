@@ -4,6 +4,8 @@
 
 ---
 
+<sub>🇧🇷 português · 🇺🇸 inglês · 🆓 gratuito · 💸 pago · 🎓 emite certificado · 🧪 prático · ⭐ prioridade alta · *parcial / tier / audit / Financial Aid* = gratuito com ressalva</sub>
+
 | Curso | Provedor | Lang | Tags |
 |---|---|---|---|
 | ⭐ Introdução ao Hacking e Pentest 2.0 | [Solyd](https://solyd.com.br/cursos/introducao-ao-hacking-e-pentest-2/) | 🇧🇷 | 🆓 🎓 |
@@ -21,7 +23,7 @@
 | Offensive Android Programming | [Mobile Hacking Lab](https://www.mobilehackinglab.com/course/offensive-android-programming) | 🇺🇸 | 🆓 🎓 |
 | Offensive iOS Programming | [Mobile Hacking Lab](https://www.mobilehackinglab.com/course/offensive-ios-programming) | 🇺🇸 | 🆓 🎓 |
 | Android Hacking Map | [Hextree](https://app.hextree.io/map/android) | 🇺🇸 | 🆓 🧪 |
-| Antisyphon — cursos pay-what-you-can | [antisyphontraining.com](https://www.antisyphontraining.com/) | 🇺🇸 | 🆓/💳 |
+| Antisyphon — cursos pay-what-you-can | [antisyphontraining.com](https://www.antisyphontraining.com/) | 🇺🇸 | 🆓/💸 |
 | OpenSecurityTraining2 | [ost2.fyi](https://ost2.fyi/) | 🇺🇸 | 🆓 🎓 |
 | Metasploit Unleashed | [OffSec](https://www.offsec.com/metasploit-unleashed/) | 🇺🇸 | 🆓 |
 | Kali Linux Revealed | [OffSec](https://www.offsec.com/kali-training/) | 🇺🇸 | 🆓 |

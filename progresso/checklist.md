@@ -52,6 +52,3 @@ Marque conforme avança. Data de conclusão ajuda a ver o ritmo real.
 ---
 
 [⬅️ Voltar ao índice](../README.md)
-
----
-

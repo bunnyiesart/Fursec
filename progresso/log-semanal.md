@@ -33,6 +33,3 @@ Copie o bloco abaixo toda semana. Leva 3 minutos e é o que mantém a consistên
 ---
 
 [⬅️ Voltar ao índice](../README.md)
-
----
-
