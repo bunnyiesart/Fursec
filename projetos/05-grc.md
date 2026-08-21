@@ -22,7 +22,7 @@
 **Prova que:** domina o contexto brasileiro — vantagem local enorme.
 **Tempo:** 20–30h
 **Entregável:** mapeamento de dados (data mapping), RIPD (Relatório de Impacto), base legal por tratamento, fluxo de atendimento ao titular, e plano de resposta a incidente de dados com prazo ANPD.
-**Fonte:** [Guias oficiais ANPD](https://www.gov.br/anpd/pt-br)
+**Fonte:** [Guias e estudos técnicos da ANPD](https://www.gov.br/anpd/pt-br/centrais-de-conteudo)
 
 ### P29 — Programa de gestão de fornecedores
 **Tempo:** 10–15h

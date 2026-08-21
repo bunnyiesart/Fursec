@@ -12,7 +12,7 @@
 | [Splunk BOTS](https://bots.splunk.com/) | 🇺🇸 | 🆓 🧪 | Boss of the SOC datasets |
 | [DetectionLab](https://github.com/clong/DetectionLab) | 🇺🇸 | 🆓 🧪 | Lab de detecção automatizado |
 | [Malware-Traffic-Analysis.net](https://www.malware-traffic-analysis.net/) | 🇺🇸 | 🆓 🧪 | PCAPs reais para treinar |
-| [RangeForce Community](https://www.rangeforce.com/) | 🇺🇸 | 🆓 tier 🧪 | |
+| [RangeForce Community](https://www.rangeforce.com/) | 🇺🇸 | 🆓 tier 🧪 | Módulos hands-on de blue team no navegador |
 | [Sigma HQ](https://github.com/SigmaHQ/sigma) | 🇺🇸 | 🆓 | Regras de detecção — contribua! |
 
 ---

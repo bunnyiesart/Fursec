@@ -18,7 +18,7 @@ Every phase has an **hour budget**. Convert to calendar time with your own pace:
 Two parallel columns run through the whole thing:
 
 - 🟢 **FREE LANE** — costs nothing, ever. Everyone does this lane.
-- 💳 **PAID LANE** — optional exam vouchers. Never pay for *learning*; pay only for the *exam* that proves it. Tips in [Paid Lane](#-paid-lane--when-to-actually-spend-money).
+- 💳 **PAID LANE** — optional exam vouchers. Never pay for *learning*; pay only for the *exam* that proves it. Guia completo em [`docs/certificacoes.md`](./docs/certificacoes.md).
 
 **Rule of thumb:** don't buy an exam until you can already pass a free practice test at 85%.
 
@@ -56,7 +56,7 @@ Everything below is shared by all four tracks. Do not fork yet.
 
 **Exit test:** you can score >80% on free Security+ practice questions and write a Python script that parses a log file.
 
-💳 *First sensible paid moment is here — see [When to buy Security+](#-paid-lane--when-to-actually-spend-money).*
+💳 *First sensible paid moment is here — see [`docs/certificacoes.md`](./docs/certificacoes.md).*
 
 ---
 

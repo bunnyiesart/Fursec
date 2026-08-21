@@ -6,7 +6,7 @@
 
 | Canal | Foco |
 |---|---|
-| [Mente Binária / Papo Binário](https://www.youtube.com/@mentebinaria) | Engenharia reversa, malware, C, baixo nível |
+| [Mente Binária](https://www.youtube.com/@mentebinaria) | Engenharia reversa, malware, C, baixo nível |
 | [Curso em Vídeo](https://www.youtube.com/@CursoemVideo) | Programação e fundamentos |
 | [Solyd Offensive Security](https://www.youtube.com/@solyd) | Pentest e hacking |
 | [Desec Security](https://www.youtube.com/@DesecSecurity) | Pentest prático |
@@ -20,10 +20,9 @@
 | [Professor Messer](https://www.youtube.com/@professormesser) | Security+ / Network+ completo |
 | [John Hammond](https://www.youtube.com/@_JohnHammond) | CTF, malware, ofensivo |
 | [IppSec](https://www.youtube.com/@ippsec) | Walkthroughs HTB — ouro puro |
-| [TCM Security](https://www.youtube.com/@TCMSecurityAcademy) | Cursos completos grátis |
+| [TCM Security / The Cyber Mentor](https://www.youtube.com/@TCMSecurityAcademy) | Cursos completos grátis, pentest prático |
 | [LiveOverflow](https://www.youtube.com/@LiveOverflow) | Binary exploitation, pesquisa |
 | [NetworkChuck](https://www.youtube.com/@NetworkChuck) | Redes e entrada na área |
-| [The Cyber Mentor](https://www.youtube.com/@TCMSecurityAcademy) | Pentest prático |
 | [13Cubed](https://www.youtube.com/@13Cubed) | DFIR e forense Windows |
 | [SANS Offensive Operations](https://www.youtube.com/@SANSOffensiveOperations) | Webcasts avançados |
 | [Black Hat](https://www.youtube.com/@BlackHatOfficialYT) | Palestras de conferência |

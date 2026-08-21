@@ -17,59 +17,17 @@ github.com/seu-usuario/
 
 O repo `cybersecurity-portfolio` é só um README que aponta para os outros, com **uma frase por projeto explicando o que ele prova**. É a primeira coisa que o recrutador abre.
 
-## Template de README de projeto
+## Os templates
 
-```markdown
-# [Nome do Projeto]
+Não recrie do zero — copie o arquivo pronto:
 
-**O que este projeto prova:** [uma frase — a skill demonstrada]
+| Template | Quando usar | O que ele força você a preencher |
+|---|---|---|
+| [`README-projeto.md`](../projetos/templates/README-projeto.md) | Todo projeto que você publicar | Problema, ambiente, metodologia, resultados, **remediação**, o que quebrou, o que aprendeu |
+| [`writeup-ctf.md`](../projetos/templates/writeup-ctf.md) | Cada máquina / CTF resolvido | Resumo executivo, recon, exploração, **correção**, lições |
+| [`relatorio-pentest.md`](../projetos/templates/relatorio-pentest.md) | Quando quiser o formato de consultoria | Sumário executivo, escopo e regras de engajamento, achados com severidade, apêndices |
 
-## Problema
-Que situação real isso resolve ou simula.
-
-## Ambiente
-- SO / versões / ferramentas
-- Diagrama de rede (imagem)
-
-## Metodologia
-Passo a passo do que foi feito e **por quê** cada escolha.
-
-## Resultados
-Achados, alertas gerados, evidências. Screenshots com dados anonimizados.
-
-## Remediação / Recomendações
-O que você faria para corrigir. **Esta seção é a que mais impressiona.**
-
-## Problemas encontrados
-O que quebrou e como você resolveu. Mostra raciocínio real, não roteiro.
-
-## O que eu aprendi
-Honesto e específico. Inclusive o que você faria diferente.
-
-## Referências
-```
-
-## Template de writeup de CTF/lab
-
-```markdown
-# [Máquina/Desafio] — Writeup
-
-**Dificuldade:** | **Plataforma:** | **Data:**
-
-## Resumo executivo
-3 linhas: qual foi a falha, qual o impacto, como corrigir.
-
-## Reconhecimento
-Comandos + saída relevante (recortada, não colada inteira).
-
-## Exploração
-O raciocínio antes do comando. Por que você tentou isso?
-
-## Pós-exploração / escalada
-## Correção
-Como o administrador teria evitado. **Não pule esta parte.**
-## Lições
-```
+As duas seções que quase todo mundo pula — e que são exatamente as que impressionam — são **remediação** ("o que eu faria para corrigir") e **problemas encontrados** ("o que quebrou e como resolvi"). A primeira mostra que você pensa como defensor; a segunda mostra raciocínio real em vez de roteiro decorado.
 
 ## Checklist antes de publicar
 
