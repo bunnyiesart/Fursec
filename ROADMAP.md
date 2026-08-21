@@ -32,7 +32,7 @@ You cannot secure what you don't understand. Skip this only if you already admin
 |---|---|---|---|---|
 | 0.1 | Networking basics (OSI, TCP/IP, DNS, DHCP, routing) | [Cisco Networking Basics](https://www.netacad.com/courses/networking-basics) | 20 | ✅ Badge |
 | 0.2 | Intro to Cybersecurity | [Cisco Intro to Cybersecurity](https://www.netacad.com/courses/introduction-to-cybersecurity) | 6 | ✅ Badge |
-| 0.3 | Linux command line | [TryHackMe Pre-Security path](https://tryhackme.com/path/outline/presecurity) (free rooms) + [Linux Journey](https://linuxjourney.com/) | 20 | ⚪ |
+| 0.3 | Linux command line | [TryHackMe Pre-Security path](https://tryhackme.com/path/outline/presecurity) (free rooms) + [Linux Journey](https://labex.io/linuxjourney) | 20 | ⚪ |
 | 0.4 | Windows internals + AD basics | [Microsoft Learn — Windows Server fundamentals](https://learn.microsoft.com/training/) | 12 | ⚪ |
 | 0.5 | Threat landscape awareness | [Fortinet NSE 1 + 2 + 3](https://training.fortinet.com/) | 6 | ✅ 3 badges |
 | 0.6 | Build a home lab | VirtualBox/Proxmox + Kali + Ubuntu + Windows eval VMs | 6 | ⚪ |
@@ -90,7 +90,7 @@ Pick **one** primary track now. You said all four interest you — that's fine, 
 |---|---|---|---|
 | Azure security ops (SC-200 path) | [Microsoft Learn](https://learn.microsoft.com/training/) | 35 | ✅ Free |
 | AWS security fundamentals + labs | [AWS Skill Builder](https://skillbuilder.aws/) free tier + Builder Labs | 30 | ✅ Free tier |
-| GCP security badges | [Google Cloud Skills Boost](https://www.cloudskillsboost.google/) free courses | 25 | ✅ Free tier |
+| GCP security badges | [Google Skills](https://www.skills.google/) free courses | 25 | ✅ Free tier |
 | Cloud attack/defense practice | [flaws.cloud](http://flaws.cloud/) + [flaws2.cloud](http://flaws2.cloud/) + [CloudGoat](https://github.com/RhinoSecurityLabs/cloudgoat) | 20 | ✅ Free |
 | IaC + container security | [Kubernetes Goat](https://madhuakula.com/kubernetes-goat/) | 10 | ✅ Free |
 
@@ -100,7 +100,7 @@ Pick **one** primary track now. You said all four interest you — that's fine, 
 |---|---|---|---|
 | NIST Cybersecurity Framework 2.0 | [NIST CSF official resources](https://www.nist.gov/cyberframework) | 20 | ✅ Free |
 | NIST RMF + SP 800-53 | [NIST RMF training](https://csrc.nist.gov/projects/risk-management/rmf-courses) | 20 | ✅ Free |
-| Federal/critical-infra courses | [CISA free training](https://www.cisa.gov/resources-tools/training) + [FEMA IS courses](https://training.fema.gov/is/) | 20 | ✅ Free + certs |
+| Federal/critical-infra courses | [CISA free training](https://www.cisa.gov/resources-tools/training) + [FEMA IS courses](https://training.fema.gov/programs/independent-study/) | 20 | ✅ Free + certs |
 | ISO 27001 structure | [ISO 27001 overview material](https://www.iso.org/standard/27001) + free vendor webinars | 15 | ✅ Free |
 | Risk & audit practice | Build a real risk register + control matrix for a fake company | 15 | ✅ Free |
 

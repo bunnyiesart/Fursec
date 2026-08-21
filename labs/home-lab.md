@@ -64,7 +64,6 @@ Se estiver desativada, ligue na BIOS/UEFI: `Intel VT-x` / `AMD-V` ou `SVM Mode`.
 | Ubuntu Server | Grátis | [ubuntu.com](https://ubuntu.com/download/server) |
 | Windows Server — avaliação 180 dias | Grátis | [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter) |
 | Windows 10/11 Enterprise — avaliação 90 dias | Grátis | [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter) |
-| Windows dev VM (pronta, expira) | Grátis | [Windows dev environment](https://developer.microsoft.com/windows/downloads/virtual-machines/) |
 | Security Onion | Grátis | [securityonion.net](https://securityonionsolutions.com/) |
 | pfSense CE / OPNsense | Grátis | [opnsense.org](https://opnsense.org/) |
 

@@ -19,8 +19,8 @@
 | ⭐ NIST Cybersecurity Framework 2.0 | [nist.gov](https://www.nist.gov/cyberframework) | 🇺🇸 | 🆓 |
 | NIST Risk Management Framework (RMF) courses | [csrc.nist.gov](https://csrc.nist.gov/projects/risk-management/rmf-courses) | 🇺🇸 | 🆓 |
 | CISA Free Training | [cisa.gov](https://www.cisa.gov/resources-tools/training) | 🇺🇸 | 🆓 🎓 |
-| FEMA IS Courses (certificados oficiais) | [training.fema.gov](https://training.fema.gov/is/) | 🇺🇸 | 🆓 🎓 |
-| API Security for PCI Compliance | [APIsec University](https://www.apisecuniversity.com/courses/api-security-for-pci-compliance) | 🇺🇸 | 🆓 🎓 |
+| FEMA IS Courses (certificados oficiais) | [training.fema.gov](https://training.fema.gov/programs/independent-study/) | 🇺🇸 | 🆓 🎓 |
+| API Security for PCI Compliance | [APIsec University](https://au.apisec.ai/courses/api-security-for-pci-compliance) | 🇺🇸 | 🆓 🎓 |
 | ISO/IEC 27001 — visão geral | [iso.org](https://www.iso.org/standard/27001) | 🇺🇸 | 🆓 |
 | Guias e cartilhas ANPD (LGPD oficial) | [gov.br/anpd](https://www.gov.br/anpd/pt-br) | 🇧🇷 | 🆓 |
 
