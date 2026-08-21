@@ -6,15 +6,15 @@
 
 | Curso | Provedor | Lang | Tags |
 |---|---|---|---|
-| ⭐ Introdução ao Hacking e Pentest 2.0 | [Solyd](https://solyd.com.br/treinamentos/introducao-ao-hacking-e-pentest-2/) | 🇧🇷 | 🆓 🎓 |
+| ⭐ Introdução ao Hacking e Pentest 2.0 | [Solyd](https://solyd.com.br/cursos/introducao-ao-hacking-e-pentest-2/) | 🇧🇷 | 🆓 🎓 |
 | ⭐ Introdução ao Pentest na Prática | [Desec Security](https://desecsecurity.com/curso/introducao-pentest) | 🇧🇷 | 🆓 🎓 |
 | ⭐ Web Security Academy (o melhor do mundo, grátis) | [PortSwigger](https://portswigger.net/web-security) | 🇺🇸 | 🆓 🧪 |
 | ⭐ Jr Penetration Tester Path | [TryHackMe](https://tryhackme.com/path/outline/jrpenetrationtester) | 🇺🇸 | 🆓 parcial 🧪 🎓 |
 | Offensive Security Operations | [Cybrary](https://app.cybrary.it/browse/course/offensive-security-operations) | 🇺🇸 | 🆓 🎓 |
 | HTB Academy — módulos Tier 0 grátis | [HTB Academy](https://academy.hackthebox.com/) | 🇺🇸 | 🆓 parcial 🧪 |
 | Practical Ethical Hacking (aulas no YouTube) | [TCM Security](https://www.youtube.com/@TCMSecurityAcademy) | 🇺🇸 | 🆓 |
-| Getting Started in API Pen-Testing | [APIsec University](https://www.apisecuniversity.com/courses/) | 🇺🇸 | 🆓 🎓 |
-| API Penetration Testing | [APIsec University](https://www.apisecuniversity.com/courses/api-penetration-testing) | 🇺🇸 | 🆓 🎓 |
+| Getting Started in API Pen-Testing | [APIsec University](https://au.apisec.ai/courses/) | 🇺🇸 | 🆓 🎓 |
+| API Penetration Testing | [APIsec University](https://au.apisec.ai/courses/api-penetration-testing) | 🇺🇸 | 🆓 🎓 |
 | Android Application Security / Pentest | [Mobile Hacking Lab](https://www.mobilehackinglab.com/course/free-android-application-security-course) | 🇺🇸 | 🆓 🎓 |
 | iOS Application Security / Pentest | [Mobile Hacking Lab](https://www.mobilehackinglab.com/course/free-ios-application-security-course) | 🇺🇸 | 🆓 🎓 |
 | Android Frida Labs | [Mobile Hacking Lab](https://www.mobilehackinglab.com/course/android-frida-labs) | 🇺🇸 | 🆓 🎓 |
@@ -24,7 +24,7 @@
 | Antisyphon — cursos pay-what-you-can | [antisyphontraining.com](https://www.antisyphontraining.com/) | 🇺🇸 | 🆓/💳 |
 | OpenSecurityTraining2 | [ost2.fyi](https://ost2.fyi/) | 🇺🇸 | 🆓 🎓 |
 | Metasploit Unleashed | [OffSec](https://www.offsec.com/metasploit-unleashed/) | 🇺🇸 | 🆓 |
-| Kali Linux Revealed | [kali.training](https://kali.training/) | 🇺🇸 | 🆓 |
+| Kali Linux Revealed | [OffSec](https://www.offsec.com/kali-training/) | 🇺🇸 | 🆓 |
 | Bug Bounty — Hacker101 | [hacker101.com](https://www.hacker101.com/) | 🇺🇸 | 🆓 🧪 |
 | PentesterLab — exercícios grátis | [pentesterlab.com](https://pentesterlab.com/) | 🇺🇸 | 🆓 parcial 🧪 |
 

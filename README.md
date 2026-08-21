@@ -87,7 +87,7 @@ Cada fase tem um **teste de saída** — a condição objetiva para avançar. N�
 
 Oito arquivos, um por área. Todo curso vem marcado com:
 
-`🇧🇷` português · `🇺🇸` inglês · `🆓` gratuito · `🎓` emite certificado · `🧪` prático · `⭐` prioridade alta
+`🇧🇷` português · `🇺🇸` inglês · `🆓` gratuito · `💸` pago · `🎓` emite certificado · `🧪` prático · `⭐` prioridade alta
 
 Se você quer só material em português, existe um atalho: [`docs/trilha-pt-br.md`](./docs/trilha-pt-br.md).
 

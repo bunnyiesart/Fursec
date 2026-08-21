@@ -13,7 +13,7 @@ Se você prefere estudar em português, esta é a sequência usando **apenas** m
 | 1 | [Primeiros Passos em Tecnologia](https://www.ev.org.br/trilhas-de-conhecimento/primeiros-passos-em-tecnologia) | Fundação Bradesco |
 | 2 | [Fundamentos de TI: Hardware e Software](https://www.ev.org.br/cursos/fundamentos-de-ti-hardware-e-software) | Fundação Bradesco |
 | 3 | [Conceitos Básicos de Redes](https://www.netacad.com/pt/courses/networking-basics) | Cisco NetAcad |
-| 4 | [Linux Fundamentos](https://www.eucapacito.com.br/curso-ec/linux-fundamentos/) | FIAP / Eu Capacito |
+| 4 | [Linux Fundamentos](https://www.eucapacito.com.br/cursos/linux-fundamentos/) | FIAP / Eu Capacito |
 | 5 | [CC50 — CS50 em português](https://materiais.napratica.org.br/cc50) | Fundação Estudar |
 
 ## Fase 2 — Segurança base 🇧🇷
@@ -29,9 +29,9 @@ Se você prefere estudar em português, esta é a sequência usando **apenas** m
 ## Fase 3 — Escolha a trilha 🇧🇷
 
 **🔴 Ofensiva**
-- [Introdução ao Hacking e Pentest 2.0](https://solyd.com.br/treinamentos/introducao-ao-hacking-e-pentest-2/) — Solyd
+- [Introdução ao Hacking e Pentest 2.0](https://solyd.com.br/cursos/introducao-ao-hacking-e-pentest-2/) — Solyd
 - [Introdução ao Pentest na Prática](https://desecsecurity.com/curso/introducao-pentest) — Desec Security
-- [Python Básico](https://solyd.com.br/treinamentos/python-basico/) — Solyd
+- [Python Básico](https://solyd.com.br/cursos/python-basico/) — Solyd
 
 **🔵 Defensiva / Baixo nível**
 - [CERO — Curso de Engenharia Reversa Online](https://www.mentebinaria.com.br/cursos/curso-de-engenharia-reversa-online-cero-r6/) — Mente Binária
@@ -45,7 +45,7 @@ Se você prefere estudar em português, esta é a sequência usando **apenas** m
 - [Intro ao CIS Controls](https://www.escolavirtual.gov.br/curso/1153) + [Controles 1-6](https://www.escolavirtual.gov.br/curso/1073) + [7-12](https://www.escolavirtual.gov.br/curso/1132) + [13-18](https://www.escolavirtual.gov.br/curso/1154)
 
 **☁️ Cloud**
-- [Primeiros passos com AWS](https://web.dio.me/course/primeiros-passos-com-aws/) — DIO
+- [Conceitos básicos da Nuvem AWS](https://aws.amazon.com/pt/getting-started/cloud-essentials/) — AWS
 - [Cloud Fundamentals](https://www.eucapacito.com.br/cursos/cloud-fundamentals/) — FIAP
 
 ## Leitura 🇧🇷

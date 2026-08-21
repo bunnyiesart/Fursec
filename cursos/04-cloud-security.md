@@ -11,11 +11,11 @@
 | AZ-900 Azure Fundamentals | [Microsoft Learn](https://learn.microsoft.com/training/) | 🇺🇸🇧🇷 | 🆓 |
 | ⭐ AWS Skill Builder (tier grátis + Builder Labs) | [skillbuilder.aws](https://skillbuilder.aws/) | 🇺🇸 | 🆓 🧪 🎓 |
 | AWS Cloud Practitioner Essentials | [AWS](https://skillbuilder.aws/) | 🇺🇸🇧🇷 | 🆓 |
-| Primeiros passos com AWS | [DIO](https://web.dio.me/course/primeiros-passos-com-aws/) | 🇧🇷 | 🆓 🎓 |
-| Introdução prática à computação em nuvem com AWS | [DIO](https://web.dio.me/course/Introducao-pratica-a-computacao-em-nuvem-usando-AWS/) | 🇧🇷 | 🆓 🎓 |
+| Conceitos básicos da Nuvem AWS | [AWS](https://aws.amazon.com/pt/getting-started/cloud-essentials/) | 🇧🇷 | 🆓 |
+| AWS Cloud Quest: Cloud Practitioner (labs guiados) | [AWS Skill Builder](https://skillbuilder.aws/cloudquest) | 🇺🇸🇧🇷 | 🆓 🧪 |
 | Cloud Fundamentals / Solution Architect | [FIAP / Eu Capacito](https://www.eucapacito.com.br/cursos/cloud-fundamentals/) | 🇧🇷 | 🆓 🎓 |
-| Google Cloud Skills Boost — badges grátis | [cloudskillsboost.google](https://www.cloudskillsboost.google/) | 🇺🇸 | 🆓 🧪 🎓 |
-| Fundamentals of Cloud Security | [Palo Alto Networks](https://www.paloaltonetworks.com/cyberpedia/free-cybersecurity-education-courses) | 🇺🇸 | 🆓 |
+| Google Skills — badges grátis | [skills.google](https://www.skills.google/) | 🇺🇸 | 🆓 🧪 🎓 |
+| Fundamentals of Cloud Security | [Palo Alto Beacon](https://learn.paloaltonetworks.com/) | 🇺🇸 | 🆓 |
 | ⭐ flaws.cloud (AWS attack lab) | [flaws.cloud](http://flaws.cloud/) | 🇺🇸 | 🆓 🧪 |
 | flaws2.cloud | [flaws2.cloud](http://flaws2.cloud/) | 🇺🇸 | 🆓 🧪 |
 | CloudGoat | [Rhino Security Labs](https://github.com/RhinoSecurityLabs/cloudgoat) | 🇺🇸 | 🆓 🧪 |

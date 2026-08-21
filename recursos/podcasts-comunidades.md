@@ -13,7 +13,7 @@
 | [tl;dr sec](https://tldrsec.com/) | 🇺🇸 | Newsletter AppSec |
 | [Simply Cyber](https://simplycyber.io/) | 🇺🇸 | Brief diário |
 | [OWASP Brasil](https://owasp.org/chapters/) | 🇧🇷 | Capítulos locais e eventos |
-| [BSides Brasil / BHack / Roadsec](https://roadsec.com.br/) | 🇧🇷 | Conferências nacionais |
+| [BSides Brasil / BHack / Roadsec](https://www.roadsec.com.br/) | 🇧🇷 | Conferências nacionais |
 | [Coneds — OWASP Community Series](https://members.coneds.com.br/) | 🇧🇷 | Palestras gravadas |
 | [r/netsec](https://reddit.com/r/netsec) e [r/cybersecurity](https://reddit.com/r/cybersecurity) | 🇺🇸 | Comunidade |
 

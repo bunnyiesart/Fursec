@@ -6,9 +6,9 @@
 
 | Canal | Foco |
 |---|---|
-| [Mente Binária / Papo Binário](https://www.youtube.com/@PapoBinario) | Engenharia reversa, malware, C, baixo nível |
+| [Mente Binária / Papo Binário](https://www.youtube.com/@mentebinaria) | Engenharia reversa, malware, C, baixo nível |
 | [Curso em Vídeo](https://www.youtube.com/@CursoemVideo) | Programação e fundamentos |
-| [Solyd Offensive Security](https://www.youtube.com/@SolydOfficial) | Pentest e hacking |
+| [Solyd Offensive Security](https://www.youtube.com/@solyd) | Pentest e hacking |
 | [Desec Security](https://www.youtube.com/@DesecSecurity) | Pentest prático |
 | [Gabriel Pato](https://www.youtube.com/@gabrielpato) | Carreira e segurança ofensiva |
 | [Código Fonte TV](https://www.youtube.com/@codigofontetv) | Tecnologia geral, contexto |

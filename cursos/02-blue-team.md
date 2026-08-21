@@ -7,15 +7,15 @@
 | Curso | Provedor | Lang | Tags |
 |---|---|---|---|
 | ⭐ SOC Level 1 Path | [TryHackMe](https://tryhackme.com/path/outline/soclevel1) | 🇺🇸 | 🆓 parcial 🧪 🎓 |
-| ⭐ Blue Team Junior Analyst Pathway | [Security Blue Team](https://www.securityblue.team/courses/blue-team-junior-analyst-pathway-bundle) | 🇺🇸 | 🆓 🎓 |
+| ⭐ Blue Team Junior Analyst Pathway | [Centri (ex-Security Blue Team)](https://www.centri.org/courses/blue-team-junior-analyst-pathway-bundle) | 🇺🇸 | 🆓 🎓 |
 | ⭐ Splunk Free Courses (Fundamentals 1) | [Splunk](https://www.splunk.com/en_us/training/free-courses/overview.html) | 🇺🇸 | 🆓 🎓 |
-| Fundamentals of SOC | [Palo Alto Networks](https://www.paloaltonetworks.com/cyberpedia/free-cybersecurity-education-courses) | 🇺🇸 | 🆓 |
+| Fundamentals of SOC | [Palo Alto Beacon](https://learn.paloaltonetworks.com/) | 🇺🇸 | 🆓 |
 | Defensive Security Operations | [Cybrary](https://app.cybrary.it/browse/course/defensive-security-operations) | 🇺🇸 | 🆓 🎓 |
 | Defensive Security and Cyber Risk | [Cybrary](https://app.cybrary.it/browse/course/defensive-security-and-cyber-risk) | 🇺🇸 | 🆓 🎓 |
 | Digital Forensics Basics | [Cybrary](https://app.cybrary.it/browse/course/digital-forensics-basics) | 🇺🇸 | 🆓 🎓 |
 | SC-200: Security Operations Analyst path | [Microsoft Learn](https://learn.microsoft.com/training/) | 🇺🇸🇧🇷 | 🆓 |
-| ICS300 — Industrial Control System Cybersecurity | [Idaho National Laboratory](https://ics-training.inl.gov/) | 🇺🇸 | 🆓 🎓 |
-| Elastic Security / ELK free training | [elastic.co](https://www.elastic.co/training/free) | 🇺🇸 | 🆓 |
+| ICS300 — Industrial Control System Cybersecurity | [Idaho National Laboratory](https://ics-training.inl.gov/learn) | 🇺🇸 | 🆓 🎓 |
+| Elastic Security / ELK free training | [elastic.co](https://www.elastic.co/training) | 🇺🇸 | 🆓 |
 | Wazuh — documentação e cursos | [wazuh.com](https://wazuh.com/) | 🇺🇸 | 🆓 🧪 |
 | Security Onion — treinamento gratuito | [securityonion.net](https://securityonionsolutions.com/training) | 🇺🇸 | 🆓 |
 | Velociraptor DFIR training | [docs.velociraptor.app](https://docs.velociraptor.app/training/) | 🇺🇸 | 🆓 |
