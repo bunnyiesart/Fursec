@@ -5,133 +5,130 @@
 
 ---
 
-## How to read this
+## Como ler este roadmap
 
-Every phase has an **hour budget**. Convert to calendar time with your own pace:
+Cada fase tem um **orçamento de horas**. Converta em tempo de calendário usando o seu próprio ritmo:
 
-| Your pace | Phase 0+1 (~180h) | Through Phase 3 (~450h) | Full roadmap (~650h) |
+| Seu ritmo | Fases 0+1 (~180h) | Até a Fase 3 (~450h) | Roadmap completo (~650h) |
 |---|---|---|---|
-| 5 h/week | ~9 months | ~21 months | ~30 months |
-| 10 h/week | ~4.5 months | ~11 months | ~15 months |
-| 20 h/week | ~2 months | ~5.5 months | ~8 months |
+| 5 h/semana | ~9 meses | ~21 meses | ~30 meses |
+| 10 h/semana | ~4,5 meses | ~11 meses | ~15 meses |
+| 20 h/semana | ~2 meses | ~5,5 meses | ~8 meses |
 
-Two parallel columns run through the whole thing:
+Duas faixas paralelas atravessam o roadmap inteiro:
 
-- 🟢 **FREE LANE** — costs nothing, ever. Everyone does this lane.
-- 💳 **PAID LANE** — optional exam vouchers. Never pay for *learning*; pay only for the *exam* that proves it. Guia completo em [`docs/certificacoes.md`](./docs/certificacoes.md).
+- 🟢 **FAIXA GRATUITA** — nunca custa nada. Todo mundo faz esta faixa.
+- 💳 **FAIXA PAGA** — vouchers de exame, opcionais. Nunca pague pelo *aprendizado*; pague só pelo *exame* que o comprova. Guia completo em [`docs/certificacoes.md`](./docs/certificacoes.md).
 
-**Rule of thumb:** don't buy an exam until you can already pass a free practice test at 85%.
+**Regra de bolso:** não compre um exame antes de já acertar 85% num simulado gratuito.
 
 ---
 
-## Phase 0 — Foundations (~70h)
+## Fase 0 — Fundamentos (~70h)
 
-You cannot secure what you don't understand. Skip this only if you already admin Linux and can explain a TCP handshake.
+Você não protege o que não entende. Pule esta fase só se você já administra Linux e sabe explicar um handshake TCP.
 
-| # | What | Where | Hours | Free cert? |
+| # | O que | Onde | Horas | Certificado grátis? |
 |---|---|---|---|---|
-| 0.1 | Networking basics (OSI, TCP/IP, DNS, DHCP, routing) | [Cisco Networking Basics](https://www.netacad.com/courses/networking-basics) | 20 | ✅ Badge |
-| 0.2 | Intro to Cybersecurity | [Cisco Intro to Cybersecurity](https://www.netacad.com/courses/introduction-to-cybersecurity) | 6 | ✅ Badge |
-| 0.3 | Linux command line | [TryHackMe Pre-Security path](https://tryhackme.com/path/outline/presecurity) (free rooms) + [Linux Journey](https://labex.io/linuxjourney) | 20 | ⚪ |
-| 0.4 | Windows internals + AD basics | [Microsoft Learn — Windows Server fundamentals](https://learn.microsoft.com/training/) | 12 | ⚪ |
-| 0.5 | Threat landscape awareness | [Fortinet NSE 1 + 2 + 3](https://training.fortinet.com/) | 6 | ✅ 3 badges |
-| 0.6 | Build a home lab | VirtualBox/Proxmox + Kali + Ubuntu + Windows eval VMs | 6 | ⚪ |
+| 0.1 | Redes básicas (OSI, TCP/IP, DNS, DHCP, roteamento) | [Cisco Networking Basics](https://www.netacad.com/courses/networking-basics) | 20 | ✅ Badge |
+| 0.2 | Introdução à cibersegurança | [Cisco Intro to Cybersecurity](https://www.netacad.com/courses/introduction-to-cybersecurity) | 6 | ✅ Badge |
+| 0.3 | Linha de comando Linux | [TryHackMe Pre-Security path](https://tryhackme.com/path/outline/presecurity) (salas gratuitas) + [Linux Journey](https://labex.io/linuxjourney) | 20 | ⚪ |
+| 0.4 | Internals do Windows + noções de AD | [Microsoft Learn — Windows Server fundamentals](https://learn.microsoft.com/training/) | 12 | ⚪ |
+| 0.5 | Panorama de ameaças | [Fortinet NSE 1 + 2 + 3](https://training.fortinet.com/) | 6 | ✅ 3 badges |
+| 0.6 | Montar um home lab | VirtualBox/Proxmox + Kali + Ubuntu + VMs de avaliação do Windows | 6 | ⚪ |
 
-**Exit test:** you can spin up a VM, read `ip a`, capture traffic in Wireshark, and explain what a firewall rule does.
-
----
-
-## Phase 1 — Security Core (~110h)
-
-Everything below is shared by all four tracks. Do not fork yet.
-
-| # | What | Where | Hours |
-|---|---|---|---|
-| 1.1 | Security fundamentals (CIA, AAA, controls, crypto basics) | [Professor Messer Security+ course](https://www.professormesser.com/) — 100% free video | 35 |
-| 1.2 | Cybersecurity analyst foundations | [IBM SkillsBuild — Cybersecurity Fundamentals](https://skillsbuild.org/) | 15 |
-| 1.3 | Google Cybersecurity Certificate (audit / financial aid) | [Coursera](https://www.coursera.org/professional-certificates/google-cybersecurity) — audit free, or apply Financial Aid for the cert | 25 |
-| 1.4 | Microsoft security/compliance/identity fundamentals | [SC-900 learning path on Microsoft Learn](https://learn.microsoft.com/training/) | 12 |
-| 1.5 | MITRE ATT&CK literacy | [MITRE ATT&CK official training](https://attack.mitre.org/resources/training/) | 10 |
-| 1.6 | Scripting: Python + Bash for security | [Automate the Boring Stuff](https://automatetheboringstuff.com/) | 13 |
-
-**Exit test:** you can score >80% on free Security+ practice questions and write a Python script that parses a log file.
-
-💳 *First sensible paid moment is here — see [`docs/certificacoes.md`](./docs/certificacoes.md).*
+**Teste de saída:** você consegue subir uma VM, ler `ip a`, capturar tráfego no Wireshark e explicar o que uma regra de firewall faz.
 
 ---
 
-## Phase 2 — The Fork: Hands-On per Track (~120h each)
+## Fase 1 — Núcleo de segurança (~110h)
 
-Pick **one** primary track now. You said all four interest you — that's fine, but do them **sequentially**, not in parallel. Order I'd recommend: **Blue Team → Cloud → Red Team → GRC** (blue team hires fastest, cloud pays most, red team is the most competitive entry, GRC rewards experience you don't have yet).
+Tudo aqui é comum às quatro trilhas. **Não se especialize ainda.**
 
-### 🔵 2A — Blue Team / SOC Analyst (~120h)
-
-| What | Where | Hours | Free? |
+| # | O que | Onde | Horas |
 |---|---|---|---|
-| SOC Level 1 path | [TryHackMe SOC Level 1](https://tryhackme.com/path/outline/soclevel1) | 45 | Partly free, ~$14/mo for full |
-| Splunk fundamentals + BOTS datasets | [Splunk Free Training](https://www.splunk.com/en_us/training/free-courses/overview.html) + [BOTS](https://bots.splunk.com/) | 20 | ✅ Free |
-| Alert triage in a real SOC UI | [LetsDefend free tier](https://letsdefend.io/) | 20 | ✅ Free tier |
-| DFIR / blue team challenges | [CyberDefenders](https://cyberdefenders.org/) — generous free labs | 20 | ✅ Free tier |
-| Investigation depth | [Blue Team Labs Online](https://blueteamlabs.online/) free challenges | 15 | ✅ Partly |
+| 1.1 | Fundamentos de segurança (CID, AAA, controles, noções de cripto) | [Professor Messer Security+](https://www.professormesser.com/) — vídeo 100% gratuito | 35 |
+| 1.2 | Base de analista de cibersegurança | [IBM SkillsBuild — Cybersecurity Fundamentals](https://skillsbuild.org/) | 15 |
+| 1.3 | Google Cybersecurity Certificate (audit / ajuda financeira) | [Coursera](https://www.coursera.org/professional-certificates/google-cybersecurity) — audit gratuito, ou peça Financial Aid para o certificado | 25 |
+| 1.4 | Fundamentos de segurança, compliance e identidade da Microsoft | [Trilha SC-900 no Microsoft Learn](https://learn.microsoft.com/training/) | 12 |
+| 1.5 | Fluência em MITRE ATT&CK | [Treinamento oficial MITRE ATT&CK](https://attack.mitre.org/resources/training/) | 10 |
+| 1.6 | Scripting: Python + Bash para segurança | [Automate the Boring Stuff](https://automatetheboringstuff.com/) | 13 |
+
+**Teste de saída:** você tira mais de 80% num simulado gratuito de Security+ e escreve um script Python que parseia um arquivo de log.
+
+💳 *Este é o primeiro momento em que faz sentido pagar por algo — veja [`docs/certificacoes.md`](./docs/certificacoes.md).*
+
+---
+
+## Fase 2 — A bifurcação: prática por trilha (~120h cada)
+
+Escolha **uma** trilha principal agora. Se todas te interessam, tudo bem — mas faça **em sequência**, não em paralelo. Ordem que eu recomendo: **Blue Team → Cloud → Red Team → GRC** (blue team contrata mais rápido, cloud paga melhor, red team é a entrada mais concorrida, e GRC premia experiência que você ainda não tem).
+
+### 🔵 2A — Blue Team / Analista de SOC (~120h)
+
+| O que | Onde | Horas | Gratuito? |
+|---|---|---|---|
+| Trilha SOC Level 1 | [TryHackMe SOC Level 1](https://tryhackme.com/path/outline/soclevel1) | 45 | Parcial; ~US$ 14/mês para tudo |
+| Splunk fundamentals + datasets BOTS | [Splunk Free Training](https://www.splunk.com/en_us/training/free-courses/overview.html) + [BOTS](https://bots.splunk.com/) | 20 | ✅ Grátis |
+| Triagem de alertas numa UI real de SOC | [LetsDefend — tier gratuito](https://letsdefend.io/) | 20 | ✅ Tier grátis |
+| Desafios de DFIR / blue team | [CyberDefenders](https://cyberdefenders.org/) — labs gratuitos generosos | 20 | ✅ Tier grátis |
+| Profundidade de investigação | [Blue Team Labs Online](https://blueteamlabs.online/) — desafios gratuitos | 15 | ✅ Parcial |
 
 ### 🔴 2B — Red Team / Pentest (~120h)
 
-| What | Where | Hours | Free? |
+| O que | Onde | Horas | Gratuito? |
 |---|---|---|---|
-| Web vulns — the gold standard | [PortSwigger Web Security Academy](https://portswigger.net/web-security) | 45 | ✅ 100% free |
-| Jr Penetration Tester path | [TryHackMe](https://tryhackme.com/path/outline/jrpenetrationtester) | 35 | Partly free |
-| Linux privesc wargames | [OverTheWire Bandit → Natas](https://overthewire.org/wargames/) | 15 | ✅ Free |
-| Practical ethical hacking | [TCM Security YouTube](https://www.youtube.com/@TCMSecurityAcademy) full courses | 15 | ✅ Free |
-| CTF muscle | [picoCTF](https://picoctf.org/) | 10 | ✅ Free |
+| Vulns web — o padrão-ouro | [PortSwigger Web Security Academy](https://portswigger.net/web-security) | 45 | ✅ 100% grátis |
+| Trilha Jr Penetration Tester | [TryHackMe](https://tryhackme.com/path/outline/jrpenetrationtester) | 35 | Parcial |
+| Wargames de privesc em Linux | [OverTheWire Bandit → Natas](https://overthewire.org/wargames/) | 15 | ✅ Grátis |
+| Hacking ético prático | [TCM Security no YouTube](https://www.youtube.com/@TCMSecurityAcademy) — cursos completos | 15 | ✅ Grátis |
+| Músculo de CTF | [picoCTF](https://picoctf.org/) | 10 | ✅ Grátis |
 
 ### ☁️ 2C — Cloud Security (~120h)
 
-| What | Where | Hours | Free? |
+| O que | Onde | Horas | Gratuito? |
 |---|---|---|---|
-| Azure security ops (SC-200 path) | [Microsoft Learn](https://learn.microsoft.com/training/) | 35 | ✅ Free |
-| AWS security fundamentals + labs | [AWS Skill Builder](https://skillbuilder.aws/) free tier + Builder Labs | 30 | ✅ Free tier |
-| GCP security badges | [Google Skills](https://www.skills.google/) free courses | 25 | ✅ Free tier |
-| Cloud attack/defense practice | [flaws.cloud](http://flaws.cloud/) + [flaws2.cloud](http://flaws2.cloud/) + [CloudGoat](https://github.com/RhinoSecurityLabs/cloudgoat) | 20 | ✅ Free |
-| IaC + container security | [Kubernetes Goat](https://madhuakula.com/kubernetes-goat/) | 10 | ✅ Free |
+| Operações de segurança no Azure (trilha SC-200) | [Microsoft Learn](https://learn.microsoft.com/training/) | 35 | ✅ Grátis |
+| Fundamentos de segurança AWS + labs | [AWS Skill Builder](https://skillbuilder.aws/) — tier gratuito + Builder Labs | 30 | ✅ Tier grátis |
+| Badges de segurança no GCP | [Google Skills](https://www.skills.google/) — cursos gratuitos | 25 | ✅ Tier grátis |
+| Prática de ataque/defesa em nuvem | [flaws.cloud](http://flaws.cloud/) + [flaws2.cloud](http://flaws2.cloud/) + [CloudGoat](https://github.com/RhinoSecurityLabs/cloudgoat) | 20 | ✅ Grátis |
+| Segurança de IaC e contêineres | [Kubernetes Goat](https://madhuakula.com/kubernetes-goat/) | 10 | ✅ Grátis |
 
 ### 📋 2D — GRC / Compliance (~90h)
 
-| What | Where | Hours | Free? |
+| O que | Onde | Horas | Gratuito? |
 |---|---|---|---|
-| NIST Cybersecurity Framework 2.0 | [NIST CSF official resources](https://www.nist.gov/cyberframework) | 20 | ✅ Free |
-| NIST RMF + SP 800-53 | [NIST RMF training](https://csrc.nist.gov/projects/risk-management/rmf-courses) | 20 | ✅ Free |
-| Federal/critical-infra courses | [CISA free training](https://www.cisa.gov/resources-tools/training) + [FEMA IS courses](https://training.fema.gov/programs/independent-study/) | 20 | ✅ Free + certs |
-| ISO 27001 structure | [ISO 27001 overview material](https://www.iso.org/standard/27001) + free vendor webinars | 15 | ✅ Free |
-| Risk & audit practice | Build a real risk register + control matrix for a fake company | 15 | ✅ Free |
+| NIST Cybersecurity Framework 2.0 | [Material oficial do NIST CSF](https://www.nist.gov/cyberframework) | 20 | ✅ Grátis |
+| NIST RMF + SP 800-53 | [Treinamento NIST RMF](https://csrc.nist.gov/projects/risk-management/rmf-courses) | 20 | ✅ Grátis |
+| Cursos federais / infra crítica | [CISA free training](https://www.cisa.gov/resources-tools/training) + [FEMA IS courses](https://training.fema.gov/programs/independent-study/) | 20 | ✅ Grátis + certificados |
+| Estrutura da ISO 27001 | [Visão geral da ISO 27001](https://www.iso.org/standard/27001) + webinars gratuitos de fornecedores | 15 | ✅ Grátis |
+| Prática de risco e auditoria | Monte um risk register e uma matriz de controles reais para uma empresa fictícia | 15 | ✅ Grátis |
 
 ---
 
-## Phase 3 — Depth & Proof (~150h)
+## Fase 3 — Profundidade e prova (~150h)
 
-Now you specialize *and* you make it visible. Split roughly 60/40 between learning and producing artifacts.
+Agora você se especializa *e* torna isso visível. Divida mais ou menos 60/40 entre aprender e produzir artefatos.
 
-| # | What | Hours |
+| # | O que | Horas |
 |---|---|---|
-| 3.1 | Advanced path in your chosen track (HTB Academy free modules, Antisyphon pay-what-you-can courses, OpenSecurityTraining2) | 60 |
-| 3.2 | **Home lab project** — build a detection lab (Security Onion / Wazuh / ELK), attack it, detect yourself | 40 |
-| 3.3 | **Write it up** — 6–10 blog posts or GitHub writeups documenting labs, CTFs, detections you built | 30 |
-| 3.4 | Second track from Phase 2 (breadth) | 20 |
+| 3.1 | Trilha avançada na sua área (módulos gratuitos da HTB Academy, cursos pay-what-you-can da Antisyphon, OpenSecurityTraining2) | 60 |
+| 3.2 | **Projeto de home lab** — monte um lab de detecção (Security Onion / Wazuh / ELK), ataque-o e detecte a si mesmo | 40 |
+| 3.3 | **Escreva** — 6 a 10 posts ou writeups no GitHub documentando labs, CTFs e detecções que você construiu | 30 |
+| 3.4 | Segunda trilha da Fase 2 (amplitude) | 20 |
 
-**This phase is what actually gets you hired.** Certificates get past HR; the lab writeups get you past the technical interview.
+**É esta fase que realmente te contrata.** Certificado passa pelo RH; os writeups de lab passam pela entrevista técnica.
 
 ---
 
-## Phase 4 — Job-Ready (~100h, ongoing)
+## Fase 4 — Pronto para o mercado (~100h, contínuo)
 
-| # | What | Hours |
+| # | O que | Horas |
 |---|---|---|
-| 4.1 | Resume + LinkedIn rebuilt around projects, not courses | 10 |
-| 4.2 | Interview prep — practice explaining your labs out loud | 20 |
-| 4.3 | Contribute: open-source detection rules (Sigma), CTF writeups, bug bounty on [HackerOne](https://hackerone.com/) free programs | 40 |
-| 4.4 | Continuous: [SANS free webcasts](https://www.sans.org/webcasts/), threat intel newsletters, Simply Cyber daily briefs | 30+ |
-
----
-
+| 4.1 | Currículo + LinkedIn reescritos em torno de projetos, não de cursos | 10 |
+| 4.2 | Preparo para entrevista — treine explicar seus labs em voz alta | 20 |
+| 4.3 | Contribua: regras de detecção open source (Sigma), writeups de CTF, bug bounty em programas gratuitos do [HackerOne](https://hackerone.com/) | 40 |
+| 4.4 | Contínuo: [webcasts gratuitos da SANS](https://www.sans.org/webcasts/), newsletters de threat intel, briefings diários do Simply Cyber | 30+ |
 
 ---
 
@@ -139,7 +136,7 @@ Now you specialize *and* you make it visible. Split roughly 60/40 between learni
 
 Se você quiser apenas **uma lista sequencial** sem pensar muito:
 
-1. Cisco *Introdução à Cibersegurança* 🇧🇷 → 2. Cisco *Conceitos Básicos de Redes* 🇧🇷 → 3. Fundação Bradesco *Segurança em TI* 🇧🇷 → 4. CC50/CS50 → 5. TCM *Linux 100* → 6. Fortinet FCF+FCA → 7. Professor Messer Security+ 🇺🇸 → 8. Google Cybersecurity Certificate → 9. **ESCOLHA A TRILHA** → 10a. Blue: THM SOC L1 + Splunk + LetsDefend + CyberDefenders · 10b. Red: PortSwigger + Solyd Intro + THM Jr Pentester + picoCTF · 10c. Cloud: SC-200 + AWS Skill Builder + flaws.cloud · 10d. GRC: LGPD EV.gov + CIS Controls + NIST CSF → 11. Home lab + writeups → 12. Certificação paga (ver roadmap).
+1. Cisco *Introdução à Cibersegurança* 🇧🇷 → 2. Cisco *Conceitos Básicos de Redes* 🇧🇷 → 3. Fundação Bradesco *Segurança em TI* 🇧🇷 → 4. CC50/CS50 → 5. TCM *Linux 100* → 6. Fortinet FCF+FCA → 7. Professor Messer Security+ 🇺🇸 → 8. Google Cybersecurity Certificate → 9. **ESCOLHA A TRILHA** → 10a. Blue: THM SOC L1 + Splunk + LetsDefend + CyberDefenders · 10b. Red: PortSwigger + Solyd Intro + THM Jr Pentester + picoCTF · 10c. Cloud: SC-200 + AWS Skill Builder + flaws.cloud · 10d. GRC: LGPD EV.gov + CIS Controls + NIST CSF → 11. Home lab + writeups → 12. Certificação paga (ver [`docs/certificacoes.md`](./docs/certificacoes.md)).
 
 > **Meta-conselho:** você não vai terminar tudo aqui — e nem deve. Este catálogo é um **menu**, não uma lista de tarefas. Escolha 1 curso por vez, termine, documente, e só então pegue o próximo.
 
@@ -150,3 +147,4 @@ Se você quiser apenas **uma lista sequencial** sem pensar muito:
 - Projetos para provar cada fase → [`projetos/`](./projetos/)
 - Como estudar de forma eficiente → [`docs/metodo-de-estudo.md`](./docs/metodo-de-estudo.md)
 - Acompanhar progresso → [`progresso/checklist.md`](./progresso/checklist.md)
+
