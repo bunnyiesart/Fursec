@@ -108,6 +108,34 @@ li span {
 /* Destaque discreto para o ponto de partida */
 .start li a { font-weight: 600; }
 
+/* Imagem lateral.
+   Fica fixa na margem direita e só aparece quando existe margem sobrando —
+   abaixo de 1280px ela some, para nunca espremer nem cobrir o texto.
+   Para deixá-la em preto e branco, descomente o filter. */
+.lado {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .lado {
+    display: block;
+    position: fixed;
+    top: 50%;
+    /* 50% = centro da janela; 23rem = metade da coluna de texto; 2rem = respiro.
+       Ancorar na borda do conteúdo (e não na da janela) impede que as linhas
+       divisórias das seções cruzem por cima da imagem. */
+    left: calc(50% + 23rem + 2rem);
+    transform: translateY(-50%);
+    width: 200px;
+  }
+  .lado img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    /* filter: grayscale(1); */
+  }
+}
+
 footer {
   margin-top: 4rem;
   padding-top: 1.25rem;
@@ -120,6 +148,10 @@ footer a { color: inherit; }
 </style>
 </head>
 <body>
+
+<figure class="lado">
+  <img src="assets/mascote.jpg" width="400" height="500" alt="Cabeça de fursuit azul e branca, feita à mão, sobre a bancada de trabalho." loading="lazy" decoding="async">
+</figure>
 
 <h1>Fursec</h1>
 <p class="sub">Trilha de cibersegurança com material gratuito · <a href="https://github.com/bunnyiesart/Fursec">repositório</a></p>
