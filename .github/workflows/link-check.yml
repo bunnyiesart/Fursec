@@ -8,6 +8,8 @@ on:
     paths:
       - "**.md"
       - ".lycheeignore"
+      # mudança no próprio verificador precisa ser testada pelo verificador
+      - ".github/workflows/link-check.yml"
   workflow_dispatch:
 
 permissions:
@@ -42,13 +44,40 @@ jobs:
           # --user-agent: sem ele, university.recordedfuture.com devolve 403.
           args: >-
             --no-progress
-            --max-concurrency 8
-            --timeout 30
+            --max-concurrency 5
+            --timeout 45
             --max-retries 3
             --accept 200..=299,307,403,429
             --user-agent "Mozilla/5.0 (compatible; Fursec link-check; +https://github.com/${{ github.repository }})"
             './**/*.md'
           output: lychee-report.md
+          # Não deixa a action derrubar o job: quem decide é o passo abaixo,
+          # que separa link morto de timeout.
+          fail: false
+
+      # Timeout não é link morto — é lentidão de rede, e varia a cada execução
+      # (numa rodada foi o opnsense.org, na seguinte o cl.cam.ac.uk). Derrubar
+      # o check por isso deixa o CI vermelho por acaso, e CI cronicamente
+      # vermelho é CI que ninguém olha. Erro de verdade (404) continua falhando.
+      - name: Falhar só em link morto; avisar em timeout
+        run: |
+          if [ ! -f lychee-report.md ]; then
+            echo "::error::relatório não foi gerado"; exit 1
+          fi
+          conta() { awk -F'|' -v k="$1" '$0 ~ k {gsub(/[^0-9]/,"",$3); print $3; exit}' lychee-report.md; }
+          erros=$(conta 'Errors')
+          timeouts=$(conta 'Timeouts')
+          if [ -z "$erros" ]; then
+            echo "::error::não consegui ler a contagem de erros do relatório"
+            cat lychee-report.md; exit 1
+          fi
+          echo "erros=$erros timeouts=${timeouts:-0}"
+          if [ "${timeouts:-0}" -gt 0 ]; then
+            echo "::warning::${timeouts} link(s) deram timeout. Não derruba o check — confira o relatório se persistir."
+          fi
+          if [ "$erros" -gt 0 ]; then
+            echo "::error::${erros} link(s) quebrado(s)"; exit 1
+          fi
 
       # No agendamento semanal não há PR para reportar: abre/atualiza uma issue.
       - name: Abrir issue quando algo quebrar
