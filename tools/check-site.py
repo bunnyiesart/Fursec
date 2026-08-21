@@ -8,7 +8,10 @@ Aqui o alvo é o que o build pode quebrar sozinho:
 - âncora que aponta para um id inexistente (devolve 200 e leva ao topo em
   silêncio, então nenhum verificador de status pega);
 - página gerada que ninguém alcança a partir do índice. Órfã não aparece
-  para quem navega nem para buscador, e é invisível num teste de links.
+  para quem navega nem para buscador, e é invisível num teste de links;
+- arquivo referenciado por `src=` ou por `url()` dentro de CSS. O url() de
+  uma folha de estilo resolve a partir DELA, não do documento — mover o CSS
+  de lugar quebra a imagem sem quebrar nenhum href.
 
 Uso:
     python3 tools/check-site.py [_site]
@@ -21,6 +24,8 @@ import urllib.parse
 
 HREF = re.compile(r'href="([^"]+)"')
 ID = re.compile(r'id="([^"]+)"')
+SRC = re.compile(r'src="([^"]+)"')
+CSSURL = re.compile(r'url\(\s*["\']?([^"\')]+)["\']?\s*\)')
 
 
 def main():
@@ -55,6 +60,31 @@ def main():
             elif frag and frag not in ids.get(alvo, set()):
                 problemas.append(f"{p}: âncora inexistente -> {href}")
 
+    # Recursos: src= no HTML e url() dentro do CSS. O url() resolve a partir
+    # da folha de estilo, então é fácil quebrar sem perceber ao movê-la.
+    for p in paginas:
+        base = os.path.dirname(p)
+        for src in SRC.findall(open(p, encoding="utf-8").read()):
+            if src.startswith(("http://", "https://", "data:")):
+                continue
+            total += 1
+            alvo = os.path.normpath(os.path.join(base, urllib.parse.unquote(src)))
+            if not os.path.exists(alvo):
+                problemas.append(f"{p}: src inexistente -> {src}")
+
+    for d, _, fs in os.walk(raiz):
+        for f in fs:
+            if not f.endswith(".css"):
+                continue
+            css = os.path.join(d, f)
+            for u in CSSURL.findall(open(css, encoding="utf-8").read()):
+                if u.startswith(("http://", "https://", "data:", "#")):
+                    continue
+                total += 1
+                alvo = os.path.normpath(os.path.join(d, urllib.parse.unquote(u)))
+                if not os.path.exists(alvo):
+                    problemas.append(f"{css}: url() inexistente -> {u}")
+
     # Alcançabilidade: navega a partir do índice e vê o que sobra.
     inicio = os.path.normpath(os.path.join(raiz, "index.html"))
     alcancadas, fila = set(), [inicio]
@@ -77,7 +107,7 @@ def main():
 
     for x in problemas:
         print(f"::error::{x}")
-    print(f"{total} links internos verificados em {len(paginas)} páginas; "
+    print(f"{total} referências internas verificadas em {len(paginas)} páginas; "
           f"{len(alcancadas)} alcançáveis; {len(problemas)} problema(s)")
     return 1 if problemas else 0
 
