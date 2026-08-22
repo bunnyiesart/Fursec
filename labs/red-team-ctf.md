@@ -20,6 +20,8 @@
 | [TryHackMe](https://tryhackme.com/) | 🇺🇸 | 🆓 parcial 🧪 | Salas grátis diárias |
 | [HackerOne CTF](https://ctf.hacker101.com/) | 🇺🇸 | 🆓 🧪 | Leva a convites de bug bounty |
 | [Bugcrowd University](https://www.bugcrowd.com/hackers/bugcrowd-university/) | 🇺🇸 | 🆓 | Currículo de bug bounty, do recon ao report |
+| [exploit.education — Protostar](https://exploit.education/protostar/) | 🇺🇸 | 🆓 🧪 | VMs para aprender buffer overflow, format string e heap sem mitigações modernas |
+| [CTF Aplicativo Web](https://esr.rnp.br/curso/ctf-aplicativo-web/) | 🇧🇷 | 🆓 🧪 | CTF guiado (RNP): IDOR, falhas de autenticação, SSRF |
 
 ---
 

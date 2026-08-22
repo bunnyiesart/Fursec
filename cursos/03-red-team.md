@@ -29,6 +29,9 @@
 | Kali Linux Revealed | [OffSec](https://www.offsec.com/kali-training/) | 🇺🇸 | 🆓 |
 | Bug Bounty — Hacker101 | [hacker101.com](https://www.hacker101.com/) | 🇺🇸 | 🆓 🧪 |
 | PentesterLab — exercícios grátis | [pentesterlab.com](https://pentesterlab.com/) | 🇺🇸 | 🆓 parcial 🧪 |
+| Hacker Ético | [Cisco NetAcad](https://www.netacad.com/pt/courses/ethical-hacker) | 🇧🇷 | 🆓 🎓 |
+| Ethical Hacker | [Cisco NetAcad](https://www.netacad.com/courses/ethical-hacker) | 🇺🇸 | 🆓 🎓 |
+| Intro to Cybersecurity | [pwn.college (Arizona State University)](https://pwn.college/intro-to-cybersecurity/) | 🇺🇸 | 🆓 🧪 |
 
 > 🧪 **Prática:** CTFs, wargames e labs vulneráveis (picoCTF, OverTheWire, HTB, VulnHub) estão em [`labs/red-team-ctf.md`](../labs/red-team-ctf.md).
 

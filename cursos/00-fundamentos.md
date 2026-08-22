@@ -50,6 +50,7 @@
 | Curso de HTML5 e CSS3 (módulo 1) | [Curso em Vídeo](https://www.cursoemvideo.com/curso/html5-css3-modulo1/) | 🇧🇷 | 🆓 🎓 |
 | Java Development / Python Development / Android | [FIAP / Eu Capacito](https://www.eucapacito.com.br/cursos/) | 🇧🇷 | 🆓 🎓 |
 | ⭐ Programação Moderna em C | [Mente Binária](https://www.mentebinaria.com.br/cursos/programa%C3%A7%C3%A3o-moderna-em-c/) | 🇧🇷 | 🆓 🎓 |
+| Hacker Highschool | [ISECOM](https://www.hackerhighschool.org/lessons.html) | 🇺🇸 | 🆓 |
 
 ---
 

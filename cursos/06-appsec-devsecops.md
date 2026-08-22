@@ -31,6 +31,7 @@
 | OWASP Top 10 for LLM Applications | [owasp.org](https://owasp.org/www-project-top-10-for-large-language-model-applications/) | 🇺🇸 | 🆓 |
 | Secure Code Warrior — free tier | [securecodewarrior.com](https://www.securecodewarrior.com/) | 🇺🇸 | 🆓 parcial 🧪 |
 | Snyk Learn | [learn.snyk.io](https://learn.snyk.io/) | 🇺🇸 | 🆓 🧪 |
+| CryptoHack | [cryptohack.org](https://cryptohack.org/courses/) | 🇺🇸 | 🆓 🧪 |
 
 ---
 
