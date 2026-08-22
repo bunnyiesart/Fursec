@@ -15,6 +15,8 @@
 | [bridgecrewio/terragoat](https://github.com/bridgecrewio/terragoat) | IaC / Terraform |
 | [madhuakula/kubernetes-goat](https://github.com/madhuakula/kubernetes-goat) | Kubernetes |
 | [badsectorlabs/ludus](https://github.com/badsectorlabs/ludus) | Automação de lab inteiro |
+| ⭐ [vulhub/vulhub](https://github.com/vulhub/vulhub) | ~1000 ambientes docker-compose para CVEs reais |
+| [OWASP/crAPI](https://github.com/OWASP/crAPI) | API vulnerável (OWASP API Security Top 10) |
 
 ---
 

@@ -19,6 +19,13 @@
 | [paralax/awesome-honeypots](https://github.com/paralax/awesome-honeypots) | Honeypots |
 | [jassics/awesome-aws-security](https://github.com/jassics/awesome-aws-security) | AWS |
 | 🇧🇷 [rodolfomarianocy/Trilha-de-Cursos-Gratuitos-para-InfoSec](https://github.com/rodolfomarianocy/Trilha-de-Cursos-Gratuitos-para-InfoSec) | Trilha PT-BR completa |
+| [cugu/awesome-forensics](https://github.com/cugu/awesome-forensics) | Análise forense digital — cobria a lacuna de DFIR |
+| [jivoi/awesome-osint](https://github.com/jivoi/awesome-osint) | A lista canônica de OSINT |
+| [hslatman/awesome-industrial-control-system-security](https://github.com/hslatman/awesome-industrial-control-system-security) | ICS/OT/SCADA |
+| [magnologan/awesome-k8s-security](https://github.com/magnologan/awesome-k8s-security) | Kubernetes — mantida por brasileiro |
+| [infosecB/awesome-detection-engineering](https://github.com/infosecB/awesome-detection-engineering) | Prática de detection engineering |
+| [decalage2/awesome-security-hardening](https://github.com/decalage2/awesome-security-hardening) | Guias e benchmarks de hardening (CIS, STIG) |
+| [TalEliyahu/awesome-security-newsletters](https://github.com/TalEliyahu/awesome-security-newsletters) | Newsletters de segurança curadas |
 
 ---
 
