@@ -23,6 +23,9 @@
 | Velociraptor DFIR training | [docs.velociraptor.app](https://docs.velociraptor.app/training/) | 🇺🇸 | 🆓 |
 | ⭐ AMO — Análise de Malware Online | [Mente Binária](https://www.mentebinaria.com.br/cursos/) | 🇧🇷 | 🆓 |
 | Resposta a Incidentes | [Escola Virtual Gov / CERT.br](https://www.escolavirtual.gov.br/) | 🇧🇷 | 🆓 🎓 |
+| CyberOps Associate | [Cisco NetAcad](https://www.netacad.com/pt/courses/cyberops-associate) | 🇧🇷 | 🆓 🎓 |
+| CyberOps Associate | [Cisco NetAcad](https://www.netacad.com/courses/cyberops-associate) | 🇺🇸 | 🆓 🎓 |
+| 6.858 Computer Systems Security | [MIT OpenCourseWare](https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/) | 🇺🇸 | 🆓 |
 
 > 🧪 **Prática:** as plataformas de lab blue team (LetsDefend, CyberDefenders, BTLO, Splunk BOTS) estão em [`labs/blue-team.md`](../labs/blue-team.md).
 

@@ -26,6 +26,11 @@
 | SC-900: Security, Compliance & Identity Fundamentals | [Microsoft Learn](https://learn.microsoft.com/training/) | 🇺🇸🇧🇷 | 🆓 |
 | Pre-Security Path | [TryHackMe](https://tryhackme.com/path/outline/presecurity) | 🇺🇸 | 🆓 parcial 🧪 |
 | MITRE ATT&CK Training | [attack.mitre.org](https://attack.mitre.org/resources/training/) | 🇺🇸 | 🆓 |
+| Fundamentos de Cibersegurança | [Cisco NetAcad](https://www.netacad.com/pt/courses/cybersecurity-essentials) | 🇧🇷 | 🆓 🎓 |
+| Cybersecurity Essentials | [Cisco NetAcad](https://www.netacad.com/courses/cybersecurity-essentials) | 🇺🇸 | 🆓 🎓 |
+| Diploma in Cyber Security | [Alison](https://alison.com/course/diploma-in-cyber-security) | 🇺🇸 | 🆓 🎓 |
+| Introduction to Cyber Security: Stay Safe Online | [OpenLearn (Open University)](https://www.open.edu/openlearn/digital-computing/introduction-cyber-security-stay-safe-online/content-section-overview) | 🇺🇸 | 🆓 🎓 |
+| Introduction to Cyber Security | [Great Learning Academy](https://www.mygreatlearning.com/academy/learn-for-free/courses/cyber-security) | 🇺🇸 | 🆓 |
 
 ---
 
