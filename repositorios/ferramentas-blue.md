@@ -19,6 +19,14 @@
 | [telekom-security/tpotce](https://github.com/telekom-security/tpotce) | Honeypot multi-serviço |
 | [cowrie/cowrie](https://github.com/cowrie/cowrie) | Honeypot SSH/Telnet |
 | [gchq/CyberChef](https://github.com/gchq/CyberChef) | Canivete suíço de análise |
+| [zeek/zeek](https://github.com/zeek/zeek) | Framework de monitoramento de tráfego (NSM) |
+| [OISF/suricata](https://github.com/OISF/suricata) | Motor IDS/IPS |
+| [OpenCTI-Platform/opencti](https://github.com/OpenCTI-Platform/opencti) | Plataforma de threat intel (complementa o MISP) |
+| ⭐ [VirusTotal/yara](https://github.com/VirusTotal/yara) | Motor de matching de padrões — base para detecção de malware |
+| [mandiant/capa](https://github.com/mandiant/capa) | Identifica capacidades em executáveis (triagem de malware) |
+| [LOLBAS-Project/LOLBAS](https://github.com/LOLBAS-Project/LOLBAS) | Binários e scripts do Windows usados em living-off-the-land |
+| [GTFOBins/GTFOBins.github.io](https://github.com/GTFOBins/GTFOBins.github.io) | Binários Unix usados em bypass e escalada de privilégio |
+| [osquery/osquery](https://github.com/osquery/osquery) | Telemetria e instrumentação de endpoint via SQL |
 
 ---
 
