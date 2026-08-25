@@ -65,16 +65,16 @@ Separar essas três coisas é o que permite o repositório crescer sem virar bag
 | Pasta | O que é — e o detalhe que importa | Quantidade | Comece por |
 |---|---|---|---|
 | 📍 [`ROADMAP.md`](./ROADMAP.md) | O **quando**. Cinco fases (0 a 4), medidas em **horas, não em datas** — 5h/semana ≈ 30 meses, 20h/semana ≈ 8 meses. Cada fase tem um **teste de saída** objetivo: não é "terminei o curso", é "consigo fazer X sem consultar nada". | 5 fases | Aqui |
-| 📚 [`cursos/`](./cursos/) | O catálogo: oito arquivos, um por área. Todo curso vem marcado com idioma, gratuidade, certificado e prioridade. | **155 cursos** (154 gratuitos) | [Introdução](./cursos/01-introducao-seguranca.md) |
+| 📚 [`cursos/`](./cursos/) | O catálogo: oito arquivos, um por área. Todo curso vem marcado com idioma, gratuidade, certificado e prioridade. | **172 cursos** (171 gratuitos) | [Introdução](./cursos/01-introducao-seguranca.md) |
 | 🧪 [`labs/`](./labs/) | Onde você realmente aprende — **50% do seu tempo deveria estar aqui**, não assistindo aula. Traz o "loop correto" de resolver um lab, cujo passo mais importante é o 4: *refazer do zero no dia seguinte, sem consultar nada*. | **20 plataformas** | [Home lab](./labs/home-lab.md) · [Blue](./labs/blue-team.md) · [Red](./labs/red-team-ctf.md) |
 | 🏗️ [`projetos/`](./projetos/) | O que gera entrevista. P1–P33, cada um com: o que prova, tempo estimado, entregável e repositórios de apoio. `templates/` tem 3 modelos prontos: README de projeto, writeup de CTF e relatório de pentest no formato de consultoria. Começa por [`00-regras.md`](./projetos/00-regras.md): testar sistema de terceiros sem autorização é crime, e publicar isso é red flag, não portfólio. | **33 projetos + 3 templates** | [Regras](./projetos/00-regras.md) — **obrigatório** |
-| 🔧 [`repositorios/`](./repositorios/) | Ferramentas organizadas por **função, não por popularidade**: índices mestres, consulta diária, labs para atacar, blue team, appsec/cloud, e exemplos de portfólio alheio. | **51 repositórios** | [Awesome lists](./repositorios/awesome-lists.md) |
+| 🔧 [`repositorios/`](./repositorios/) | Ferramentas organizadas por **função, não por popularidade**: índices mestres, consulta diária, labs para atacar, blue team, appsec/cloud, e exemplos de portfólio alheio. | **80 repositórios** | [Awesome lists](./repositorios/awesome-lists.md) |
 | 📖 [`livros/`](./livros/) | Gratuitos-EN, gratuitos-PT e pagos, separados. Todo link gratuito é **distribuição autorizada** pelo autor ou instituição. | **45 livros** | [Gratuitos 🇧🇷](./livros/gratuitos-pt.md) |
 | 📄 [`docs/`](./docs/) | O método. [`metodo-de-estudo.md`](./docs/metodo-de-estudo.md) é o arquivo mais importante do repositório: por que vídeo retém ~29% e testar-se retém ~57%, como configurar Anki, e as 7 armadilhas que travam quase todo mundo. | 4 documentos | [Método](./docs/metodo-de-estudo.md) |
 | 🎧 [`recursos/`](./recursos/) | Canais, podcasts e comunidades. | **27 recursos** | [YouTube](./recursos/youtube.md) |
 | 📈 [`progresso/`](./progresso/) | Checklist por fase com campo de data, e um log semanal de 3 minutos. Parece bobo, mas é o que mostra seu ritmo real em vez do ritmo que você imagina ter. | 2 ferramentas | [Checklist](./progresso/checklist.md) |
 
-**Total:** 48 arquivos de conteúdo · 276 links externos · ~17.000 palavras.
+**Total:** 48 arquivos de conteúdo · 324 links externos · ~17.700 palavras.
 
 <sub>**Legenda usada nos catálogos:** 🇧🇷 português · 🇺🇸 inglês · 🆓 gratuito · 💸 pago · 🎓 emite certificado · 🧪 prático · ⭐ prioridade alta · *parcial / tier / audit / Financial Aid* = gratuito com ressalva</sub>
 
