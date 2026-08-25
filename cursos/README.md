@@ -4,7 +4,7 @@
 
 ---
 
-Catálogo com **155 cursos** por área — 154 gratuitos e 1 pago.
+Catálogo com **172 cursos** por área — 171 gratuitos e 1 pago.
 
 <sub>🇧🇷 português · 🇺🇸 inglês · 🆓 gratuito · 💸 pago · 🎓 emite certificado · 🧪 prático · ⭐ prioridade alta · *parcial / tier / audit / Financial Aid* = gratuito com ressalva</sub>
 
