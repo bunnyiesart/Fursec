@@ -1,6 +1,6 @@
-# 🔴 Red Team — Pentest e Segurança Ofensiva
+# Red Team — Pentest e Segurança Ofensiva
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -33,8 +33,8 @@
 | Ethical Hacker | [Cisco NetAcad](https://www.netacad.com/courses/ethical-hacker) | 🇺🇸 | 🆓 🎓 |
 | Intro to Cybersecurity | [pwn.college (Arizona State University)](https://pwn.college/intro-to-cybersecurity/) | 🇺🇸 | 🆓 🧪 |
 
-> 🧪 **Prática:** CTFs, wargames e labs vulneráveis (picoCTF, OverTheWire, HTB, VulnHub) estão em [`labs/red-team-ctf.md`](../labs/red-team-ctf.md).
+> **Prática:** CTFs, wargames e labs vulneráveis (picoCTF, OverTheWire, HTB, VulnHub) estão em [`labs/red-team-ctf.md`](../labs/red-team-ctf.md).
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

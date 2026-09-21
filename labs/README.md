@@ -1,10 +1,10 @@
-# 🧪 Labs e Plataformas Práticas
+# Labs e Plataformas Práticas
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
-Onde você realmente aprende. **50% do seu tempo de estudo deve estar aqui.**
+Onde você aprende. **50% do seu tempo de estudo deve estar aqui.**
 
 | Arquivo | Conteúdo |
 |---|---|
@@ -27,4 +27,4 @@ O **passo 4** é o que separa quem aprendeu de quem copiou.
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

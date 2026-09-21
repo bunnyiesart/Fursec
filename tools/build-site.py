@@ -105,7 +105,7 @@ LAYOUT = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{titulo} — Fursec</title>
 <meta name="description" content="{desc}">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>&#129418;</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><style>path{{fill:%2316171a}}@media(prefers-color-scheme:dark){{path{{fill:%23e7e8ea}}}}</style><path d='M8 14.6c-3.9 0-6.1-3-6.1-6.2V1.9l3.6 2.7A9 9 0 0 1 8 4.3c.9 0 1.7.1 2.5.3L14.1 1.9v6.5c0 3.2-2.2 6.2-6.1 6.2zm-2.2-6.9a.85.85 0 1 0 0 1.7.85.85 0 0 0 0-1.7zm4.4 0a.85.85 0 1 0 0 1.7.85.85 0 0 0 0-1.7zM8 10.8l-1.1 1.1h2.2z'/></svg>">
 <link rel="stylesheet" href="{subir}assets/site.css">
 </head>
 <body>

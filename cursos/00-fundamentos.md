@@ -1,6 +1,6 @@
-# 🧱 Fundamentos — TI, Redes e Programação
+# Fundamentos — TI, Redes e Programação
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -54,4 +54,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

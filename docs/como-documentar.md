@@ -1,6 +1,6 @@
-# 📝 Como Documentar (o que vira portfólio)
+# Como Documentar (o que vira portfólio)
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -52,4 +52,4 @@ As duas seções que quase todo mundo pula — e que são exatamente as que impr
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

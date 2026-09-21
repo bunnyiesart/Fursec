@@ -1,6 +1,6 @@
-# 📕 Livros Pagos que Valem o Investimento
+# Livros Pagos que Valem o Investimento
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -36,4 +36,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

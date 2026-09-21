@@ -1,6 +1,6 @@
-# 🎧 Recursos Contínuos
+# Recursos Contínuos
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -13,4 +13,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

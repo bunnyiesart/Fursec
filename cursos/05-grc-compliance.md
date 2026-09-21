@@ -1,6 +1,6 @@
-# 📋 GRC, Compliance e LGPD
+# GRC, Compliance e LGPD
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -29,4 +29,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

@@ -1,6 +1,6 @@
-# 📺 Canais de YouTube
+# Canais de YouTube
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -19,7 +19,7 @@
 |---|---|
 | [Professor Messer](https://www.youtube.com/@professormesser) | Security+ / Network+ completo |
 | [John Hammond](https://www.youtube.com/@_JohnHammond) | CTF, malware, ofensivo |
-| [IppSec](https://www.youtube.com/@ippsec) | Walkthroughs HTB — ouro puro |
+| [IppSec](https://www.youtube.com/@ippsec) | Walkthroughs de máquinas do HTB, passo a passo |
 | [TCM Security / The Cyber Mentor](https://www.youtube.com/@TCMSecurityAcademy) | Cursos completos grátis, pentest prático |
 | [LiveOverflow](https://www.youtube.com/@LiveOverflow) | Binary exploitation, pesquisa |
 | [NetworkChuck](https://www.youtube.com/@NetworkChuck) | Redes e entrada na área |
@@ -30,4 +30,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

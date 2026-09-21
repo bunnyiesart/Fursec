@@ -1,6 +1,6 @@
-# 📋 Projetos GRC (P25–P30)
+# Projetos GRC (P25–P30)
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -34,4 +34,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

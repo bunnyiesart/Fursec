@@ -25,3 +25,8 @@ __pycache__/
 
 # Site gerado pelo build (tools/build-site.py)
 _site/
+
+# Artefatos locais do Impeccable: capturas de revisão e log da página
+# de decisão. O que fica versionado é o contrato e o design system.
+.impeccable/review/
+.impeccable/questions/

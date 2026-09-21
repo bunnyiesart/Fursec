@@ -1,6 +1,6 @@
-# 📗 Livros e Materiais Gratuitos — 🇧🇷 Português
+# Livros e Materiais Gratuitos — 🇧🇷 Português
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -16,4 +16,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

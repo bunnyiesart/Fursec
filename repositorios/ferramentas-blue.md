@@ -1,6 +1,6 @@
-# 🔵 Ferramentas Blue Team
+# Ferramentas Blue Team
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -30,4 +30,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

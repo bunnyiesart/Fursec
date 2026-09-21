@@ -1,6 +1,6 @@
-# 🎯 Labs Vulneráveis (ambientes para atacar)
+# Labs Vulneráveis (ambientes para atacar)
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -20,4 +20,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

@@ -1,6 +1,6 @@
-# 🔴 Projetos Red Team (P13–P19)
+# Projetos Red Team (P13–P19)
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -43,4 +43,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

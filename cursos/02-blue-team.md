@@ -1,6 +1,6 @@
-# 🔵 Blue Team — SOC, DFIR e Detecção
+# Blue Team — SOC, DFIR e Detecção
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -27,8 +27,8 @@
 | CyberOps Associate | [Cisco NetAcad](https://www.netacad.com/courses/cyberops-associate) | 🇺🇸 | 🆓 🎓 |
 | 6.858 Computer Systems Security | [MIT OpenCourseWare](https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/) | 🇺🇸 | 🆓 |
 
-> 🧪 **Prática:** as plataformas de lab blue team (LetsDefend, CyberDefenders, BTLO, Splunk BOTS) estão em [`labs/blue-team.md`](../labs/blue-team.md).
+> **Prática:** as plataformas de lab blue team (LetsDefend, CyberDefenders, BTLO, Splunk BOTS) estão em [`labs/blue-team.md`](../labs/blue-team.md).
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

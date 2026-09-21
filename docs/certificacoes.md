@@ -1,10 +1,10 @@
-# 🎓 Certificações — Gratuitas e Pagas
+# Certificações — Gratuitas e Pagas
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
-## 🆓 Faixa gratuita — credencial de verdade, sem pagar nada
+## Faixa gratuita — credencial de verdade, sem pagar nada
 
 Estas dão uma credencial ou badge real e verificável sem custo:
 
@@ -20,11 +20,11 @@ Estas dão uma credencial ou badge real e verificável sem custo:
 | Google Cybersecurity Certificate | Coursera | 25h+ | **Gratuito via Financial Aid** — solicite, espere ~15 dias; a aprovação é comum |
 | Certificados de trilha da TryHackMe | TryHackMe | varia | As salas gratuitas geram certificado de conclusão |
 
-⚠️ **Acabou:** o programa gratuito do **ISC2 CC** (curso + exame) **encerrou em 20 de maio de 2026**, depois de atingir 1 milhão de inscritos. Códigos já emitidos e não expirados valem até 31/12/2026, mas as novas inscrições estão fechadas — o CC agora é exame pago. **Não siga roadmaps antigos que ainda listam o CC como gratuito.**
+**Acabou:** o programa gratuito do **ISC2 CC** (curso + exame) **encerrou em 20 de maio de 2026**, depois de atingir 1 milhão de inscritos. Códigos já emitidos e não expirados valem até 31/12/2026, mas as novas inscrições estão fechadas — o CC agora é exame pago. **Não siga roadmaps antigos que ainda listam o CC como gratuito.**
 
 ---
 
-## 💳 Faixa paga — quando realmente vale gastar
+## Faixa paga — quando vale gastar
 
 A ordem importa. Compre **nesta sequência**, e só quando o gatilho for atingido.
 
@@ -49,4 +49,4 @@ A ordem importa. Compre **nesta sequência**, e só quando o gatilho for atingid
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

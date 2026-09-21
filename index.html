@@ -4,235 +4,300 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fursec — índice</title>
-<meta name="description" content="Índice de navegação do Fursec: trilha de cibersegurança com material gratuito.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🦊</text></svg>">
+<meta name="description" content="Índice de navegação do Fursec: trilha de cibersegurança com material gratuito. 172 cursos, 33 projetos, 80 repositórios, 45 livros.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><style>path{fill:%2316171a}@media(prefers-color-scheme:dark){path{fill:%23e7e8ea}}</style><path d='M8 14.6c-3.9 0-6.1-3-6.1-6.2V1.9l3.6 2.7A9 9 0 0 1 8 4.3c.9 0 1.7.1 2.5.3L14.1 1.9v6.5c0 3.2-2.2 6.2-6.1 6.2zm-2.2-6.9a.85.85 0 1 0 0 1.7.85.85 0 0 0 0-1.7zm4.4 0a.85.85 0 1 0 0 1.7.85.85 0 0 0 0-1.7zM8 10.8l-1.1 1.1h2.2z'/></svg>">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body class="inicio">
 
-<h1>Fursec</h1>
-<p class="sub">Trilha de cibersegurança com material gratuito · <a href="https://github.com/bunnyiesart/Fursec">repositório</a></p>
+<header class="topo">
+  <h1>Fursec</h1>
+  <p class="sub">Trilha de cibersegurança com material gratuito.</p>
+  <a class="repo" href="https://github.com/bunnyiesart/Fursec">github.com/bunnyiesart/Fursec</a>
+</header>
 
-<input id="f" type="search" placeholder="Filtrar…" autocomplete="off" aria-label="Filtrar itens">
-<p class="vazio" id="vazio">Nada encontrado.</p>
+<div class="busca" id="busca">
+  <svg class="lupa" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+    <circle cx="6.5" cy="6.5" r="4.25"/><path d="M9.7 9.7 13 13"/>
+  </svg>
+  <input id="f" type="search" placeholder="Filtrar por título, descrição ou seção…" autocomplete="off" aria-label="Filtrar o catálogo" aria-describedby="conta">
+  <span class="atalho" aria-hidden="true">/</span>
+  <output class="conta" id="conta" for="f"></output>
+</div>
+<p class="vazio" id="vazio"></p>
 
-<section class="start">
-  <h2>Comece aqui</h2>
-  <ul>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md">Método de estudo</a><span>Como estudar para reter. Leia antes de tudo.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md">Roadmap</a><span>Cinco fases medidas em horas, não em datas.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/trilha-pt-br.md">Trilha só em português</a><span>A trilha inteira, do zero, sem inglês.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md">Checklist</a><span>Marque o que concluiu, com data.</span></li>
-  </ul>
-</section>
+<main class="caixas">
 
-<section>
-  <h2>Roadmap</h2>
-  <ul>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#como-ler-este-roadmap">Como ler este roadmap</a><span>Converter horas em tempo de calendário no seu ritmo.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-0--fundamentos-70h">Fase 0 — Fundamentos (~70h)</a><span>Redes, Linux, Windows, primeiro home lab.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-1--núcleo-de-segurança-110h">Fase 1 — Núcleo de segurança (~110h)</a><span>Comum às quatro trilhas. Não se especialize ainda.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-2--a-bifurcação-prática-por-trilha-120h-cada">Fase 2 — A bifurcação: prática por trilha (~120h cada)</a><span>Escolha uma trilha e faça em sequência.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-3--profundidade-e-prova-150h">Fase 3 — Profundidade e prova (~150h)</a><span>Especializa e torna visível. É a fase que contrata.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-4--pronto-para-o-mercado-100h-contínuo">Fase 4 — Pronto para o mercado (~100h, contínuo)</a><span>Currículo, entrevista, contribuição.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#ordem-sequencial-condensada">Ordem sequencial condensada</a><span>A lista única, sem pensar muito.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#próximos-passos">Próximos passos</a><span>Para onde ir depois de cada fase.</span></li>
-  </ul>
-</section>
+  <section class="caixa caixa--banda caixa--inicio">
+    <h2>Comece aqui</h2>
+    <p class="quant"><b>4</b> <span>passos, nesta ordem</span></p>
+    <ul>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md">Método de estudo</a><span>Como estudar para reter. Leia antes de começar.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md">Roadmap</a><span>Cinco fases, medidas em horas de estudo.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/docs/trilha-pt-br.md">Trilha só em português</a><span>A trilha inteira, do zero, sem inglês.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md">Checklist</a><span>Marque o que concluiu, com data.</span></li>
+    </ul>
+  </section>
 
-<section>
-  <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/README.md">Cursos</a></h2>
-  <ul>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/00-fundamentos.md">Fundamentos</a><span>TI, redes, sistemas e programação.</span>
-      <ul class="sec">
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/00-fundamentos.md#redes--networking">Redes / Networking</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/00-fundamentos.md#programação--programming">Programação / Programming</a></li>
-      </ul>
-    </li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/01-introducao-seguranca.md">Introdução à segurança</a><span>A porta de entrada.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/02-blue-team.md">Blue team</a><span>SOC, SIEM, DFIR, detecção.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/03-red-team.md">Red team</a><span>Pentest, web hacking, mobile.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/04-cloud-security.md">Cloud security</a><span>AWS, Azure, GCP, Kubernetes.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/05-grc-compliance.md">GRC e compliance</a><span>NIST, ISO, CIS Controls, LGPD.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/06-appsec-devsecops.md">AppSec e DevSecOps</a><span>OWASP, API, pipeline seguro, IA.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/07-malware-re-intel.md">Malware e engenharia reversa</a><span>Purple team, RE, threat intel.</span></li>
-  </ul>
-</section>
+  <section class="caixa caixa--larga">
+    <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/README.md">Cursos</a></h2>
+    <p class="quant"><b>172</b> <span>cursos · 171 gratuitos</span></p>
+    <ul>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/00-fundamentos.md">Fundamentos</a><span>TI, redes, sistemas e programação.</span>
+        <details>
+          <summary>2 seções</summary>
+          <ul class="sec">
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/00-fundamentos.md#redes--networking">Redes / Networking</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/00-fundamentos.md#programação--programming">Programação / Programming</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/01-introducao-seguranca.md">Introdução à segurança</a><span>A porta de entrada.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/02-blue-team.md">Blue team</a><span>SOC, SIEM, DFIR, detecção.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/03-red-team.md">Red team</a><span>Pentest, web hacking, mobile.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/04-cloud-security.md">Cloud security</a><span>AWS, Azure, GCP, Kubernetes.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/05-grc-compliance.md">GRC e compliance</a><span>NIST, ISO, CIS Controls, LGPD.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/06-appsec-devsecops.md">AppSec e DevSecOps</a><span>OWASP, API, pipeline seguro, IA.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/cursos/07-malware-re-intel.md">Malware e engenharia reversa</a><span>Purple team, RE, threat intel.</span></li>
+    </ul>
+  </section>
 
-<section>
-  <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/README.md">Labs</a></h2>
-  <ul>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md">Home lab barato</a><span>Do R$ 0 ao mini servidor dedicado.</span>
-      <ul class="sec">
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#escolha-seu-nível">Escolha seu nível</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#-nível-0--custo-zero-comece-aqui">🆓 Nível 0 — Custo zero (comece aqui)</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#️-nível-05--nuvem-gratuita-complemento-ao-nível-0">☁️ Nível 0.5 — Nuvem gratuita (complemento ao nível 0)</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#-nível-1--mini-pc-usado-o-melhor-custo-benefício">💻 Nível 1 — Mini PC usado (o melhor custo-benefício)</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#-nível-2--upgrades-por-ordem-de-impacto">🔧 Nível 2 — Upgrades por ordem de impacto</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#-o-salto-mini-servidor-para-cenários-realistas">🏢 O salto: mini servidor para cenários realistas</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#-topologias-prontas-por-trilha">🌐 Topologias prontas por trilha</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#-segurança-do-lab-não-pule-esta-parte">🔒 Segurança do lab (não pule esta parte)</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#-custo-total-na-real">💸 Custo total, na real</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#-os-7-erros-mais-comuns">❌ Os 7 erros mais comuns</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#-próximos-passos">✅ Próximos passos</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#fontes">Fontes</a></li>
-      </ul>
-    </li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/blue-team.md">Plataformas blue team</a><span>LetsDefend, CyberDefenders, BTLO.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/red-team-ctf.md">CTFs e wargames</a><span>picoCTF, OverTheWire, HTB, VulnHub.</span></li>
-  </ul>
-</section>
+  <section class="caixa caixa--larga">
+    <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/repositorios/README.md">Repositórios</a></h2>
+    <p class="quant"><b>80</b> <span>repositórios</span></p>
+    <ul>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/repositorios/awesome-lists.md">Awesome lists</a><span>Os índices mestres.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/repositorios/conhecimento.md">Consulta diária</a><span>HackTricks, PayloadsAllTheThings, SecLists.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/repositorios/labs-vulneraveis.md">Labs vulneráveis</a><span>GOAD, CloudGoat, Juice Shop.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/repositorios/ferramentas-blue.md">Ferramentas blue team</a><span>Wazuh, Sigma, Velociraptor, MISP.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/repositorios/ferramentas-appsec-cloud.md">Ferramentas AppSec e cloud</a><span>Semgrep, Trivy, Prowler, Checkov.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/repositorios/exemplos-portfolio.md">Referências de portfólio</a><span>Como outras pessoas organizam o deles.</span></li>
+    </ul>
+  </section>
 
-<section>
-  <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/README.md">Projetos</a></h2>
-  <ul>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/00-regras.md">Regras de ética</a><span>Obrigatório antes de qualquer projeto.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/01-fundamentais.md">P1–P4 fundamentais</a><span>Home lab, ferramentas em Python, hardening.</span>
-      <ul class="sec">
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/01-fundamentais.md#️-p1--home-lab-documentado">🏗️ P1 — Home Lab documentado</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/01-fundamentais.md#-p2--analisador-de-força-de-senha-python">🔑 P2 — Analisador de força de senha (Python)</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/01-fundamentais.md#-p3--parser-de-logs-em-linha-de-comando">📊 P3 — Parser de logs em linha de comando</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/01-fundamentais.md#-p4--hardening-baseline-aplicado">🔒 P4 — Hardening baseline aplicado</a></li>
-      </ul>
-    </li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md">P5–P12 blue team</a><span>SIEM, detecção, honeypot, forense.</span>
-      <ul class="sec">
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p5--siem-próprio-com-wazuh">P5 — SIEM próprio com Wazuh</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p6--lab-de-detecção-ataque--detecção">P6 — Lab de detecção: ataque → detecção</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p7--pacote-de-regras-sigma-e-contribua-upstream">P7 — Pacote de regras Sigma (e contribua upstream)</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p8--honeypot-com-relatório-de-30-dias">P8 — Honeypot com relatório de 30 dias</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p9--análise-de-phishing-série-de-writeups">P9 — Análise de phishing (série de writeups)</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p10--playbook-de-resposta-a-incidentes--tabletop">P10 — Playbook de resposta a incidentes + tabletop</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p11--forense-de-memória">P11 — Forense de memória</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p12--relatório-de-threat-intel-sobre-um-grupo-apt">P12 — Relatório de threat intel sobre um grupo APT</a></li>
-      </ul>
-    </li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md">P13–P19 red team</a><span>Relatório de pentest, recon, AD, bug bounty.</span>
-      <ul class="sec">
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md#p13--relatório-de-pentest-profissional">P13 — Relatório de pentest profissional</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md#p14--ferramenta-de-automação-de-recon">P14 — Ferramenta de automação de recon</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md#p15--pentest-completo-do-owasp-juice-shop">P15 — Pentest completo do OWASP Juice Shop</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md#p16--attack-path-em-active-directory">P16 — Attack path em Active Directory</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md#p17--lab-de-quebra-de-senhas">P17 — Lab de quebra de senhas</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md#p18--primeiro-report-válido-de-bug-bounty">P18 — Primeiro report válido de bug bounty</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md#p19--pentest-de-aplicação-mobile">P19 — Pentest de aplicação mobile</a></li>
-      </ul>
-    </li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/04-cloud.md">P20–P24 cloud</a><span>IaC seguro, CloudTrail, auditoria, Kubernetes.</span>
-      <ul class="sec">
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/04-cloud.md#p20--baseline-seguro-em-terraform">P20 — Baseline seguro em Terraform</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/04-cloud.md#p21--flawscloud-com-plano-de-remediação">P21 — flaws.cloud com plano de remediação</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/04-cloud.md#p22--detecção-em-cloudtrail">P22 — Detecção em CloudTrail</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/04-cloud.md#p23--auditoria-multi-cloud-automatizada">P23 — Auditoria multi-cloud automatizada</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/04-cloud.md#p24--hardening-de-kubernetes">P24 — Hardening de Kubernetes</a></li>
-      </ul>
-    </li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/05-grc.md">P25–P30 GRC</a><span>Políticas, NIST CSF, risco, LGPD.</span>
-      <ul class="sec">
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/05-grc.md#p25--conjunto-completo-de-políticas-sgsi-fictício">P25 — Conjunto completo de políticas (SGSI fictício)</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/05-grc.md#p26--gap-assessment-nist-csf-20">P26 — Gap assessment NIST CSF 2.0</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/05-grc.md#p27--registro-de-riscos--metodologia">P27 — Registro de riscos + metodologia</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/05-grc.md#p28--programa-lgpd-completo-">P28 — Programa LGPD completo 🇧🇷</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/05-grc.md#p29--programa-de-gestão-de-fornecedores">P29 — Programa de gestão de fornecedores</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/05-grc.md#p30--implementação-de-cis-controls-ig1">P30 — Implementação de CIS Controls IG1</a></li>
-      </ul>
-    </li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/06-appsec.md">P31–P33 AppSec</a><span>Threat model, pipeline, code review.</span>
-      <ul class="sec">
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/06-appsec.md#p31--threat-model-de-um-projeto-open-source">P31 — Threat model de um projeto open source</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/06-appsec.md#p32--pipeline-cicd-com-segurança-embutida">P32 — Pipeline CI/CD com segurança embutida</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/06-appsec.md#p33--code-review-de-segurança-com-pr-real">P33 — Code review de segurança com PR real</a></li>
-      </ul>
-    </li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/README.md#-templates-prontos">Templates</a><span>README de projeto, writeup de CTF, relatório.</span></li>
-  </ul>
-</section>
+  <section class="caixa caixa--estreita">
+    <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/livros/README.md">Livros</a></h2>
+    <p class="quant"><b>45</b> <span>títulos e coleções</span></p>
+    <ul>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/livros/gratuitos-pt.md">Gratuitos em português</a><span>Distribuição autorizada, nada pirata.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/livros/gratuitos-en.md">Gratuitos em inglês</a><span>Security Engineering, CyBOK, OWASP.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/livros/pagos.md">Pagos que valem</a><span>Quando comprar e em que fase ler.</span></li>
+    </ul>
+  </section>
 
-<section>
-  <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/repositorios/README.md">Repositórios</a></h2>
-  <ul>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/repositorios/awesome-lists.md">Awesome lists</a><span>Os índices mestres.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/repositorios/conhecimento.md">Consulta diária</a><span>HackTricks, PayloadsAllTheThings, SecLists.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/repositorios/labs-vulneraveis.md">Labs vulneráveis</a><span>GOAD, CloudGoat, Juice Shop.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/repositorios/ferramentas-blue.md">Ferramentas blue team</a><span>Wazuh, Sigma, Velociraptor, MISP.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/repositorios/ferramentas-appsec-cloud.md">Ferramentas AppSec e cloud</a><span>Semgrep, Trivy, Prowler, Checkov.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/repositorios/exemplos-portfolio.md">Referências de portfólio</a><span>Como outras pessoas organizam o deles.</span></li>
-  </ul>
-</section>
+  <section class="caixa caixa--larga">
+    <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/README.md">Projetos</a></h2>
+    <p class="quant"><b>33</b> <span>projetos · 3 templates</span></p>
+    <ul>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/00-regras.md">Regras de ética</a><span>Obrigatório antes de qualquer projeto.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/01-fundamentais.md">P1–P4 fundamentais</a><span>Home lab, ferramentas em Python, hardening.</span>
+        <details>
+          <summary>4 seções</summary>
+          <ul class="sec">
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/01-fundamentais.md#p1--home-lab-documentado">P1 — Home Lab documentado</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/01-fundamentais.md#p2--analisador-de-força-de-senha-python">P2 — Analisador de força de senha (Python)</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/01-fundamentais.md#p3--parser-de-logs-em-linha-de-comando">P3 — Parser de logs em linha de comando</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/01-fundamentais.md#p4--hardening-baseline-aplicado">P4 — Hardening baseline aplicado</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md">P5–P12 blue team</a><span>SIEM, detecção, honeypot, forense.</span>
+        <details>
+          <summary>8 seções</summary>
+          <ul class="sec">
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p5--siem-próprio-com-wazuh">P5 — SIEM próprio com Wazuh</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p6--lab-de-detecção-ataque--detecção">P6 — Lab de detecção: ataque → detecção</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p7--pacote-de-regras-sigma-e-contribua-upstream">P7 — Pacote de regras Sigma</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p8--honeypot-com-relatório-de-30-dias">P8 — Honeypot com relatório de 30 dias</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p9--análise-de-phishing-série-de-writeups">P9 — Análise de phishing</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p10--playbook-de-resposta-a-incidentes--tabletop">P10 — Playbook de resposta a incidentes</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p11--forense-de-memória">P11 — Forense de memória</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/02-blue-team.md#p12--relatório-de-threat-intel-sobre-um-grupo-apt">P12 — Threat intel sobre um grupo APT</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md">P13–P19 red team</a><span>Relatório de pentest, recon, AD, bug bounty.</span>
+        <details>
+          <summary>7 seções</summary>
+          <ul class="sec">
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md#p13--relatório-de-pentest-profissional">P13 — Relatório de pentest profissional</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md#p14--ferramenta-de-automação-de-recon">P14 — Ferramenta de automação de recon</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md#p15--pentest-completo-do-owasp-juice-shop">P15 — Pentest do OWASP Juice Shop</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md#p16--attack-path-em-active-directory">P16 — Attack path em Active Directory</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md#p17--lab-de-quebra-de-senhas">P17 — Lab de quebra de senhas</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md#p18--primeiro-report-válido-de-bug-bounty">P18 — Primeiro report válido de bug bounty</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/03-red-team.md#p19--pentest-de-aplicação-mobile">P19 — Pentest de aplicação mobile</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/04-cloud.md">P20–P24 cloud</a><span>IaC seguro, CloudTrail, auditoria, Kubernetes.</span>
+        <details>
+          <summary>5 seções</summary>
+          <ul class="sec">
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/04-cloud.md#p20--baseline-seguro-em-terraform">P20 — Baseline seguro em Terraform</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/04-cloud.md#p21--flawscloud-com-plano-de-remediação">P21 — flaws.cloud com plano de remediação</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/04-cloud.md#p22--detecção-em-cloudtrail">P22 — Detecção em CloudTrail</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/04-cloud.md#p23--auditoria-multi-cloud-automatizada">P23 — Auditoria multi-cloud automatizada</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/04-cloud.md#p24--hardening-de-kubernetes">P24 — Hardening de Kubernetes</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/05-grc.md">P25–P30 GRC</a><span>Políticas, NIST CSF, risco, LGPD.</span>
+        <details>
+          <summary>6 seções</summary>
+          <ul class="sec">
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/05-grc.md#p25--conjunto-completo-de-políticas-sgsi-fictício">P25 — Conjunto completo de políticas</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/05-grc.md#p26--gap-assessment-nist-csf-20">P26 — Gap assessment NIST CSF 2.0</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/05-grc.md#p27--registro-de-riscos--metodologia">P27 — Registro de riscos + metodologia</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/05-grc.md#p28--programa-lgpd-completo-">P28 — Programa LGPD completo 🇧🇷</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/05-grc.md#p29--programa-de-gestão-de-fornecedores">P29 — Gestão de fornecedores</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/05-grc.md#p30--implementação-de-cis-controls-ig1">P30 — CIS Controls IG1</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/06-appsec.md">P31–P33 AppSec</a><span>Threat model, pipeline, code review.</span>
+        <details>
+          <summary>3 seções</summary>
+          <ul class="sec">
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/06-appsec.md#p31--threat-model-de-um-projeto-open-source">P31 — Threat model de projeto open source</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/06-appsec.md#p32--pipeline-cicd-com-segurança-embutida">P32 — Pipeline CI/CD com segurança embutida</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/06-appsec.md#p33--code-review-de-segurança-com-pr-real">P33 — Code review de segurança com PR real</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/README.md#templates-prontos">Templates</a><span>README de projeto, writeup de CTF, relatório de pentest.</span></li>
+    </ul>
+  </section>
 
-<section>
-  <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/livros/README.md">Livros</a></h2>
-  <ul>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/livros/gratuitos-pt.md">Gratuitos em português</a><span>Distribuição autorizada, nada pirata.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/livros/gratuitos-en.md">Gratuitos em inglês</a><span>Security Engineering, CyBOK, OWASP.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/livros/pagos.md">Pagos que valem</a><span>Quando comprar e em que fase ler.</span></li>
-  </ul>
-</section>
+  <section class="caixa caixa--estreita">
+    <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/recursos/README.md">Recursos</a></h2>
+    <p class="quant"><b>26</b> <span>canais, podcasts e comunidades</span></p>
+    <ul>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/recursos/youtube.md">Canais de YouTube</a><span>Brasileiros e internacionais.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/recursos/podcasts-comunidades.md">Podcasts e comunidades</a><span>Newsletters, eventos, fóruns.</span></li>
+    </ul>
+  </section>
 
-<section>
-  <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/README.md">Documentação</a></h2>
-  <ul>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md">Método de estudo</a><span>Active recall, Anki, as 7 armadilhas.</span>
-      <ul class="sec">
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#o-método-das-3-camadas">O método das 3 camadas</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#spaced-repetition-anki--configuração-para-segurança">Spaced repetition (Anki) — configuração para segurança</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#sistema-de-notas">Sistema de notas</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#ritmo-semanal">Ritmo semanal</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#as-7-armadilhas-todas-comuns-todas-evitáveis">As 7 armadilhas (todas comuns, todas evitáveis)</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#como-estudar-para-prova-de-certificação">Como estudar para prova de certificação</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#como-estudar-um-lab--ctf-o-loop-correto">Como estudar um lab / CTF (o loop correto)</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#regra-dos-30-dias">Regra dos 30 dias</a></li>
-      </ul>
-    </li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/como-documentar.md">Como documentar</a><span>Transformar lab em portfólio.</span>
-      <ul class="sec">
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/como-documentar.md#os-templates">Os templates</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/como-documentar.md#checklist-antes-de-publicar">Checklist antes de publicar</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/como-documentar.md#ritmo-de-publicação">Ritmo de publicação</a></li>
-      </ul>
-    </li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/certificacoes.md">Certificações</a><span>O que é grátis e em que ordem comprar exame.</span>
-      <ul class="sec">
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/certificacoes.md#-faixa-gratuita--credencial-de-verdade-sem-pagar-nada">🆓 Faixa gratuita — credencial de verdade, sem pagar nada</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/certificacoes.md#-faixa-paga--quando-realmente-vale-gastar">💳 Faixa paga — quando realmente vale gastar</a></li>
-      </ul>
-    </li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/trilha-pt-br.md">Trilha em português</a><span>Só material PT-BR, do zero.</span>
-      <ul class="sec">
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/trilha-pt-br.md#fase-1--fundamentos-">Fase 1 — Fundamentos 🇧🇷</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/trilha-pt-br.md#fase-2--segurança-base-">Fase 2 — Segurança base 🇧🇷</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/trilha-pt-br.md#fase-3--escolha-a-trilha-">Fase 3 — Escolha a trilha 🇧🇷</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/trilha-pt-br.md#leitura-">Leitura 🇧🇷</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/trilha-pt-br.md#aviso-honesto">Aviso honesto</a></li>
-      </ul>
-    </li>
-  </ul>
-</section>
+  <section class="caixa caixa--banda caixa--roadmap">
+    <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md">Roadmap</a></h2>
+    <p class="quant"><b>5</b> <span>fases, medidas em horas de estudo</span></p>
+    <ul class="fases">
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-0--fundamentos-70h">Fase 0 — Fundamentos</a><span>~70h · Redes, Linux, Windows.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-1--núcleo-de-segurança-110h">Fase 1 — Núcleo de segurança</a><span>~110h · Comum a todas as trilhas.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-2--a-bifurcação-prática-por-trilha-120h-cada">Fase 2 — A bifurcação: prática por trilha</a><span>~120h por trilha · Escolha uma.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-3--profundidade-e-prova-150h">Fase 3 — Profundidade e prova</a><span>~150h · Especialização e portfólio.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-4--pronto-para-o-mercado-100h-contínuo">Fase 4 — Pronto para o mercado</a><span>~100h · Currículo e entrevista.</span></li>
+    </ul>
+    <ul class="apoio">
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#como-ler-este-roadmap">Como ler este roadmap</a><span>Como converter horas em calendário no seu ritmo.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#ordem-sequencial-condensada">Ordem sequencial condensada</a><span>A lista única, em ordem.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#próximos-passos">Próximos passos</a><span>Para onde ir depois de cada fase.</span></li>
+    </ul>
+  </section>
 
-<section>
-  <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/recursos/README.md">Recursos</a></h2>
-  <ul>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/recursos/youtube.md">Canais de YouTube</a><span>Brasileiros e internacionais.</span></li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/recursos/podcasts-comunidades.md">Podcasts e comunidades</a><span>Newsletters, eventos, fóruns.</span></li>
-  </ul>
-</section>
+  <section class="caixa caixa--estreita">
+    <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/README.md">Labs</a></h2>
+    <p class="quant"><b>22</b> <span>plataformas</span></p>
+    <ul>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md">Home lab barato</a><span>Do R$ 0 ao mini servidor dedicado.</span>
+        <details>
+          <summary>12 seções</summary>
+          <ul class="sec">
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#escolha-seu-nível">Escolha seu nível</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#nível-0--custo-zero-comece-aqui">Nível 0 — Custo zero</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#nível-05--nuvem-gratuita-complemento-ao-nível-0">Nível 0.5 — Nuvem gratuita</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#nível-1--mini-pc-usado-o-melhor-custo-benefício">Nível 1 — Mini PC usado</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#nível-2--upgrades-por-ordem-de-impacto">Nível 2 — Upgrades por impacto</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#o-salto-mini-servidor-para-cenários-realistas">O salto: mini servidor dedicado</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#topologias-prontas-por-trilha">Topologias prontas por trilha</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#segurança-do-lab-não-pule-esta-parte">Segurança do lab</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#custo-total">Custo total</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#os-7-erros-mais-comuns">Os 7 erros mais comuns</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#próximos-passos">Próximos passos</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/labs/home-lab.md#fontes">Fontes</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/labs/blue-team.md">Plataformas blue team</a><span>LetsDefend, CyberDefenders, BTLO.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/labs/red-team-ctf.md">CTFs e wargames</a><span>picoCTF, OverTheWire, HTB, VulnHub.</span></li>
+    </ul>
+  </section>
 
-<section>
-  <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/README.md">Progresso</a></h2>
-  <ul>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md">Checklist</a><span>Por fase, com campo de data.</span>
-      <ul class="sec">
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md#fase-0--fundamentos">Fase 0 — Fundamentos</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md#fase-1--núcleo-de-segurança">Fase 1 — Núcleo de segurança</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md#fase-2--trilha-primária-______________">Fase 2 — Trilha primária: ______________</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md#fase-2b--trilha-secundária-______________">Fase 2b — Trilha secundária: ______________</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md#fase-3--profundidade-e-prova">Fase 3 — Profundidade e prova</a></li>
-        <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md#fase-4--pronto-para-o-mercado">Fase 4 — Pronto para o mercado</a></li>
-      </ul>
-    </li>
-    <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/log-semanal.md">Log semanal</a><span>Três minutos por semana.</span></li>
-  </ul>
-</section>
+  <section class="caixa caixa--estreita">
+    <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/README.md">Documentação</a></h2>
+    <p class="quant"><b>4</b> <span>documentos de método</span></p>
+    <ul>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md">Método de estudo</a><span>Active recall, Anki, as 7 armadilhas.</span>
+        <details>
+          <summary>8 seções</summary>
+          <ul class="sec">
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#o-método-das-3-camadas">O método das 3 camadas</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#spaced-repetition-anki--configuração-para-segurança">Spaced repetition (Anki)</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#sistema-de-notas">Sistema de notas</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#ritmo-semanal">Ritmo semanal</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#as-7-armadilhas-todas-comuns-todas-evitáveis">As 7 armadilhas</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#como-estudar-para-prova-de-certificação">Como estudar para prova de certificação</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#como-estudar-um-lab--ctf-o-loop-correto">Como estudar um lab / CTF</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/metodo-de-estudo.md#regra-dos-30-dias">Regra dos 30 dias</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/docs/como-documentar.md">Como documentar</a><span>Transformar lab em portfólio.</span>
+        <details>
+          <summary>3 seções</summary>
+          <ul class="sec">
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/como-documentar.md#os-templates">Os templates</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/como-documentar.md#checklist-antes-de-publicar">Checklist antes de publicar</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/como-documentar.md#ritmo-de-publicação">Ritmo de publicação</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/docs/certificacoes.md">Certificações</a><span>O que é grátis e em que ordem comprar exame.</span>
+        <details>
+          <summary>2 seções</summary>
+          <ul class="sec">
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/certificacoes.md#faixa-gratuita--credencial-de-verdade-sem-pagar-nada">Faixa gratuita</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/certificacoes.md#faixa-paga--quando-vale-gastar">Faixa paga</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/docs/trilha-pt-br.md">Trilha em português</a><span>Só material PT-BR, do zero.</span>
+        <details>
+          <summary>5 seções</summary>
+          <ul class="sec">
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/trilha-pt-br.md#fase-1--fundamentos-">Fase 1 — Fundamentos</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/trilha-pt-br.md#fase-2--segurança-base-">Fase 2 — Segurança base</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/trilha-pt-br.md#fase-3--escolha-a-trilha-">Fase 3 — Escolha a trilha</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/trilha-pt-br.md#leitura-">Leitura</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/docs/trilha-pt-br.md#aviso-honesto">Aviso honesto</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </section>
+
+  <section class="caixa caixa--estreita">
+    <h2><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/README.md">Progresso</a></h2>
+    <p class="quant"><b>2</b> <span>ferramentas de acompanhamento</span></p>
+    <ul>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md">Checklist</a><span>Por fase, com campo de data.</span>
+        <details>
+          <summary>6 seções</summary>
+          <ul class="sec">
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md#fase-0--fundamentos">Fase 0 — Fundamentos</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md#fase-1--núcleo-de-segurança">Fase 1 — Núcleo de segurança</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md#fase-2--trilha-primária-______________">Fase 2 — Trilha primária</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md#fase-2b--trilha-secundária-______________">Fase 2b — Trilha secundária</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md#fase-3--profundidade-e-prova">Fase 3 — Profundidade e prova</a></li>
+            <li><a href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/checklist.md#fase-4--pronto-para-o-mercado">Fase 4 — Pronto para o mercado</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/progresso/log-semanal.md">Log semanal</a><span>Três minutos por semana.</span></li>
+    </ul>
+  </section>
+
+</main>
 
 <footer>
   <a href="https://github.com/bunnyiesart/Fursec">github.com/bunnyiesart/Fursec</a> ·
@@ -264,21 +329,60 @@
 })();
 </script>
 
-<!-- Filtro. Apague este script e o <input id="f"> lá em cima se não quiser. -->
+<!-- Filtro. Apague este script e a <div class="busca"> lá em cima se não quiser. -->
 <script>
-const campo = document.getElementById('f');
-// só os itens de primeiro nível; o texto deles já inclui o das seções filhas,
-// então buscar por uma seção faz o arquivo que a contém aparecer
-const itens = [...document.querySelectorAll('section > ul > li')];
-const vazio = document.getElementById('vazio');
-campo.addEventListener('input', () => {
-  const q = campo.value.trim().toLowerCase();
-  itens.forEach(li => li.hidden = q && !li.textContent.toLowerCase().includes(q));
-  document.querySelectorAll('section').forEach(s => {
-    s.hidden = ![...s.querySelectorAll(':scope > ul > li')].some(li => !li.hidden);
+(() => {
+  const campo  = document.getElementById('f');
+  const conta  = document.getElementById('conta');
+  const vazio  = document.getElementById('vazio');
+  const caixaBusca = document.getElementById('busca');
+  const caixas = [...document.querySelectorAll('.caixa')];
+  // Só os itens de primeiro nível. O texto deles já inclui o das seções
+  // filhas, então buscar por uma seção faz aparecer o arquivo que a contém.
+  const itens  = [...document.querySelectorAll('.caixa > ul > li')];
+  // Uma leitura só do DOM, no carregamento: o texto não muda depois.
+  const texto  = new Map(itens.map(li => [li, li.textContent.toLowerCase()]));
+
+  const plural = (n, um, muitos) => `${n} ${n === 1 ? um : muitos}`;
+
+  const aplicar = () => {
+    const q = campo.value.trim().toLowerCase();
+    let visiveis = 0;
+
+    for (const li of itens) {
+      const casa = !q || texto.get(li).includes(q);
+      li.hidden = !casa;
+      if (casa) visiveis++;
+      // Com busca ativa, abre o <details> cujo conteúdo casa — senão o
+      // resultado fica escondido atrás de um resumo fechado.
+      const det = li.querySelector('details');
+      if (det) det.open = Boolean(q) && casa && det.textContent.toLowerCase().includes(q);
+    }
+
+    for (const cx of caixas) {
+      cx.hidden = ![...cx.querySelectorAll(':scope > ul > li')].some(li => !li.hidden);
+    }
+
+    const total = plural(itens.length, 'entrada', 'entradas');
+    conta.value = q ? `${visiveis} de ${total}` : `${total} no índice`;
+    caixaBusca.classList.toggle('tem-texto', Boolean(q));
+
+    // O estado vazio diz o que foi buscado, o que o filtro lê e a saída.
+    vazio.textContent = visiveis ? '' : `Nada encontrado para “${campo.value.trim()}”. O filtro lê título, descrição e nome de seção — Esc limpa.`;
+    vazio.style.display = visiveis ? 'none' : 'block';
+  };
+
+  campo.addEventListener('input', aplicar);
+  aplicar();   // escreve a contagem inicial; nada de número fixo no HTML
+
+  // "/" foca a busca, como em quase todo catálogo. Esc limpa.
+  addEventListener('keydown', e => {
+    if (e.key === '/' && e.target !== campo) { e.preventDefault(); campo.focus(); }
+    else if (e.key === 'Escape' && e.target === campo && campo.value) {
+      campo.value = ''; aplicar();
+    }
   });
-  vazio.style.display = itens.every(li => li.hidden) ? 'block' : 'none';
-});
+})();
 </script>
 
 </body>

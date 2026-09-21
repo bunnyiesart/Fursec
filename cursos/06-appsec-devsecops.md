@@ -1,6 +1,6 @@
-# 🛡️ AppSec, DevSecOps e Segurança de API
+# AppSec, DevSecOps e Segurança de API
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -35,4 +35,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

@@ -1,6 +1,6 @@
-# 🏠 Home Lab Barato — Guia Completo
+# Home Lab Barato — Guia Completo
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -9,19 +9,19 @@ O home lab é o **projeto P1** e a base de todo o resto. A boa notícia: dá par
 ---
 
 <details>
-<summary><b>📑 Índice</b> — guia longo; use isto para pular direto</summary>
+<summary><b>Índice</b> — guia longo; use isto para pular direto</summary>
 
 - [Escolha seu nível — comparativo custo × capacidade](#niveis)
-- [🆓 Nível 0 — custo zero (comece aqui)](#nivel-0)
-- [☁️ Nível 0.5 — nuvem gratuita](#nivel-05)
-- [💻 Nível 1 — mini PC usado](#nivel-1)
-- [🔧 Nível 2 — upgrades por ordem de impacto](#nivel-2)
-- [🏢 Nível 3 — mini servidor dedicado](#nivel-3)
-- [🌐 Topologias prontas por trilha (red · blue · AD · malware)](#topologias)
-- [🔒 Segurança do lab — **não pule**](#seguranca)
-- [💸 Custo total, na real](#custos)
-- [❌ Os 7 erros mais comuns](#erros)
-- [✅ Próximos passos](#proximos-passos)
+- [Nível 0 — custo zero (comece aqui)](#nivel-0)
+- [Nível 0.5 — nuvem gratuita](#nivel-05)
+- [Nível 1 — mini PC usado](#nivel-1)
+- [Nível 2 — upgrades por ordem de impacto](#nivel-2)
+- [Nível 3 — mini servidor dedicado](#nivel-3)
+- [Topologias prontas por trilha (red · blue · AD · malware)](#topologias)
+- [Segurança do lab — **não pule**](#seguranca)
+- [Custo total](#custos)
+- [Os 7 erros mais comuns](#erros)
+- [Próximos passos](#proximos-passos)
 - [Fontes](#fontes)
 
 </details>
@@ -46,7 +46,7 @@ O home lab é o **projeto P1** e a base de todo o resto. A boa notícia: dá par
 
 <a id="nivel-0"></a>
 
-## 🆓 Nível 0 — Custo zero (comece aqui)
+## Nível 0 — Custo zero (comece aqui)
 
 ### O que você precisa
 
@@ -130,7 +130,7 @@ Reserve **sempre** 4 GB para o seu sistema hospedeiro. O que sobra é o seu lab:
 
 <a id="nivel-05"></a>
 
-## ☁️ Nível 0.5 — Nuvem gratuita (complemento ao nível 0)
+## Nível 0.5 — Nuvem gratuita (complemento ao nível 0)
 
 Serve para o que precisa ficar **ligado 24/7** e você não quer deixar o notebook aceso: honeypot, servidor de C2 de laboratório, coletor de logs.
 
@@ -152,7 +152,7 @@ Serve para o que precisa ficar **ligado 24/7** e você não quer deixar o notebo
 
 <a id="nivel-1"></a>
 
-## 💻 Nível 1 — Mini PC usado (o melhor custo-benefício)
+## Nível 1 — Mini PC usado (o melhor custo-benefício)
 
 Quando o notebook começar a engasgar, o caminho mais barato **não é montar um PC** — é comprar um desktop corporativo usado da linha "tiny/micro/mini". São máquinas que custaram ~US$ 900 novas e hoje saem por **US$ 80–180**.
 
@@ -173,10 +173,10 @@ Quando o notebook começar a engasgar, o caminho mais barato **não é montar um
 
 ### O que NÃO comprar
 
-- ❌ **Servidor de rack antigo** (Dell R710 e similares). Parece tentador pelo preço, mas faz barulho de aspirador, consome 200W+ e a conta de luz supera o preço do mini PC em poucos meses.
-- ❌ **Raspberry Pi como host principal.** É ARM — muita imagem de lab (Windows, Metasploitable, boa parte das VMs de segurança) simplesmente não roda. Serve como alvo ou honeypot, não como hypervisor.
-- ❌ **Máquina com menos de 8 GB e sem slot para expandir.**
-- ❌ **CPU anterior à 6ª geração Intel** — falta suporte de virtualização moderno.
+- **Servidor de rack antigo** (Dell R710 e similares). Parece tentador pelo preço, mas faz barulho de aspirador, consome 200W+ e a conta de luz supera o preço do mini PC em poucos meses.
+- **Raspberry Pi como host principal.** É ARM — muita imagem de lab (Windows, Metasploitable, boa parte das VMs de segurança) não roda. Serve como alvo ou honeypot, não como hypervisor.
+- **Máquina com menos de 8 GB e sem slot para expandir.**
+- **CPU anterior à 6ª geração Intel** — falta suporte de virtualização moderno.
 
 ### Onde procurar no Brasil
 
@@ -196,7 +196,7 @@ Ao comprar, confirme: geração da CPU, quantidade de RAM, se acompanha SSD e se
 
 <a id="nivel-2"></a>
 
-## 🔧 Nível 2 — Upgrades por ordem de impacto
+## Nível 2 — Upgrades por ordem de impacto
 
 1. **RAM 16 → 32 GB** (~US$ 30–60 em DDR4 SO-DIMM usada). **É sempre o melhor upgrade.** Destrava GOAD, Security Onion e análise de malware.
 2. **SSD NVMe** — se o lab está lento, geralmente é disco, não CPU.
@@ -207,7 +207,7 @@ Ao comprar, confirme: geração da CPU, quantidade de RAM, se acompanha SSD e se
 
 <a id="nivel-3"></a>
 
-## 🏢 O salto: mini servidor para cenários realistas
+## O salto: mini servidor para cenários realistas
 
 Os níveis anteriores resolvem estudo pontual — subir um Kali, quebrar um alvo, desligar. Mas existe um teto: **VM isolada não é ambiente real.** Empresa de verdade tem domínio, segmentação, vários hosts conversando e log acumulando há semanas. Nada disso cabe num lab que você liga por duas horas e desliga.
 
@@ -298,9 +298,9 @@ Infra como código também **vira projeto de portfólio** — o repositório com
 
 <a id="topologias"></a>
 
-## 🌐 Topologias prontas por trilha
+## Topologias prontas por trilha
 
-### 🔴 Red Team — o lab mínimo (roda em 8 GB)
+### Red Team — o lab mínimo (roda em 8 GB)
 
 ```
 [ Kali Linux 2GB ] ──┐
@@ -311,7 +311,7 @@ Infra como código também **vira projeto de portfólio** — o repositório com
 
 Cobre: recon, exploração, web hacking, privilege escalation em Linux.
 
-### 🔵 Blue Team — SIEM (precisa de 16 GB)
+### Blue Team — SIEM (precisa de 16 GB)
 
 ```
 [ Wazuh all-in-one 4GB ] ←── logs ──┬── [ Windows 10 + agente 4GB ]
@@ -321,7 +321,7 @@ Cobre: recon, exploração, web hacking, privilege escalation em Linux.
 
 Cobre: coleta de log, regras de detecção, triagem, projeto P5 e P6.
 
-### 🏢 Active Directory (precisa de 16 GB, ideal 32 GB)
+### Active Directory (precisa de 16 GB, ideal 32 GB)
 
 ```
 [ Windows Server DC 4GB ]
@@ -331,7 +331,7 @@ Cobre: coleta de log, regras de detecção, triagem, projeto P5 e P6.
 
 Para o [GOAD](https://github.com/Orange-Cyberdefense/GOAD) completo, planeje 32 GB. Existe a variante **GOAD-Light**, que roda em 16 GB.
 
-### 🦠 Análise de malware (isolamento obrigatório)
+### Análise de malware (isolamento obrigatório)
 
 ```
 [ Windows 10 (snapshot limpo) ] ── rede: NENHUMA ou host-only isolada
@@ -344,7 +344,7 @@ Para o [GOAD](https://github.com/Orange-Cyberdefense/GOAD) completo, planeje 32 
 
 <a id="seguranca"></a>
 
-## 🔒 Segurança do lab (não pule esta parte)
+## Segurança do lab (não pule esta parte)
 
 O maior risco de um home lab não é alguém te invadir — é **você mesmo infectar sua rede de casa**.
 
@@ -381,7 +381,7 @@ Sem snapshot, cada erro custa uma reinstalação. Com snapshot, custa 10 segundo
 
 <a id="custos"></a>
 
-## 💸 Custo total, na real
+## Custo total
 
 | Cenário | Investimento |
 |---|---|
@@ -398,7 +398,7 @@ Sem snapshot, cada erro custa uma reinstalação. Com snapshot, custa 10 segundo
 
 <a id="erros"></a>
 
-## ❌ Os 7 erros mais comuns
+## Os 7 erros mais comuns
 
 | Erro | Consequência | Correção |
 |---|---|---|
@@ -414,7 +414,7 @@ Sem snapshot, cada erro custa uma reinstalação. Com snapshot, custa 10 segundo
 
 <a id="proximos-passos"></a>
 
-## ✅ Próximos passos
+## Próximos passos
 
 Com o lab de pé, você já pode fazer:
 
@@ -437,4 +437,4 @@ Com o lab de pé, você já pode fazer:
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

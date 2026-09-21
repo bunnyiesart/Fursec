@@ -66,7 +66,7 @@ Por isso o [`.lycheeignore`](.lycheeignore) é curto: ele é só para host genui
 
 Se você criar ou editar um arquivo `.md`:
 
-- Começa com um `# H1` e um `[⬅️ Voltar ao índice](../README.md)` logo abaixo
+- Começa com um `# H1` e um `[← Voltar ao índice](../README.md)` logo abaixo
 - Termina com `---`, linha em branco, e o mesmo link de volta
 - Réguas horizontais (`---`) sempre com linha em branco antes e depois
 - Uma linha em branco no fim do arquivo, nunca duas

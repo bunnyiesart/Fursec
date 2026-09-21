@@ -1,6 +1,6 @@
-# 🧪 Labs e Ranges — Blue Team
+# Labs e Ranges — Blue Team
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -19,4 +19,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

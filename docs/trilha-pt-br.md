@@ -1,6 +1,6 @@
 # 🇧🇷 Trilha Brasileira — só conteúdo em português
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -59,4 +59,4 @@ O conteúdo avançado da área é majoritariamente em inglês. Esta trilha te le
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

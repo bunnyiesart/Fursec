@@ -1,12 +1,12 @@
-# 🏗️ Projetos de Portfólio
+# Projetos de Portfólio
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
 33 projetos que provam habilidade real. **Um projeto documentado vale mais que três certificados básicos.**
 
-> ⚠️ **Leia primeiro:** [`00-regras.md`](./00-regras.md) — ética, legalidade e o que nunca publicar.
+> **Leia primeiro:** [`00-regras.md`](./00-regras.md) — ética, legalidade e o que nunca publicar.
 
 | Arquivo | Projetos | Foco |
 |---|---|---|
@@ -18,7 +18,7 @@
 | [05-grc.md](./05-grc.md) | P25–P30 | Políticas, NIST CSF, risco, **LGPD**, CIS |
 | [06-appsec.md](./06-appsec.md) | P31–P33 | Threat model, pipeline seguro, code review |
 
-## 📄 Templates prontos
+## Templates prontos
 
 | Template | Quando usar |
 |---|---|
@@ -37,4 +37,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

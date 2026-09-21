@@ -1,6 +1,6 @@
-# ⭐ Awesome Lists — os índices mestres
+# Awesome Lists — os índices mestres
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -29,4 +29,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

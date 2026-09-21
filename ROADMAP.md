@@ -1,6 +1,6 @@
-# 🗺️ Roadmap — Fursec
+# Roadmap — Fursec
 
-[⬅️ Voltar ao índice](./README.md)
+[← Voltar ao índice](./README.md)
 
 > O **quando**. Fases medidas em horas de estudo, não em datas.
 > Catálogo completo do que existe: [`cursos/`](./cursos/) · Certificações: [`docs/certificacoes.md`](./docs/certificacoes.md)
@@ -66,7 +66,7 @@ Tudo aqui é comum às quatro trilhas. **Não se especialize ainda.**
 
 Escolha **uma** trilha principal agora. Se todas te interessam, tudo bem — mas faça **em sequência**, não em paralelo. Ordem que eu recomendo: **Blue Team → Cloud → Red Team → GRC** (blue team contrata mais rápido, cloud paga melhor, red team é a entrada mais concorrida, e GRC premia experiência que você ainda não tem).
 
-### 🔵 2A — Blue Team / Analista de SOC (~120h)
+### 2A — Blue Team / Analista de SOC (~120h)
 
 | O que | Onde | Horas | Gratuito? |
 |---|---|---|---|
@@ -76,7 +76,7 @@ Escolha **uma** trilha principal agora. Se todas te interessam, tudo bem — mas
 | Desafios de DFIR / blue team | [CyberDefenders](https://cyberdefenders.org/) — labs gratuitos generosos | 20 | ✅ Tier grátis |
 | Profundidade de investigação | [Blue Team Labs Online](https://blueteamlabs.online/) — desafios gratuitos | 15 | ✅ Parcial |
 
-### 🔴 2B — Red Team / Pentest (~120h)
+### 2B — Red Team / Pentest (~120h)
 
 | O que | Onde | Horas | Gratuito? |
 |---|---|---|---|
@@ -86,7 +86,7 @@ Escolha **uma** trilha principal agora. Se todas te interessam, tudo bem — mas
 | Hacking ético prático | [TCM Security no YouTube](https://www.youtube.com/@TCMSecurityAcademy) — cursos completos | 15 | ✅ Grátis |
 | Músculo de CTF | [picoCTF](https://picoctf.org/) | 10 | ✅ Grátis |
 
-### ☁️ 2C — Cloud Security (~120h)
+### 2C — Cloud Security (~120h)
 
 | O que | Onde | Horas | Gratuito? |
 |---|---|---|---|
@@ -96,7 +96,7 @@ Escolha **uma** trilha principal agora. Se todas te interessam, tudo bem — mas
 | Prática de ataque/defesa em nuvem | [flaws.cloud](http://flaws.cloud/) + [flaws2.cloud](http://flaws2.cloud/) + [CloudGoat](https://github.com/RhinoSecurityLabs/cloudgoat) | 20 | ✅ Grátis |
 | Segurança de IaC e contêineres | [Kubernetes Goat](https://madhuakula.com/kubernetes-goat/) | 10 | ✅ Grátis |
 
-### 📋 2D — GRC / Compliance (~90h)
+### 2D — GRC / Compliance (~90h)
 
 | O que | Onde | Horas | Gratuito? |
 |---|---|---|---|
@@ -119,7 +119,7 @@ Agora você se especializa *e* torna isso visível. Divida mais ou menos 60/40 e
 | 3.3 | **Escreva** — 6 a 10 posts ou writeups no GitHub documentando labs, CTFs e detecções que você construiu | 30 |
 | 3.4 | Segunda trilha da Fase 2 (amplitude) | 20 |
 
-**É esta fase que realmente te contrata.** Certificado passa pelo RH; os writeups de lab passam pela entrevista técnica.
+Certificado passa pelo RH; os writeups de lab passam pela entrevista técnica.
 
 ---
 
@@ -136,7 +136,7 @@ Agora você se especializa *e* torna isso visível. Divida mais ou menos 60/40 e
 
 ## Ordem sequencial condensada
 
-Se você quiser apenas **uma lista sequencial** sem pensar muito:
+Se você quiser apenas **uma lista sequencial**:
 
 1. Cisco *Introdução à Cibersegurança* 🇧🇷 → 2. Cisco *Conceitos Básicos de Redes* 🇧🇷 → 3. Fundação Bradesco *Segurança em TI* 🇧🇷 → 4. CC50/CS50 → 5. TCM *Linux 100* → 6. Fortinet FCF+FCA → 7. Professor Messer Security+ 🇺🇸 → 8. Google Cybersecurity Certificate → 9. **ESCOLHA A TRILHA** → 10a. Blue: THM SOC L1 + Splunk + LetsDefend + CyberDefenders · 10b. Red: PortSwigger + Solyd Intro + THM Jr Pentester + picoCTF · 10c. Cloud: SC-200 + AWS Skill Builder + flaws.cloud · 10d. GRC: LGPD EV.gov + CIS Controls + NIST CSF → 11. Home lab + writeups → 12. Certificação paga (ver [`docs/certificacoes.md`](./docs/certificacoes.md)).
 
@@ -152,4 +152,4 @@ Se você quiser apenas **uma lista sequencial** sem pensar muito:
 
 ---
 
-[⬅️ Voltar ao índice](./README.md)
+[← Voltar ao índice](./README.md)
