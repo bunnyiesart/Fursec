@@ -87,8 +87,8 @@ h1 {
   flex: 0 0 100%;
   margin: 0 0 1rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: clamp(5.5px, 2.3vw, 11px);
-  line-height: 1.25;
+  font-size: clamp(5.5px, 2.2vw, 11px);
+  line-height: 1;
   color: var(--fg);
   white-space: pre;
   overflow: hidden;

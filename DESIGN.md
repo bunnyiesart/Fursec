@@ -61,9 +61,9 @@ typography:
     letterSpacing: "normal"
   arte:
     fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
-    fontSize: "clamp(5.5px, 2.3vw, 11px)"
+    fontSize: "clamp(5.5px, 2.2vw, 11px)"
     fontWeight: 400
-    lineHeight: 1.25
+    lineHeight: 1
     letterSpacing: "normal"
   prompt:
     fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
