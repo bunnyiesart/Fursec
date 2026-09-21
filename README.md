@@ -70,6 +70,7 @@ Separar essas três coisas é o que permite o repositório crescer sem virar bag
 | [`projetos/`](./projetos/) | O que gera entrevista. P1–P33, cada um com: o que prova, tempo estimado, entregável e repositórios de apoio. `templates/` tem 3 modelos prontos: README de projeto, writeup de CTF e relatório de pentest no formato de consultoria. Começa por [`00-regras.md`](./projetos/00-regras.md): testar sistema de terceiros sem autorização é crime, e publicar isso é red flag, não portfólio. | **33 projetos + 3 templates** | [Regras](./projetos/00-regras.md) — **obrigatório** |
 | [`repositorios/`](./repositorios/) | Ferramentas organizadas por **função, não por popularidade**: índices mestres, consulta diária, labs para atacar, blue team, appsec/cloud, e exemplos de portfólio alheio. | **80 repositórios** | [Awesome lists](./repositorios/awesome-lists.md) |
 | [`livros/`](./livros/) | Gratuitos-EN, gratuitos-PT e pagos, separados. Todo link gratuito é **distribuição autorizada** pelo autor ou instituição. | **45 livros** | [Gratuitos 🇧🇷](./livros/gratuitos-pt.md) |
+| [`trilhas/`](./trilhas/) | Uma página por especialização: o que a função faz, o caminho em ordem, o teste de saída e o que perguntam em entrevista. É o outro eixo do repositório — por trilha, em vez de por tipo de material. | 6 trilhas | [Blue Team](./trilhas/blue-team.md) |
 | [`docs/`](./docs/) | O método. [`metodo-de-estudo.md`](./docs/metodo-de-estudo.md) é o arquivo mais importante do repositório: por que vídeo retém ~29% e testar-se retém ~57%, como configurar Anki, e as 7 armadilhas que travam quase todo mundo. | 6 documentos | [Método](./docs/metodo-de-estudo.md) |
 | [`recursos/`](./recursos/) | Canais, podcasts e comunidades. | **26 recursos** | [YouTube](./recursos/youtube.md) |
 | [`progresso/`](./progresso/) | Checklist por fase com campo de data, e um log semanal de 3 minutos. Mostra seu ritmo real em vez do ritmo que você imagina ter. | 2 ferramentas | [Checklist](./progresso/checklist.md) |
@@ -84,14 +85,14 @@ Separar essas três coisas é o que permite o repositório crescer sem virar bag
 
 Escolha **uma** por vez. Os fundamentos são ~70% comuns entre elas.
 
-| Trilha | Cursos | Labs | Projetos | Boa para |
-|---|---|---|---|---|
-| 🔵 **Blue Team / SOC** | [ver](./cursos/02-blue-team.md) | [ver](./labs/blue-team.md) | [P5–P12](./projetos/02-blue-team.md) | Quem quer contratar rápido |
-| 🔴 **Red Team / Pentest** | [ver](./cursos/03-red-team.md) | [ver](./labs/red-team-ctf.md) | [P13–P19](./projetos/03-red-team.md) | Quem gosta de quebrar coisas |
-| ☁️ **Cloud Security** | [ver](./cursos/04-cloud-security.md) | — | [P20–P24](./projetos/04-cloud.md) | Melhor salário |
-| 📋 **GRC / LGPD** | [ver](./cursos/05-grc-compliance.md) | — | [P25–P30](./projetos/05-grc.md) | Menos concorrência, sem lab |
-| 🛡️ **AppSec** | [ver](./cursos/06-appsec-devsecops.md) | — | [P31–P33](./projetos/06-appsec.md) | Quem já programa |
-| 🟣 **Malware / RE** | [ver](./cursos/07-malware-re-intel.md) | — | P11, P12 | Quem curte baixo nível |
+| Trilha | Página | Cursos | Labs | Projetos | Boa para |
+|---|---|---|---|---|---|
+| 🔵 **Blue Team / SOC** | [trilha](./trilhas/blue-team.md) | [ver](./cursos/02-blue-team.md) | [ver](./labs/blue-team.md) | [P5–P12](./projetos/02-blue-team.md) | Quem quer contratar rápido |
+| 🔴 **Red Team / Pentest** | [trilha](./trilhas/red-team.md) | [ver](./cursos/03-red-team.md) | [ver](./labs/red-team-ctf.md) | [P13–P19](./projetos/03-red-team.md) | Quem gosta de quebrar coisas |
+| ☁️ **Cloud Security** | [trilha](./trilhas/cloud.md) | [ver](./cursos/04-cloud-security.md) | — | [P20–P24](./projetos/04-cloud.md) | Melhor salário |
+| 📋 **GRC / LGPD** | [trilha](./trilhas/grc.md) | [ver](./cursos/05-grc-compliance.md) | — | [P25–P30](./projetos/05-grc.md) | Menos concorrência, sem lab |
+| 🛡️ **AppSec** | [trilha](./trilhas/appsec.md) | [ver](./cursos/06-appsec-devsecops.md) | — | [P31–P33](./projetos/06-appsec.md) | Quem já programa |
+| 🟣 **Malware / RE** | [trilha](./trilhas/malware-re.md) | [ver](./cursos/07-malware-re-intel.md) | — | P11, P12 | Quem curte baixo nível |
 
 **Ordem sugerida se todas interessam:** Blue Team → Cloud → Red Team → GRC.
 
