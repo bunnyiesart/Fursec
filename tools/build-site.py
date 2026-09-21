@@ -25,15 +25,22 @@ REPO = os.environ.get("GITHUB_REPOSITORY", "bunnyiesart/Fursec")
 API = f"https://api.github.com/repos/{REPO}/contents/"
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Não vira página: o índice do site já cumpre esse papel.
-IGNORAR = {"README.md"}
+# Não vira página: o índice do site já cumpre esse papel, e os artefatos de
+# desenvolvimento (verdade de produto, design system, contrato de direção) são
+# documentação do repositório, não conteúdo do site. Sem esta exclusão o build
+# gera página para eles e o check-site acusa órfã, porque o índice — com razão
+# — não linka nenhum deles.
+IGNORAR = {"README.md", "PRODUCT.md", "DESIGN.md"}
+
+# Pastas cujo .md nunca vira página.
+FORA = (".github/", ".impeccable/")
 
 
 def versionados():
     saida = subprocess.run(["git", "-C", RAIZ, "ls-files", "*.md"],
                            capture_output=True, text=True, check=True).stdout
     return sorted(f for f in saida.split()
-                  if not f.startswith(".github/") and f not in IGNORAR)
+                  if not f.startswith(FORA) and f not in IGNORAR)
 
 
 def render(caminho, token):
