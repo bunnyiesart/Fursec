@@ -15,7 +15,7 @@
 | Offensive Security Operations | [Cybrary](https://app.cybrary.it/browse/course/offensive-security-operations) | 🇺🇸 | 🆓 🎓 |
 | HTB Academy — módulos Tier 0 grátis | [HTB Academy](https://academy.hackthebox.com/) | 🇺🇸 | 🆓 parcial 🧪 |
 | Practical Ethical Hacking (aulas no YouTube) | [TCM Security](https://www.youtube.com/@TCMSecurityAcademy) | 🇺🇸 | 🆓 |
-| Getting Started in API Pen-Testing | [APIsec University](https://au.apisec.ai/courses/) | 🇺🇸 | 🆓 🎓 |
+| Getting Started in API Pen-Testing | [APIsec University](https://au.apisec.ai/courses/getting-started-in-api-pen-testing) | 🇺🇸 | 🆓 🎓 |
 | API Penetration Testing | [APIsec University](https://au.apisec.ai/courses/api-penetration-testing) | 🇺🇸 | 🆓 🎓 |
 | Android Application Security / Pentest | [Mobile Hacking Lab](https://www.mobilehackinglab.com/course/free-android-application-security-course) | 🇺🇸 | 🆓 🎓 |
 | iOS Application Security / Pentest | [Mobile Hacking Lab](https://www.mobilehackinglab.com/course/free-ios-application-security-course) | 🇺🇸 | 🆓 🎓 |
