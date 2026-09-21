@@ -2,7 +2,7 @@
 
 > Template — copie para o seu repositório de projeto.
 
-[⬅️ Voltar aos projetos](../README.md)
+[← Voltar aos projetos](../README.md)
 
 ---
 
@@ -11,10 +11,10 @@
 ![status](https://img.shields.io/badge/status-concluído-brightgreen)
 ![area](https://img.shields.io/badge/área-blue--team-blue)
 
-## 🎯 Problema
+## Problema
 Que situação real isso resolve ou simula. Contexto de negócio, não só técnico.
 
-## 🧰 Ambiente
+## Ambiente
 | Componente | Versão / Detalhe |
 |---|---|
 | SO | |
@@ -23,17 +23,17 @@ Que situação real isso resolve ou simula. Contexto de negócio, não só técn
 
 <!-- Insira aqui o diagrama de rede -->
 
-## 🔬 Metodologia
+## Metodologia
 Passo a passo do que foi feito e **por quê** cada escolha.
 
 1.
 2.
 3.
 
-## 📊 Resultados
+## Resultados
 Achados, alertas gerados, evidências. Screenshots com dados anonimizados.
 
-## 🛠️ Remediação / Recomendações
+## Remediação / Recomendações
 O que você faria para corrigir, priorizado por risco.
 **Esta é a seção que mais impressiona recrutador. Não pule.**
 
@@ -41,14 +41,14 @@ O que você faria para corrigir, priorizado por risco.
 |---|---|---|
 | | | |
 
-## 🧱 Problemas encontrados
+## Problemas encontrados
 O que quebrou e como você resolveu. Mostra raciocínio real, não roteiro decorado.
 
-## 💡 O que eu aprendi
+## O que eu aprendi
 Honesto e específico — inclusive o que faria diferente numa próxima vez.
 
-## 🔗 Referências
+## Referências
 
 ---
 
-[⬅️ Voltar aos projetos](../README.md)
+[← Voltar aos projetos](../README.md)

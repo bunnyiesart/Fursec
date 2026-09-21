@@ -1,6 +1,6 @@
-# 🧪 Labs, CTFs e Wargames — Red Team
+# Labs, CTFs e Wargames — Red Team
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -25,4 +25,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

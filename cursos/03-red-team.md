@@ -1,6 +1,6 @@
-# 🔴 Red Team — Pentest e Segurança Ofensiva
+# Red Team — Pentest e Segurança Ofensiva
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -15,7 +15,7 @@
 | Offensive Security Operations | [Cybrary](https://app.cybrary.it/browse/course/offensive-security-operations) | 🇺🇸 | 🆓 🎓 |
 | HTB Academy — módulos Tier 0 grátis | [HTB Academy](https://academy.hackthebox.com/) | 🇺🇸 | 🆓 parcial 🧪 |
 | Practical Ethical Hacking (aulas no YouTube) | [TCM Security](https://www.youtube.com/@TCMSecurityAcademy) | 🇺🇸 | 🆓 |
-| Getting Started in API Pen-Testing | [APIsec University](https://au.apisec.ai/courses/) | 🇺🇸 | 🆓 🎓 |
+| Getting Started in API Pen-Testing | [APIsec University](https://au.apisec.ai/courses/getting-started-in-api-pen-testing) | 🇺🇸 | 🆓 🎓 |
 | API Penetration Testing | [APIsec University](https://au.apisec.ai/courses/api-penetration-testing) | 🇺🇸 | 🆓 🎓 |
 | Android Application Security / Pentest | [Mobile Hacking Lab](https://www.mobilehackinglab.com/course/free-android-application-security-course) | 🇺🇸 | 🆓 🎓 |
 | iOS Application Security / Pentest | [Mobile Hacking Lab](https://www.mobilehackinglab.com/course/free-ios-application-security-course) | 🇺🇸 | 🆓 🎓 |
@@ -33,8 +33,8 @@
 | Ethical Hacker | [Cisco NetAcad](https://www.netacad.com/courses/ethical-hacker) | 🇺🇸 | 🆓 🎓 |
 | Intro to Cybersecurity | [pwn.college (Arizona State University)](https://pwn.college/intro-to-cybersecurity/) | 🇺🇸 | 🆓 🧪 |
 
-> 🧪 **Prática:** CTFs, wargames e labs vulneráveis (picoCTF, OverTheWire, HTB, VulnHub) estão em [`labs/red-team-ctf.md`](../labs/red-team-ctf.md).
+> **Prática:** CTFs, wargames e labs vulneráveis (picoCTF, OverTheWire, HTB, VulnHub) estão em [`labs/red-team-ctf.md`](../labs/red-team-ctf.md).
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

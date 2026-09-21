@@ -1,6 +1,6 @@
-# ✅ Checklist de Progresso
+# Checklist de Progresso
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -12,7 +12,7 @@ Marque conforme avança. Data de conclusão ajuda a ver o ritmo real.
 - [ ] Linux linha de comando — _____
 - [ ] Windows / AD básico — _____
 - [ ] Fortinet NSE 1-3 — _____
-- [ ] 🏗️ **P1 — Home lab montado e documentado** — _____
+- [ ] **P1 — Home lab montado e documentado** — _____
 
 ## Fase 1 — Núcleo de segurança
 - [ ] Professor Messer Security+ completo — _____
@@ -21,9 +21,9 @@ Marque conforme avança. Data de conclusão ajuda a ver o ritmo real.
 - [ ] SC-900 — _____
 - [ ] MITRE ATT&CK — _____
 - [ ] Python para segurança — _____
-- [ ] 🔑 **P2 — Analisador de senha** — _____
-- [ ] 📊 **P3 — Parser de logs** — _____
-- [ ] ✍️ 85%+ em simulado Security+ inédito — _____
+- [ ] **P2 — Analisador de senha** — _____
+- [ ] **P3 — Parser de logs** — _____
+- [ ] 85%+ em simulado Security+ inédito — _____
 - [ ] 💳 Security+ aprovado (opcional) — _____
 
 ## Fase 2 — Trilha primária: ______________
@@ -51,4 +51,4 @@ Marque conforme avança. Data de conclusão ajuda a ver o ritmo real.
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

@@ -1,10 +1,10 @@
-# ⚠️ Regras de Ética e Segurança (leia antes de tudo)
+# Regras de Ética e Segurança (leia antes de tudo)
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
-> ⚠️ **Leia isto antes de qualquer projeto.**
+> **Leia isto antes de qualquer projeto.**
 
 | ✅ FAÇA | ❌ NUNCA FAÇA |
 |---|---|
@@ -19,4 +19,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

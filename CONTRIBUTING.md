@@ -43,6 +43,12 @@ Os catálogos são tabelas markdown. Copie o formato do arquivo em que você est
 
 Qualificadores que acompanham o `🆓` quando a gratuidade tem ressalva: `parcial`, `tier`, `audit`, `via Financial Aid`.
 
+> **No site, estas tags saem escritas.** O build converte cada emoji em
+> etiqueta de texto — `🆓` vira `GRÁTIS`, `🎓` vira `CERT`, `🧪` vira `LAB`,
+> as bandeiras viram `PT` e `EN`, e o `⭐` vira negrito no nome do item.
+> Continue usando emoji no markdown: é o que funciona no GitHub, e a
+> conversão é só na camada de publicação.
+
 ### Regras de link
 
 - **Aponte para a página do curso, não para a home do provedor.** `provedor.com/cursos/nome-do-curso` em vez de `provedor.com`. Um link genérico obriga a pessoa a caçar.
@@ -66,7 +72,7 @@ Por isso o [`.lycheeignore`](.lycheeignore) é curto: ele é só para host genui
 
 Se você criar ou editar um arquivo `.md`:
 
-- Começa com um `# H1` e um `[⬅️ Voltar ao índice](../README.md)` logo abaixo
+- Começa com um `# H1` e um `[← Voltar ao índice](../README.md)` logo abaixo
 - Termina com `---`, linha em branco, e o mesmo link de volta
 - Réguas horizontais (`---`) sempre com linha em branco antes e depois
 - Uma linha em branco no fim do arquivo, nunca duas

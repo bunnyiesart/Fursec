@@ -1,6 +1,6 @@
-# 🛡️ Projetos AppSec / DevSecOps (P31–P33)
+# Projetos AppSec / DevSecOps (P31–P33)
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -18,4 +18,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

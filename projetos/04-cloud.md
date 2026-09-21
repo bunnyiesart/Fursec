@@ -1,6 +1,6 @@
-# ☁️ Projetos Cloud Security (P20–P24)
+# Projetos Cloud Security (P20–P24)
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -29,4 +29,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

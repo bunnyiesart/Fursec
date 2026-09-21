@@ -1,6 +1,6 @@
-# 📚 Cursos
+# Cursos
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -19,8 +19,8 @@ Catálogo com **172 cursos** por área — 171 gratuitos e 1 pago.
 | [06-appsec-devsecops.md](./06-appsec-devsecops.md) | OWASP, API, pipeline seguro, IA |
 | [07-malware-re-intel.md](./07-malware-re-intel.md) | Purple team, malware, engenharia reversa |
 
-> 🇧🇷 Só quer conteúdo em português? → [`docs/trilha-pt-br.md`](../docs/trilha-pt-br.md)
+> Só quer conteúdo em português? → [`docs/trilha-pt-br.md`](../docs/trilha-pt-br.md)
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

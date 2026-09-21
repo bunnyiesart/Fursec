@@ -19,7 +19,31 @@
 }
 /* ───────────────────────────────────────────────────────── */
 
+/* Tom derivado dos cinco de cima. Nenhuma cor nova entra aqui: com uma
+   paleta fixa, quem carrega a hierarquia é escala, peso e espaço. */
+:root {
+  --realce: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
 * { box-sizing: border-box; }
+
+/* Superfícies que o navegador desenha. Sem isto elas chegam com o padrão
+   de fábrica, que não pertence a paleta nenhuma — é o detalhe mais barato
+   que separa página construída de página montada. */
+::selection { background: var(--realce); color: var(--fg); }
+html { scrollbar-color: var(--line) transparent; }
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--line); border-radius: 6px;
+  border: 3px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
 
 body {
   margin: 0 auto;
@@ -29,9 +53,16 @@ body {
   color: var(--fg);
   font: 15px/1.6 ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-underline-offset: .2em;
+  caret-color: var(--accent);
 }
+/* O índice é uma grade de caixas e pede mais largura; a página de documento
+   continua estreita, porque ali o que importa é a medida de leitura. */
+body.inicio { max-width: 64rem; }
 
-/* Cabeçalho */
+/* ─────────────────────────────────────────────────────────
+   Cabeçalho
+   ───────────────────────────────────────────────────────── */
 h1 {
   margin: 0;
   font-size: 1.05rem;
@@ -39,87 +70,270 @@ h1 {
   letter-spacing: .14em;
   text-transform: uppercase;
 }
-.sub {
-  margin: .4rem 0 0;
-  color: var(--muted);
-}
+.sub { margin: .4rem 0 0; color: var(--muted); }
 .sub a { color: inherit; }
 
-/* Busca — apague este bloco e o <input> e o <script> se não quiser */
+.topo { display: flex; flex-wrap: wrap; align-items: baseline;
+  gap: .35rem 1.25rem; }
+.topo .sub { margin: 0; }
+.topo .repo {
+  margin-left: auto; color: var(--muted); font-size: .8125rem;
+  text-decoration: none; border-bottom: 1px solid var(--line);
+}
+.topo .repo:hover, .topo .repo:focus {
+  color: var(--accent); border-bottom-color: var(--accent);
+}
+
+/* ─────────────────────────────────────────────────────────
+   Busca. Apague este bloco, o <form> e o <script> se não quiser.
+   ───────────────────────────────────────────────────────── */
+.busca {
+  display: flex; align-items: center; gap: .6rem;
+  margin: 2rem 0 0;
+  border-bottom: 1px solid var(--line);
+}
+/* Sem marca nem rótulo, um campo transparente de borda única lê como linha
+   de prosa, não como campo — e ele é a ação primária de quem volta.
+   A lupa é desenhada, no mesmo traço da divisa do <details>. */
+.busca .lupa { flex: 0 0 auto; color: var(--muted); }
+.busca:focus-within .lupa { color: var(--accent); }
+.atalho {
+  flex: 0 0 auto;
+  padding: .1rem .35rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--muted);
+  font-size: .6875rem;
+  line-height: 1.4;
+}
+.busca:focus-within .atalho, .busca.tem-texto .atalho { visibility: hidden; }
 #f {
-  width: 100%;
-  margin: 2.5rem 0 0;
-  padding: .6rem .75rem;
+  flex: 1; min-width: 0;
+  padding: .7rem 0;
   background: transparent;
   color: var(--fg);
-  border: 1px solid var(--line);
-  border-radius: 4px;
+  border: 0;
   font: inherit;
+  font-size: 1.0625rem;
 }
-#f:focus { outline: none; border-color: var(--accent); }
+#f:focus { outline: none; }
 #f::placeholder { color: var(--muted); }
+/* A borda de baixo é da linha inteira, então o foco acende a linha e não
+   um anel em volta do campo. */
+.busca:focus-within {
+  border-bottom-color: var(--accent);
+  /* engrossa a régua sem mexer na borda, que deslocaria o layout */
+  box-shadow: 0 1px 0 var(--accent);
+}
+#f::-webkit-search-cancel-button { filter: grayscale(1) opacity(.5); }
 
-/* Seções */
-section { margin-top: 2.75rem; }
-h2 {
-  margin: 0 0 .9rem;
-  padding-bottom: .5rem;
-  border-bottom: 1px solid var(--line);
+.conta {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: .8125rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.vazio { display: none; margin: 1.5rem 0 0; color: var(--muted); }
+
+/* ─────────────────────────────────────────────────────────
+   A grade de caixas. A largura de cada uma acompanha o peso do que ela
+   carrega — não é uma grade de cartões idênticos.
+   ───────────────────────────────────────────────────────── */
+.caixas {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  /* Cada caixa termina onde seu conteúdo termina. Sem isto a linha da grade
+     estica a caixa curta até a altura da vizinha alta e abre um vão que
+     desmente a única regra desta página: a caixa tem o tamanho do que carrega. */
+  align-items: start;
+}
+.caixa {
+  grid-column: span 4;
+  padding: 1.25rem 1.25rem 1.5rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+}
+.caixa--larga { grid-column: span 6; }
+/* Três faixas de largura. A ORDEM das caixas é a contagem do acervo; a
+   LARGURA é quantos documentos a caixa tem para dispor. São dois sinais
+   diferentes de propósito: sem isso, LIVROS (45 no acervo, 3 documentos)
+   reservava meia página e abria um vão que parecia conteúdo que não carregou. */
+.caixa--estreita { grid-column: span 3; }
+
+/* A entrada ocupa a largura inteira e deita os passos em colunas: é a
+   primeira coisa que quem chega precisa, e assim ela não disputa altura
+   com nenhuma vizinha. */
+.caixa--banda { grid-column: span 12; }
+.caixa--banda > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1.25rem 2rem;
+}
+
+/* As cinco fases numa linha só: era esse percurso da esquerda para a direita
+   que justificou tirar o Roadmap da fila de contagem. Os três itens que não
+   são fase saem de baixo da sequência e vão para um rodapé próprio. */
+.caixa--roadmap > .fases { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.caixa--roadmap > .apoio {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.caixa--roadmap > .apoio a.item { font-size: .9375rem; }
+
+/* Rótulo: mesmo corpo nas dez caixas. A diferença entre elas é a área que
+   ocupam, nunca o tamanho da letra. */
+.caixa > h2 {
+  margin: 0;
   color: var(--muted);
   font-size: .7rem;
   font-weight: 600;
   letter-spacing: .12em;
   text-transform: uppercase;
 }
+.caixa > h2 a {
+  color: inherit; text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.caixa > h2 a:hover, .caixa > h2 a:focus-visible {
+  color: var(--accent); border-bottom-color: var(--accent);
+}
 
-/* Título de seção que leva à página-índice da pasta: herda a cor do
-   próprio título, senão vira azul de link e quebra a paleta. */
-section > h2 a { color: inherit; text-decoration: none;
-  border-bottom: 1px solid transparent; }
-section > h2 a:hover, section > h2 a:focus {
-  color: var(--accent); border-bottom-color: var(--accent); outline: none; }
+/* A contagem é o que o olho pega primeiro dentro da caixa. */
+.quant {
+  margin: .5rem 0 1rem;
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: .4rem;
+  line-height: 1;
+}
+.quant b {
+  font-size: 2.125rem;
+  font-weight: 600;
+  letter-spacing: -.03em;
+  font-variant-numeric: tabular-nums;
+}
+.quant span { color: var(--muted); font-size: .8125rem; line-height: 1.35; }
+/* Na caixa estreita a unidade não cabe ao lado do numeral, e quebrando numa
+   linha flex ela penderia da borda direita dele, parecendo centrada.
+   Atada à LARGURA, não à classe: abaixo de 62rem a faixa estreita colapsa
+   para a largura das outras caixas, e ali a quebra não teria explicação. */
+@media (min-width: 62.0625rem) {
+  .caixa--estreita .quant span { flex: 0 0 100%; margin-top: .3rem; }
+}
 
-/* Lista de links */
+/* ─────────────────────────────────────────────────────────
+   Listas dentro da caixa
+   ───────────────────────────────────────────────────────── */
 ul { margin: 0; padding: 0; list-style: none; }
-li { padding: .3rem 0; }
-li a {
+/* A banda deita os passos em colunas e não leva régua entre eles. */
+.caixa:not(.caixa--banda) > ul > li + li {
+  margin-top: .75rem; padding-top: .75rem;
+  border-top: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
+}
+.caixa a.item {
+  display: block;
   color: var(--fg);
   text-decoration: none;
   border-bottom: 1px solid transparent;
+  width: fit-content;
+  max-width: 100%;
 }
-li a:hover, li a:focus {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-  outline: none;
+.caixa a.item:hover, .caixa a.item:focus-visible {
+  color: var(--accent); border-bottom-color: var(--accent);
 }
-li span {
+.caixa li > span {
   display: block;
+  margin-top: .1rem;
   color: var(--muted);
-  font-size: .875rem;
+  font-size: .8125rem;
+  line-height: 1.5;
 }
-@media (min-width: 34rem) {
-  /* column-gap só: o gap de linha empurraria a sublista para longe do item */
-  section > ul > li { display: flex; flex-wrap: wrap; column-gap: 1rem; row-gap: 0; align-items: baseline; }
-  section > ul > li > a { flex: 0 0 15rem; }
-  section > ul > li > span { flex: 1; }
-  /* a sublista ocupa a linha inteira, alinhada à coluna da descrição */
-  .sec { flex: 0 0 100%; padding-left: 16rem; }
+/* Peso extra só na caixa de entrada: é a ação primária de quem chega. */
+.caixa--inicio a.item { font-weight: 600; }
+
+/* ─────────────────────────────────────────────────────────
+   Seções de dentro de cada documento, atrás de um <details>.
+   Nativo: teclado e leitor de tela funcionam sem script.
+   ───────────────────────────────────────────────────────── */
+.caixa details { margin-top: .45rem; }
+.caixa summary {
+  display: inline-flex; align-items: center; gap: .4rem;
+  width: fit-content;
+  color: var(--muted);
+  font-size: .75rem;
+  letter-spacing: .04em;
+  cursor: pointer;
+  list-style: none;
+  font-variant-numeric: tabular-nums;
+}
+.caixa summary::-webkit-details-marker { display: none; }
+.caixa summary:hover { color: var(--accent); }
+/* Divisa desenhada com duas bordas, não glifo nem emoji: um traço só,
+   na mesma espessura em toda a página. */
+.caixa summary::before {
+  content: "";
+  width: .3rem; height: .3rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform .18s cubic-bezier(.2, .8, .2, 1);
+}
+.caixa details[open] > summary::before { transform: rotate(45deg); }
+
+.sec { margin: .5rem 0 .2rem; padding-left: .7rem;
+  border-left: 1px solid var(--line); }
+.sec li { padding: .1rem 0; }
+.sec a {
+  color: var(--muted); font-size: .8125rem; text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.sec a:hover, .sec a:focus-visible {
+  color: var(--accent); border-bottom-color: var(--accent);
 }
 
-/* Seções dentro de cada arquivo */
-.sec { margin: .15rem 0 .55rem; }
-.sec li { padding: .12rem 0; }
-.sec a { font-size: .875rem; color: var(--muted); }
-.sec a::before { content: "· "; }
-.sec a:hover, .sec a:focus { color: var(--accent); }
+/* ─────────────────────────────────────────────────────────
+   Estreito: a grade vira uma coluna. A caixa mantém o corpo da letra e
+   perde colunas, nunca o contrário.
+   ───────────────────────────────────────────────────────── */
+@media (max-width: 62rem) {
+  .caixa, .caixa--larga, .caixa--estreita { grid-column: span 6; }
+  /* A regra acima casa a banda também (ela é .caixa) e, vindo depois no
+     arquivo, vencia o span 12. As bandas de orientação perdiam a largura
+     inteira aqui e passavam a dividir linha com um catálogo. */
+  .caixa--banda { grid-column: span 12; }
+  .caixa--roadmap > .fases { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  /* O auto-fit dá 3 colunas nesta faixa e deixa o quarto passo órfão numa
+     linha só. Em 2x2 os quatro passos leem como um bloco. */
+  .caixa--inicio > ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 40rem) {
+  body { padding: 2.5rem 1rem 4rem; }
+  .caixa, .caixa--larga, .caixa--estreita { grid-column: span 12; }
+  .quant b { font-size: 1.875rem; }
+  /* O cabeçalho empilha: em 390px a linha única corta a frase e o endereço. */
+  .topo { display: block; }
+  .topo .sub { margin: .35rem 0 0; }
+  .topo .repo { display: inline-block; margin: .5rem 0 0; }
+  /* Em 390px a linha da busca não cabe com tudo: o atalho de teclado não
+     serve num telefone e a contagem desce para a própria linha. */
+  .atalho { display: none; }
+  .busca { flex-wrap: wrap; }
+  .conta { flex-basis: 100%; padding-bottom: .5rem; }
+  /* Duas colunas em 390px apertam o passo até cortar a descrição. */
+  .caixa--banda > ul,
+  .caixa--roadmap > .fases,
+  .caixa--roadmap > .apoio { grid-template-columns: 1fr; }
+}
 
-/* Destaque discreto para o ponto de partida */
-.start li a { font-weight: 600; }
-
-/* Fundo: alguém encarando de trás do texto.
+/* ─────────────────────────────────────────────────────────
+   Fundo: alguém encarando de trás do texto.
    Decorativo — por isso é background em CSS e não <img>: leitor de tela
    ignora, em vez de anunciar a descrição no meio da navegação.
-   A opacidade é o único número que importa aqui; mexa nela à vontade. */
+   A opacidade é o único número que importa aqui; mexa nela à vontade.
+   ───────────────────────────────────────────────────────── */
 body.inicio::before {
   content: "";
   position: fixed;
@@ -139,39 +353,42 @@ body.inicio::before {
 }
 @media (prefers-color-scheme: dark) {
   /* no escuro quem aparece é o claro da foto, e ele salta mais */
-  body.inicio::before { opacity: .08; }
+  body.inicio::before { opacity: .05; }
 }
-/* Quem pediu menos movimento no sistema não recebe parallax. */
+/* Quem pediu menos movimento no sistema não recebe parallax nem transição. */
 @media (prefers-reduced-motion: reduce) {
   body.inicio::before { transform: none !important; }
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
 
 footer {
-  margin-top: 4rem;
+  margin-top: 3rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: .85rem;
+  font-size: .8125rem;
 }
 footer a { color: inherit; }
-.vazio { display: none; color: var(--muted); padding: .3rem 0; }
+footer a:hover, footer a:focus { color: var(--accent); }
 
 /* ─────────────────────────────────────────────────────────
    Conteúdo dos documentos (páginas geradas a partir dos .md)
    ───────────────────────────────────────────────────────── */
 .crumb { margin: 0 0 2.5rem; color: var(--muted); font-size: .8rem;
   letter-spacing: .1em; text-transform: uppercase; }
-.crumb a { color: inherit; }
+.crumb a { color: inherit; text-decoration: none; }
 .crumb a:hover { color: var(--accent); }
 
 .md { overflow-wrap: break-word; }
 .md h1 { margin: 0 0 1.5rem; font-size: 1.5rem; line-height: 1.25;
   /* o h1 do índice é caixa alta com tracking largo; título de documento não */
-  letter-spacing: normal; text-transform: none; font-weight: 600; }
+  letter-spacing: normal; text-transform: none; font-weight: 600;
+  text-wrap: balance; }
 .md h2 { margin: 2.5rem 0 .9rem; padding-bottom: .5rem;
   border-bottom: 1px solid var(--line); color: var(--fg);
-  font-size: 1.05rem; letter-spacing: 0; text-transform: none; }
-.md h3 { margin: 1.75rem 0 .5rem; font-size: .95rem; }
+  font-size: 1.05rem; letter-spacing: 0; text-transform: none;
+  text-wrap: balance; }
+.md h3 { margin: 1.75rem 0 .5rem; font-size: .95rem; text-wrap: balance; }
 .md p, .md li { line-height: 1.65; }
 .md a { color: var(--accent); text-decoration: none;
   border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
@@ -180,7 +397,7 @@ footer a { color: inherit; }
 .md ul { list-style: disc; }
 .md li { padding: .1rem 0; display: list-item; }
 .md blockquote { margin: 1.25rem 0; padding: .1rem 0 .1rem 1rem;
-  border-left: 2px solid var(--line); color: var(--muted); }
+  border-left: 1px solid var(--line); color: var(--muted); }
 .md code { font-size: .875em; padding: .15em .35em; border-radius: 3px;
   background: color-mix(in srgb, var(--fg) 8%, transparent); }
 .md pre { overflow-x: auto; padding: .9rem 1rem; border-radius: 5px;
@@ -192,13 +409,44 @@ footer a { color: inherit; }
 
 /* Tabela: rola sozinha em tela estreita em vez de estourar a página */
 .md .table-wrap { overflow-x: auto; margin: 1rem 0; }
-.md table { border-collapse: collapse; font-size: .9rem; }
+.md table { border-collapse: collapse; font-size: .8125rem; }
 .md th, .md td { padding: .45rem .7rem; border: 1px solid var(--line);
   text-align: left; vertical-align: top; }
 .md th { font-weight: 600; white-space: nowrap; }
+/* Coluna de horas e de preço fica legível quando o dígito tem largura fixa. */
+.md td { font-variant-numeric: tabular-nums; }
+
+/* Etiquetas de catálogo. Substituem os emoji da legenda, que o build
+   converte: o dado continua (idioma, gratuidade, certificado, prático,
+   prioridade), mas escrito, na paleta da casa e num corpo só.
+   Diferenciação por PESO, nunca por matiz — não há cor a gastar. */
+.md .tag {
+  display: inline-block;
+  padding: .1em .4em;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--muted);
+  font-size: .625rem;
+  line-height: 1.5;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: .1em;
+}
+.md td .tag + .tag, .md li .tag + .tag { margin-left: .25em; }
+/* "Gratuito primeiro" é princípio do produto, então grátis tem o peso do
+   texto principal e o resto fica recuado. */
+.md .tag--gratis,
+.md .tag--prioridade {
+  color: var(--fg);
+  border-color: color-mix(in srgb, var(--fg) 22%, transparent);
+}
+/* Prioridade: "comece por estes". É peso no nome, não etiqueta — como
+   etiqueta ela pesava mais que o curso que qualificava. */
+.md .prio { font-weight: 600; color: var(--fg); }
 
 .md .task-list-item { list-style: none; }
 .md .contains-task-list { padding-left: .2rem; }
-.md input[type="checkbox"] { margin-right: .5rem; }
+.md input[type="checkbox"] { margin-right: .5rem; accent-color: var(--accent); }
 .md details { margin: 1rem 0; }
 .md summary { cursor: pointer; color: var(--muted); }

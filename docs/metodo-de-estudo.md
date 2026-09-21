@@ -1,6 +1,6 @@
-# 🧠 Método de Estudo
+# Método de Estudo
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -12,7 +12,7 @@ Não é opinião. É o que a pesquisa de aprendizagem mostra:
 | **Active recall** (se testar sem olhar) | ~57% |
 | Active recall + spaced repetition | até **70% melhor** que método passivo |
 
-**Tradução prática:** assistir vídeo de curso é a parte *menos* importante do seu estudo. Sério. O vídeo é o começo, não o fim.
+**Tradução prática:** assistir vídeo de curso é a parte *menos* importante do seu estudo. O vídeo é o começo, não o fim.
 
 ## O método das 3 camadas
 
@@ -123,4 +123,4 @@ Se você estudar algo e não usar em 30 dias, você perde. Por isso o home lab i
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

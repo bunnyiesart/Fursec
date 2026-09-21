@@ -1,6 +1,6 @@
-# ☁️🛡️ Ferramentas AppSec e Cloud
+# Ferramentas AppSec e Cloud
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -23,4 +23,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

@@ -22,18 +22,56 @@ import urllib.error
 import urllib.request
 
 REPO = os.environ.get("GITHUB_REPOSITORY", "bunnyiesart/Fursec")
+# Domínio próprio servido pelo Pages. Vazio = publica no endereço do GitHub.
+DOMINIO = os.environ.get("FURSEC_DOMINIO", "furrsec.com")
 API = f"https://api.github.com/repos/{REPO}/contents/"
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Não vira página: o índice do site já cumpre esse papel.
-IGNORAR = {"README.md"}
+# Não vira página: o índice do site já cumpre esse papel, e os artefatos de
+# desenvolvimento (verdade de produto, design system, contrato de direção) são
+# documentação do repositório, não conteúdo do site. Sem esta exclusão o build
+# gera página para eles e o check-site acusa órfã, porque o índice — com razão
+# — não linka nenhum deles.
+IGNORAR = {"README.md", "PRODUCT.md", "DESIGN.md"}
+
+# Pastas cujo .md nunca vira página.
+FORA = (".github/", ".impeccable/")
+
+# Emoji da legenda -> etiqueta escrita. A ordem importa: bandeira antes de
+# qualquer coisa, e os pares de indicador regional antes dos isolados.
+ETIQUETAS = [
+    ("\U0001F1E7\U0001F1F7", "PT", ""),            # bandeira do Brasil
+    ("\U0001F1FA\U0001F1F8", "EN", ""),            # bandeira dos EUA
+    ("\U0001F193", "grátis", " tag--gratis"),      # 🆓
+    ("\U0001F4B8", "pago", ""),                     # 💸
+    ("\U0001F4B3", "pago", ""),                     # 💳
+    ("\U0001F393", "cert", ""),              # 🎓
+    ("\U0001F9EA", "lab", ""),                  # 🧪
+    # ⭐ não entra aqui: virou peso no nome, em destaca_prioridade()  # ⭐
+    ("\U0001F534", "crítico", " tag--prioridade"), # 🔴 risco
+    ("\U0001F7E0", "alto", ""),                     # 🟠
+    ("\U0001F7E1", "médio", ""),                    # 🟡
+    ("\U0001F7E2", "baixo", ""),
+    ("\u26AA", "a fazer", ""),             # ⚪ status a preencher                    # 🟢
+]
+
+# Emoji que só repete a palavra ao lado: "FAÇA", "NUNCA FAÇA",
+# "Quase nunca", "Defensiva". Sai, e o texto continua dizendo tudo.
+REMOVER = (
+    "\u2B50",                                 # estrela solta fora de tabela
+    "\u2705", "\u274C",                      # marca e cruz de polaridade
+    "\u26A0\uFE0F", "\u26A0",                # aviso
+    "\U0001F535", "\U0001F4CB",              # marcadores de trilha
+    "\u2601\uFE0F", "\u2601",
+    "\U0001F7E3", "\U0001F6E1\uFE0F", "\U0001F6E1",
+)
 
 
 def versionados():
     saida = subprocess.run(["git", "-C", RAIZ, "ls-files", "*.md"],
                            capture_output=True, text=True, check=True).stdout
     return sorted(f for f in saida.split()
-                  if not f.startswith(".github/") and f not in IGNORAR)
+                  if not f.startswith(FORA) and f not in IGNORAR)
 
 
 def render(caminho, token):
@@ -48,6 +86,40 @@ def render(caminho, token):
 
 def destino(caminho):
     return caminho[:-3] + ".html"
+
+
+def fora_de_pre(html_, fn):
+    """Aplica fn só no que está FORA de <pre>.
+
+    Dentro de bloco de código o emoji é conteúdo: as árvores de diretório de
+    docs/ usam 📁 e 📌 como parte do desenho, e trocá-los por etiqueta
+    quebraria o exemplo.
+    """
+    partes = re.split(r"(<pre[\s\S]*?</pre>)", html_)
+    return "".join(p if p.startswith("<pre") else fn(p) for p in partes)
+
+
+def destaca_prioridade(trecho):
+    """A estrela marcava "faça este primeiro". Vira negrito no nome.
+
+    Como etiqueta ela ficava com mais peso visual que o curso que
+    qualificava. Negrito é o eixo que esta página já usa para hierarquia,
+    e dispensa legenda: o olho entende "comece por estes" sem decodificar.
+    """
+    return re.sub(
+        r"<td>\s*\u2B50\s*(.*?)</td>",
+        r'<td><strong class="prio" title="Prioridade alta">\1</strong></td>',
+        trecho, flags=re.S)
+
+
+def etiquetar(trecho):
+    trecho = destaca_prioridade(trecho)
+    for emoji, rotulo, classe in ETIQUETAS:
+        trecho = trecho.replace(
+            emoji, f'<span class="tag{classe}">{rotulo}</span>')
+    for emoji in REMOVER:
+        trecho = trecho.replace(emoji + " ", "").replace(emoji, "")
+    return trecho
 
 
 def reescreve(corpo, caminho):
@@ -95,6 +167,29 @@ def reescreve(corpo, caminho):
     # 4. Tabela larga precisa rolar sozinha, senão estoura a largura da página.
     corpo = corpo.replace("<table>", '<div class="table-wrap"><table>') \
                  .replace("</table>", "</table></div>")
+
+    # 5. Tags: emoji viram etiqueta tipográfica.
+    #
+    #    A legenda (idioma, gratuidade, certificado, prático, prioridade) é
+    #    dado que a pessoa filtra, e por isso fica. Mas emoji é a APRESENTAÇÃO
+    #    errada dele: duas colunas coloridas em 36 linhas são a cara de
+    #    catálogo gerado por máquina, e o design system proíbe emoji na
+    #    interface. No GitHub o emoji funciona e continua no markdown; aqui o
+    #    site usa a própria linguagem.
+    corpo = fora_de_pre(corpo, etiquetar)
+
+    # 6. A legenda das tags existia para decodificar o emoji. Com etiqueta
+    #    escrita ela não decodifica nada, e repetia duas linhas em 12 páginas.
+    corpo = re.sub(r"<sub>\s*(<span class=\"tag[^\n]*?)</sub>\s*", "", corpo)
+
+    # 7. O markdown traz "Voltar ao índice" no topo e no pé, porque no
+    #    GitHub não existe migalha. Aqui existe, então o do topo era o
+    #    terceiro elemento de navegação seguido antes de qualquer conteúdo.
+    #    O do pé fica: é o retorno natural no fim de um documento longo.
+    corpo = re.sub(
+        r'<p[^>]*>\s*<a href="[^"]*">\s*\u2190[^<]*</a>\s*</p>\s*',
+        "", corpo, count=1)
+
     return corpo
 
 
@@ -105,7 +200,7 @@ LAYOUT = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{titulo} — Fursec</title>
 <meta name="description" content="{desc}">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>&#129418;</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><style>path{{fill:%2316171a}}@media(prefers-color-scheme:dark){{path{{fill:%23e7e8ea}}}}</style><path d='M8 14.6c-3.9 0-6.1-3-6.1-6.2V1.9l3.6 2.7A9 9 0 0 1 8 4.3c.9 0 1.7.1 2.5.3L14.1 1.9v6.5c0 3.2-2.2 6.2-6.1 6.2zm-2.2-6.9a.85.85 0 1 0 0 1.7.85.85 0 0 0 0-1.7zm4.4 0a.85.85 0 1 0 0 1.7.85.85 0 0 0 0-1.7zM8 10.8l-1.1 1.1h2.2z'/></svg>">
 <link rel="stylesheet" href="{subir}assets/site.css">
 </head>
 <body>
@@ -173,6 +268,14 @@ def main():
 
     shutil.copytree(os.path.join(RAIZ, "assets"), os.path.join(saida, "assets"))
     open(os.path.join(saida, ".nojekyll"), "w").close()
+
+    # Domínio próprio. A publicação por workflow guarda o domínio na
+    # configuração do Pages, então este arquivo é cinto e suspensório: se a
+    # configuração for perdida, o CNAME no artefato a restabelece. Um arquivo
+    # a mais é mais barato que um site fora do ar por um dia.
+    if DOMINIO:
+        with open(os.path.join(saida, "CNAME"), "w", encoding="utf-8") as f:
+            f.write(DOMINIO + "\n")
 
     print(f"{paginas} páginas + índice ({n} links locais) em {args.saida}/")
     return 0

@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-21T00:00:00Z",
+  "title": "Design System: Fursec",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Branco de Papel",
+        "canonical": "#ffffff",
+        "darkValue": "#131417",
+        "tonalRamp": ["#131417", "#26282d", "#3b3e44", "#54575e", "#6e7178", "#9a9da3", "#c6c8cb", "#ffffff"]
+      },
+      "fg": {
+        "role": "neutral",
+        "displayName": "Grafite de Texto",
+        "canonical": "#16171a",
+        "darkValue": "#e7e8ea",
+        "tonalRamp": ["#0b0c0d", "#16171a", "#2a2c30", "#414449", "#5b5e64", "#8a8d93", "#bcbfc4", "#e7e8ea"]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Cinza de Apoio",
+        "canonical": "#6e7178",
+        "darkValue": "#8b8f97",
+        "tonalRamp": ["#181a1d", "#2b2d31", "#3e4146", "#53565c", "#6e7178", "#8b8f97", "#b4b7bc", "#dcdee1"]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Linha de Divisa",
+        "canonical": "#e6e7e9",
+        "darkValue": "#26282d",
+        "tonalRamp": ["#16171a", "#26282d", "#3a3d42", "#55585e", "#7b7e85", "#a8abb0", "#cfd1d4", "#e6e7e9"]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Azul de Estado",
+        "canonical": "#1a4fd6",
+        "darkValue": "#8fb0ff",
+        "tonalRamp": ["#07143c", "#0d2470", "#12379f", "#1a4fd6", "#3f6ee6", "#6b93f3", "#8fb0ff", "#c9d9ff"]
+      },
+      "realce": {
+        "role": "primary",
+        "displayName": "Realce de Seleção",
+        "canonical": "color-mix(in srgb, var(--accent) 12%, transparent)",
+        "note": "Tom derivado do acento, não uma sexta cor. Usado só como fundo de ::selection.",
+        "tonalRamp": []
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Contagem", "purpose": "O numeral de acervo dentro da caixa. Maior corpo da página e primeiro elemento de leitura de cada seção. 1.875rem abaixo de 40rem." },
+      "headline": { "displayName": "Título de documento", "purpose": "O h1 das páginas geradas dos .md. Sem caixa alta e sem tracking, de propósito." },
+      "title": { "displayName": "Marca do índice", "purpose": "\"Fursec\" no topo do índice, em caixa alta com tracking .14em. O mesmo corpo sem tracking serve o h2 de documento." },
+      "body": { "displayName": "Corpo", "purpose": "Texto corrido e título de item de catálogo. 1.65 de entrelinha nas páginas de documento." },
+      "campo": { "displayName": "Campo de busca", "purpose": "Um corpo acima do texto corrido, sem moldura: lê como linha de prosa." },
+      "label": { "displayName": "Rótulo de seção", "purpose": "O mesmo corpo nas dez caixas. Hierarquia entre seções nunca é tamanho de letra." },
+      "meta": { "displayName": "Apoio", "purpose": "Descrição de item, unidade da contagem, contagem de resultados, links de sublista." },
+      "micro": { "displayName": "Micro", "purpose": "O summary de \"N seções\". Tecla de atalho desce a .6875rem; migalha a .8rem em caixa alta." }
+    },
+    "shadows": [
+      {
+        "name": "nenhuma",
+        "value": "none",
+        "purpose": "O sistema é plano. Nenhuma superfície levanta: profundidade vem de borda de 1px, régua a 60% do token e a camada de fundo em opacidade .06/.05."
+      },
+      {
+        "name": "regua-de-foco",
+        "value": "0 1px 0 var(--accent)",
+        "purpose": "Não é elevação. Engrossa o filete da linha de busca em foco sem mexer na borda, que deslocaria o layout."
+      }
+    ],
+    "motion": [
+      { "name": "divisa", "value": "transform .18s cubic-bezier(.2, .8, .2, 1)", "purpose": "A divisa de borda CSS do <details> girando de -45° para 45° ao abrir." },
+      { "name": "parallax-fundo", "value": "translate3d(0, var(--py), 0) — --py = -(progresso * innerHeight * 0.15)", "purpose": "O mascote de fundo desliza por PROGRESSO do scroll, não por scroll absoluto: o curso disponível é a folga de 15% do inset." },
+      { "name": "reduced-motion", "value": "@media (prefers-reduced-motion: reduce) { transform: none !important; * { animation-duration: .01ms !important; transition-duration: .01ms !important } }", "purpose": "Desliga parallax e toda transição. Todo movimento novo respeita a mesma consulta." }
+    ],
+    "breakpoints": [
+      { "name": "grade-dupla", "value": "62rem", "purpose": "Abaixo: a grade de 12 vira duas colunas (span 6); Roadmap passa a 3 fases por linha; a banda de entrada trava em 2 colunas. As bandas precisam de span 12 reafirmado aqui." },
+      { "name": "coluna-unica", "value": "40rem", "purpose": "Abaixo: tudo empilha (span 12), cabeçalho em bloco, tecla de atalho oculta, contagem em linha própria, numeral a 1.875rem." },
+      { "name": "unidade-quebrada", "value": "62.0625rem (min-width)", "purpose": "Acima: na faixa estreita a unidade da contagem quebra para a linha inteira. Atada à largura, não à classe." }
+    ],
+    "containers": [
+      { "name": "documento", "value": "46rem", "purpose": "Páginas geradas dos .md: manda a medida de leitura." },
+      { "name": "indice", "value": "64rem", "purpose": "body.inicio: a grade de caixas pede largura." }
+    ],
+    "grid": {
+      "columns": 12,
+      "gap": "1.25rem",
+      "alignItems": "start",
+      "bands": [
+        { "name": "banda", "span": 12, "purpose": "Bandas de orientação: Comece aqui e Roadmap. Fora da fila de contagem." },
+        { "name": "larga", "span": 6, "purpose": "Catálogos com muitos documentos a dispor." },
+        { "name": "estreita", "span": 3, "purpose": "Seções com poucos documentos." }
+      ],
+      "orderingRule": "A ORDEM das caixas é a contagem do acervo, estritamente decrescente (172, 80, 45, 33, 26, 22, 4, 2). A LARGURA é quantos documentos a caixa tem para dispor. Posto se lê pela ordem de leitura; a área lê volume de layout."
+    },
+    "reviewCoverage": {
+      "verdict": "ship (três rodadas)",
+      "covered": ["index.html a 1440 claro/escuro", "index.html a 768", "index.html a 390 claro/escuro", "dois primeiros-viewport 1440x900", "dois estados de filtro"],
+      "notCovered": ["as páginas de documento geradas pelo tools/build-site.py (.md), que compartilham esta folha e nunca entraram em matriz de fidelidade"],
+      "requiredCaptures": ["1440", "768", "390"],
+      "why768": "A faixa 40–62rem esconde defeito de colapso de banda e não é interpolável pelos extremos: passou por todas as rodadas invisível enquanto só 1440 e 390 eram capturados."
+    },
+    "rasters": [
+      { "path": "assets/mascote.jpg", "provenance": "pré-existente ao trabalho; não produzido nem modificado nesta passagem. Nenhum raster foi gerado.", "usage": "background decorativo de body.inicio::before, cinza .55, opacidade .06 claro / .05 escuro. Nunca <img>." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Caixa rotulada",
+      "kind": "card",
+      "refersTo": "caixa",
+      "description": "A linguagem de componente inteira do índice: rótulo em caixa alta, contagem em numeral tabular grande, entradas separadas por régua.",
+      "html": "<section class=\"ds-caixa\"><h2 class=\"ds-caixa-rotulo\"><a href=\"#\">Cursos</a></h2><p class=\"ds-caixa-quant\"><b>172</b> <span>cursos · 171 gratuitos</span></p><ul class=\"ds-caixa-lista\"><li><a class=\"ds-caixa-item\" href=\"#\">Fundamentos</a><span class=\"ds-caixa-desc\">TI, redes, sistemas e programação.</span></li><li><a class=\"ds-caixa-item\" href=\"#\">Blue team</a><span class=\"ds-caixa-desc\">SOC, SIEM, DFIR, detecção.</span></li></ul></section>",
+      "css": ".ds-caixa { padding: 1.25rem 1.25rem 1.5rem; background: var(--bg, #fff); color: var(--fg, #16171a); border: 1px solid var(--line, #e6e7e9); border-radius: 0; font: 15px/1.6 ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; } .ds-caixa-rotulo { margin: 0; color: var(--muted, #6e7178); font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; } .ds-caixa-rotulo a { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; } .ds-caixa-rotulo a:hover, .ds-caixa-rotulo a:focus-visible { color: var(--accent, #1a4fd6); border-bottom-color: var(--accent, #1a4fd6); } .ds-caixa-quant { margin: .5rem 0 1rem; display: flex; align-items: baseline; flex-wrap: wrap; gap: .4rem; line-height: 1; } .ds-caixa-quant b { font-size: 2.125rem; font-weight: 600; letter-spacing: -.03em; font-variant-numeric: tabular-nums; } .ds-caixa-quant span { color: var(--muted, #6e7178); font-size: .8125rem; line-height: 1.35; } .ds-caixa-lista { margin: 0; padding: 0; list-style: none; } .ds-caixa-lista > li + li { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid color-mix(in srgb, var(--line, #e6e7e9) 60%, transparent); } .ds-caixa-item { display: block; width: fit-content; max-width: 100%; color: var(--fg, #16171a); text-decoration: none; border-bottom: 1px solid transparent; } .ds-caixa-item:hover, .ds-caixa-item:focus-visible { color: var(--accent, #1a4fd6); border-bottom-color: var(--accent, #1a4fd6); } .ds-caixa-desc { display: block; margin-top: .1rem; color: var(--muted, #6e7178); font-size: .8125rem; line-height: 1.5; }"
+    },
+    {
+      "name": "Caixa banda de entrada",
+      "kind": "card",
+      "refersTo": "caixa",
+      "description": "Banda de largura inteira, itens deitados em colunas sem régua. Única caixa com peso de fonte elevado: é a ação primária de quem chega.",
+      "html": "<section class=\"ds-caixa ds-banda\"><h2 class=\"ds-caixa-rotulo\">Comece aqui</h2><p class=\"ds-caixa-quant\"><b>4</b> <span>passos, nesta ordem</span></p><ul class=\"ds-banda-lista\"><li><a class=\"ds-banda-item\" href=\"#\">Método de estudo</a><span class=\"ds-caixa-desc\">Como estudar para reter.</span></li><li><a class=\"ds-banda-item\" href=\"#\">Roadmap</a><span class=\"ds-caixa-desc\">Cinco fases, medidas em horas.</span></li><li><a class=\"ds-banda-item\" href=\"#\">Trilha só em português</a><span class=\"ds-caixa-desc\">A trilha inteira, sem inglês.</span></li><li><a class=\"ds-banda-item\" href=\"#\">Checklist</a><span class=\"ds-caixa-desc\">Marque o que concluiu, com data.</span></li></ul></section>",
+      "css": ".ds-caixa { padding: 1.25rem 1.25rem 1.5rem; background: var(--bg, #fff); color: var(--fg, #16171a); border: 1px solid var(--line, #e6e7e9); border-radius: 0; font: 15px/1.6 ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; } .ds-caixa-rotulo { margin: 0; color: var(--muted, #6e7178); font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; } .ds-caixa-quant { margin: .5rem 0 1rem; display: flex; align-items: baseline; gap: .4rem; line-height: 1; } .ds-caixa-quant b { font-size: 2.125rem; font-weight: 600; letter-spacing: -.03em; font-variant-numeric: tabular-nums; } .ds-caixa-quant span { color: var(--muted, #6e7178); font-size: .8125rem; } .ds-banda-lista { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1.25rem 2rem; } .ds-banda-item { display: block; width: fit-content; max-width: 100%; font-weight: 600; color: var(--fg, #16171a); text-decoration: none; border-bottom: 1px solid transparent; } .ds-banda-item:hover, .ds-banda-item:focus-visible { color: var(--accent, #1a4fd6); border-bottom-color: var(--accent, #1a4fd6); } .ds-caixa-desc { display: block; margin-top: .1rem; color: var(--muted, #6e7178); font-size: .8125rem; line-height: 1.5; } @media (max-width: 40rem) { .ds-banda-lista { grid-template-columns: 1fr; } }"
+    },
+    {
+      "name": "Linha de busca",
+      "kind": "input",
+      "refersTo": "busca-campo",
+      "description": "Campo transparente de borda única com lupa desenhada, tecla de atalho e contagem ao vivo. O foco acende a linha inteira, não um anel em volta do campo.",
+      "html": "<div class=\"ds-busca\"><svg class=\"ds-busca-lupa\" width=\"15\" height=\"15\" viewBox=\"0 0 15 15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" aria-hidden=\"true\"><circle cx=\"6.5\" cy=\"6.5\" r=\"4.25\"/><path d=\"M9.7 9.7 13 13\"/></svg><input class=\"ds-busca-campo\" type=\"search\" placeholder=\"Filtrar por título, descrição ou seção…\" aria-label=\"Filtrar o catálogo\"><span class=\"ds-busca-atalho\" aria-hidden=\"true\">/</span><output class=\"ds-busca-conta\">1284 entradas no índice</output></div>",
+      "css": ".ds-busca { display: flex; align-items: center; gap: .6rem; border-bottom: 1px solid var(--line, #e6e7e9); font: 15px/1.6 ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; color: var(--fg, #16171a); } .ds-busca:focus-within { border-bottom-color: var(--accent, #1a4fd6); box-shadow: 0 1px 0 var(--accent, #1a4fd6); } .ds-busca-lupa { flex: 0 0 auto; color: var(--muted, #6e7178); } .ds-busca:focus-within .ds-busca-lupa { color: var(--accent, #1a4fd6); } .ds-busca-campo { flex: 1; min-width: 0; padding: .7rem 0; background: transparent; color: var(--fg, #16171a); border: 0; font: inherit; font-size: 1.0625rem; } .ds-busca-campo:focus { outline: none; } .ds-busca-campo::placeholder { color: var(--muted, #6e7178); } .ds-busca-atalho { flex: 0 0 auto; padding: .1rem .35rem; border: 1px solid var(--line, #e6e7e9); border-radius: 3px; color: var(--muted, #6e7178); font-size: .6875rem; line-height: 1.4; } .ds-busca:focus-within .ds-busca-atalho { visibility: hidden; } .ds-busca-conta { flex: 0 0 auto; color: var(--muted, #6e7178); font-size: .8125rem; font-variant-numeric: tabular-nums; white-space: nowrap; }"
+    },
+    {
+      "name": "Seção recolhida",
+      "kind": "custom",
+      "refersTo": "secao-summary",
+      "description": "<details> nativo com divisa desenhada em duas bordas CSS a 1.5px. Teclado e leitor de tela funcionam sem script.",
+      "html": "<details class=\"ds-sec-det\"><summary class=\"ds-sec-sum\">2 seções</summary><ul class=\"ds-sec\"><li><a href=\"#\">Redes / Networking</a></li><li><a href=\"#\">Programação / Programming</a></li></ul></details>",
+      "css": ".ds-sec-det { margin-top: .45rem; font: 15px/1.6 ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; } .ds-sec-sum { display: inline-flex; align-items: center; gap: .4rem; width: fit-content; color: var(--muted, #6e7178); font-size: .75rem; letter-spacing: .04em; cursor: pointer; list-style: none; font-variant-numeric: tabular-nums; } .ds-sec-sum::-webkit-details-marker { display: none; } .ds-sec-sum:hover { color: var(--accent, #1a4fd6); } .ds-sec-sum::before { content: \"\"; width: .3rem; height: .3rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(-45deg); transition: transform .18s cubic-bezier(.2, .8, .2, 1); } .ds-sec-det[open] > .ds-sec-sum::before { transform: rotate(45deg); } .ds-sec { margin: .5rem 0 .2rem; padding: 0 0 0 .7rem; list-style: none; border-left: 1px solid var(--line, #e6e7e9); } .ds-sec li { padding: .1rem 0; } .ds-sec a { color: var(--muted, #6e7178); font-size: .8125rem; text-decoration: none; border-bottom: 1px solid transparent; } .ds-sec a:hover, .ds-sec a:focus-visible { color: var(--accent, #1a4fd6); border-bottom-color: var(--accent, #1a4fd6); }"
+    },
+    {
+      "name": "Cabeçalho do índice",
+      "kind": "nav",
+      "refersTo": "caixa-rotulo",
+      "description": "Marca em caixa alta com tracking, a frase do que é, e o endereço do repositório empurrado para a direita com filete inferior que acende no acento.",
+      "html": "<header class=\"ds-topo\"><h1 class=\"ds-topo-marca\">Fursec</h1><p class=\"ds-topo-sub\">Trilha de cibersegurança com material gratuito.</p><a class=\"ds-topo-repo\" href=\"#\">github.com/bunnyiesart/Fursec</a></header>",
+      "css": ".ds-topo { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem 1.25rem; font: 15px/1.6 ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; color: var(--fg, #16171a); } .ds-topo-marca { margin: 0; font-size: 1.05rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; } .ds-topo-sub { margin: 0; color: var(--muted, #6e7178); } .ds-topo-repo { margin-left: auto; color: var(--muted, #6e7178); font-size: .8125rem; text-decoration: none; border-bottom: 1px solid var(--line, #e6e7e9); } .ds-topo-repo:hover, .ds-topo-repo:focus-visible { color: var(--accent, #1a4fd6); border-bottom-color: var(--accent, #1a4fd6); } @media (max-width: 40rem) { .ds-topo { display: block; } .ds-topo-sub { margin: .35rem 0 0; } .ds-topo-repo { display: inline-block; margin: .5rem 0 0; } }"
+    },
+    {
+      "name": "Página de documento",
+      "kind": "custom",
+      "refersTo": "documento-link",
+      "description": "Envelope de leitura das páginas geradas dos .md: migalha em caixa alta, h1 sem tracking, h2 com filete, link de corpo no acento com sublinhado a 35%. Superfície ainda não verificada em matriz de fidelidade.",
+      "html": "<div class=\"ds-doc\"><p class=\"ds-crumb\"><a href=\"#\">&lsaquo; Fursec</a></p><article class=\"ds-md\"><h1>Método de estudo</h1><h2>Como reter</h2><p>Vídeo passivo retém cerca de 29%; <a href=\"#\">testar-se</a> chega a 57%. Use <code>spaced repetition</code>.</p><blockquote>Metade do tempo tem de ser lab.</blockquote></article></div>",
+      "css": ".ds-doc { max-width: 46rem; font: 15px/1.6 ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; color: var(--fg, #16171a); text-underline-offset: .2em; } .ds-crumb { margin: 0 0 2.5rem; color: var(--muted, #6e7178); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; } .ds-crumb a { color: inherit; text-decoration: none; } .ds-crumb a:hover { color: var(--accent, #1a4fd6); } .ds-md { overflow-wrap: break-word; } .ds-md h1 { margin: 0 0 1.5rem; font-size: 1.5rem; line-height: 1.25; letter-spacing: normal; text-transform: none; font-weight: 600; text-wrap: balance; } .ds-md h2 { margin: 2.5rem 0 .9rem; padding-bottom: .5rem; border-bottom: 1px solid var(--line, #e6e7e9); font-size: 1.05rem; letter-spacing: 0; text-wrap: balance; } .ds-md p { line-height: 1.65; } .ds-md a { color: var(--accent, #1a4fd6); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--accent, #1a4fd6) 35%, transparent); } .ds-md a:hover { border-bottom-color: var(--accent, #1a4fd6); } .ds-md code { font-size: .875em; padding: .15em .35em; border-radius: 3px; background: color-mix(in srgb, var(--fg, #16171a) 8%, transparent); } .ds-md blockquote { margin: 1.25rem 0; padding: .1rem 0 .1rem 1rem; border-left: 1px solid var(--line, #e6e7e9); color: var(--muted, #6e7178); }"
+    },
+    {
+      "name": "Estado vazio do filtro",
+      "kind": "custom",
+      "refersTo": "caixa-item-descricao",
+      "description": "Diz o que foi buscado, o que o filtro lê e como sair. Sem ilustração, sem ícone.",
+      "html": "<p class=\"ds-vazio\">Nada encontrado para “sigma”. O filtro lê título, descrição e nome de seção — Esc limpa.</p>",
+      "css": ".ds-vazio { margin: 1.5rem 0 0; color: var(--muted, #6e7178); font: 15px/1.6 ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "O Acervo Medido",
+    "overview": "Este sistema não tem cor nem face para gastar. A paleta de cinco tokens e a pilha de fonte de sistema estão fixadas pelo usuário como intocáveis, e é dessa restrição que todo o resto nasce: a hierarquia é carregada por escala, peso, espaço e área, e o acento existe só em hover, foco e estado. Onde outro sistema pintaria uma seção de destaque, este a faz maior; onde outro trocaria de face, este muda o corpo do numeral.\n\nA personalidade é de catálogo conferido, não de brochura. A página se declara pela dimensão antes de se declarar pelo conteúdo: cada caixa abre com sua contagem real em numeral tabular de corpo grande, e é a contagem que o olho pega primeiro — o rótulo vem acima dela, menor. Recusa explícita, confirmada no build: a lista corrida de links anotados que trata 172 cursos e 2 arquivos de progresso como se pesassem igual, e a grade de cartões idênticos de ícone-título-texto. A caixa tem o tamanho do que carrega.\n\nDensidade alta, moldura mínima, movimento quase nulo. A única moldura é a borda de 1px de --line; o único movimento persistente é a divisa do <details> girando em 180ms e um parallax de fundo em 15% do curso da janela, ambos desligados por prefers-reduced-motion. A folha é única e serve duas superfícies: o índice (grade de caixas, 64rem) e as páginas de documento geradas dos .md (coluna de leitura, 46rem).",
+    "keyCharacteristics": [
+      "Cinco tokens de cor, um derivado por color-mix, nenhum sexto — em claro e escuro.",
+      "Fonte de sistema única; nenhuma face self-hosted, nenhum peso acima de 600.",
+      "Contagem em numeral tabular como primeiro elemento de leitura de cada caixa.",
+      "Rótulo de seção em corpo fixo nas dez caixas; a diferença entre elas é área.",
+      "Borda de 1px e régua de 1px como único recurso de separação. Zero sombra.",
+      "Ícone é desenhado (borda CSS, SVG inline, path autoral), nunca glifo nem emoji.",
+      "Superfícies do navegador — seleção, caret, barra de rolagem, anel de foco — puxadas dos mesmos tokens."
+    ],
+    "rules": [
+      { "name": "A Regra dos Cinco", "body": "A paleta é fechada em cinco tokens mais derivados por color-mix dos mesmos tokens. Uma sexta cor é proibida, em claro e em escuro. Precisar de uma cor nova significa que a hierarquia foi resolvida errada: resolva por escala, peso, espaço ou área.", "section": "colors" },
+      { "name": "A Regra do Acento Reativo", "body": "O acento não decora: ele responde. Só pode aparecer em hover, :focus-visible, caret, estado ativo e corpo de link de documento. Um acento em repouso na superfície do índice é violação.", "section": "colors" },
+      { "name": "A Regra de Estado é Marca, Não Matiz", "body": "Com um acento só, o que diferencia uma caixa da outra nunca é cor. Diferença se expressa por área, ordem e peso.", "section": "colors" },
+      { "name": "A Regra do Rótulo Fixo", "body": "Os dez rótulos de seção saem todos no mesmo corpo (.7rem). Hierarquia entre seções se lê pela área que a caixa ocupa e pela ordem em que aparece — nunca pelo tamanho da letra. Teste: se dois rótulos de seção têm corpos diferentes, a composição falhou.", "section": "typography" },
+      { "name": "A Regra do Numeral Tabular", "body": "Todo número que o leitor possa comparar — contagem da caixa, resultado do filtro, \"N seções\", coluna de horas e de preço nas tabelas — sai com font-variant-numeric: tabular-nums.", "section": "typography" },
+      { "name": "A Regra dos Dois Pesos", "body": "400 e 600, nada mais. O peso 600 é reservado a título, rótulo, contagem, th e à única caixa de entrada (\"Comece aqui\"), que é a ação primária de quem chega.", "section": "typography" },
+      { "name": "A Regra da Caixa Medida", "body": "A caixa tem o tamanho do que carrega: align-items: start no eixo vertical e a faixa de largura pelo volume de documentos no horizontal. Nenhuma caixa é esticada para casar com a vizinha.", "section": "layout" },
+      { "name": "A Regra da Banda Restaurada", "body": "Reescrever o span de .caixa numa media query obriga a reafirmar o span 12 das bandas na mesma query.", "section": "layout" },
+      { "name": "A Regra de Zero Sombra", "body": "Nenhuma superfície levanta. Se um elemento precisa se destacar, ele ganha contorno, área ou espaço — não sombra, não gradiente, não deslocamento.", "section": "elevation" },
+      { "name": "A Regra do Ícone Desenhado", "body": "Ícone é desenhado ou não existe. Borda CSS, SVG inline ou path autoral, sempre a 1.5px e em currentColor. Glifo tipográfico, fonte de ícone e emoji na cromia da interface são proibidos.", "section": "shapes" },
+      { "name": "A Regra do Canto Vivo", "body": "Contêiner não arredonda. O raio é reservado a superfície de navegador e a marcação inline de código.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do resolver hierarquia por escala, peso (400/600), espaço e área. A paleta e a face são intocáveis; toda diferenciação nova sai dessas quatro alavancas.",
+      "Do usar o acento só em hover, :focus-visible, caret, estado ativo e corpo de link de documento.",
+      "Do manter o rótulo de seção no mesmo corpo (.7rem, .12em, caixa alta) em toda caixa nova.",
+      "Do abrir toda caixa pela contagem real em numeral tabular, com a unidade em --muted ao lado.",
+      "Do ordenar caixas de catálogo de forma estritamente decrescente pela contagem do acervo, e dimensionar a largura pelo volume de documentos que a caixa dispõe. Ordem é posto; área é volume.",
+      "Do restaurar .caixa--banda { grid-column: span 12; } dentro de qualquer media query que reescreva o span de .caixa.",
+      "Do desenhar todo ícone — borda CSS, SVG inline ou path autoral — a 1.5px em currentColor.",
+      "Do derivar tons novos com color-mix sobre os cinco tokens existentes, como já fazem o realce da seleção, a régua a 60% e os fundos de código.",
+      "Do dar contraparte escura a todo token e a todo valor de opacidade; ambos os temas são obrigatórios.",
+      "Do submeter qualquer movimento novo a prefers-reduced-motion: reduce, como já fazem o parallax e a transição da divisa.",
+      "Do capturar 1440, 768 e 390 em claro e escuro ao revisar. A faixa 40–62rem não é interpolável pelos extremos: foi ali que a banda colapsada passou por várias rodadas de revisão sem ser vista."
+    ],
+    "donts": [
+      "Don't introduzir uma sexta cor, um gradiente ou uma face tipográfica nova. Nem no claro, nem no escuro, nem \"só para este componente\".",
+      "Don't usar emoji na cromia da interface. (A legenda de tags nas tabelas dos catálogos é dado funcional do conteúdo, não interface, e permanece.)",
+      "Don't usar glifo tipográfico ou fonte de ícone onde cabe um traço desenhado.",
+      "Don't adicionar box-shadow de elevação, nem gradiente, nem deslocamento de profundidade. O sistema é plano por contorno.",
+      "Don't diferenciar uma caixa por cor de fundo, cor de borda ou tamanho de rótulo.",
+      "Don't arredondar contêiner. O raio pertence a anel de foco, marcação de código e superfície de navegador.",
+      "Don't escrever outline: none num link. O único outline: none autorizado da folha é o do campo de busca, cujo foco está desenhado no filete da linha inteira.",
+      "Don't trazer o mascote como <img>. Ele é decorativo por definição e entra como background, para que o leitor de tela o ignore em vez de anunciar descrição no meio da navegação.",
+      "Don't esticar uma caixa para casar com a altura da vizinha, nem remover align-items: start.",
+      "Don't fixar contagem em HTML. Número que o leitor confere é escrito pelo script ou vem do .md.",
+      "Don't reduzir o corpo do texto para ganhar colunas em tela estreita. A caixa perde colunas, nunca corpo de letra."
+    ]
+  }
+}

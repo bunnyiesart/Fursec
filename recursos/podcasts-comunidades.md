@@ -1,13 +1,13 @@
-# 🎙️ Podcasts, Newsletters e Comunidades
+# Podcasts, Newsletters e Comunidades
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
 | Recurso | Lang | Nota |
 |---|---|---|
 | [Papo Binário](https://podcasts.apple.com/br/podcast/papo-bin%C3%A1rio/id1543330979) | 🇧🇷 | Carreira e técnica |
-| [Darknet Diaries](https://darknetdiaries.com/) | 🇺🇸 | Histórias reais, viciante |
+| [Darknet Diaries](https://darknetdiaries.com/) | 🇺🇸 | Histórias de incidentes reais, em formato narrativo |
 | [Risky Business](https://risky.biz/) | 🇺🇸 | Notícias semanais da indústria |
 | [SANS Internet Storm Center](https://isc.sans.edu/) | 🇺🇸 | Diário de ameaças |
 | [tl;dr sec](https://tldrsec.com/) | 🇺🇸 | Newsletter AppSec |
@@ -19,4 +19,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

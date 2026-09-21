@@ -1,6 +1,6 @@
-# 🔵 Projetos Blue Team (P5–P12)
+# Projetos Blue Team (P5–P12)
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -48,4 +48,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

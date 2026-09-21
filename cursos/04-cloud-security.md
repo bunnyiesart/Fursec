@@ -1,6 +1,6 @@
-# ☁️ Cloud Security — AWS, Azure, GCP e Kubernetes
+# Cloud Security — AWS, Azure, GCP e Kubernetes
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -28,4 +28,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)

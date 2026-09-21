@@ -1,6 +1,6 @@
-# 📗 Livros Gratuitos e Legais — 🇺🇸 English
+# Livros Gratuitos e Legais — 🇺🇸 English
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
 
 ---
 
@@ -25,4 +25,4 @@
 
 ---
 
-[⬅️ Voltar ao índice](../README.md)
+[← Voltar ao índice](../README.md)
