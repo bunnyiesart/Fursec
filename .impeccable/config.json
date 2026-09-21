@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-21T21:56:41.273Z",
+        "reason": "decisao do assistente, nao confirmada pelo usuario: .arte e .quant usam line-height 1 por requisito funcional. A arte ASCII em bloco so tem as fileiras encostadas com entrelinha 1 (com 1.25 o logotipo FURSEC ganha faixas brancas horizontais, defeito corrigido em 4f2d53d), e .quant e um numeral de uma linha. Motivo registrado em DESIGN.md. Custo assumido: entrelinha de prosa no index.html deixa de ser coberta."
+      }
+    ]
+  }
+}

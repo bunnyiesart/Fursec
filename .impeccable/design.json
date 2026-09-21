@@ -9,35 +9,82 @@
         "displayName": "Branco de Papel",
         "canonical": "#ffffff",
         "darkValue": "#131417",
-        "tonalRamp": ["#131417", "#26282d", "#3b3e44", "#54575e", "#6e7178", "#9a9da3", "#c6c8cb", "#ffffff"]
+        "tonalRamp": [
+          "#131417",
+          "#26282d",
+          "#3b3e44",
+          "#54575e",
+          "#6e7178",
+          "#9a9da3",
+          "#c6c8cb",
+          "#ffffff"
+        ],
+        "note": "Fundo chapado. Nenhuma camada de imagem: a folha shipped nao tem um unico url()."
       },
       "fg": {
         "role": "neutral",
         "displayName": "Grafite de Texto",
         "canonical": "#16171a",
         "darkValue": "#e7e8ea",
-        "tonalRamp": ["#0b0c0d", "#16171a", "#2a2c30", "#414449", "#5b5e64", "#8a8d93", "#bcbfc4", "#e7e8ea"]
+        "tonalRamp": [
+          "#0b0c0d",
+          "#16171a",
+          "#2a2c30",
+          "#414449",
+          "#5b5e64",
+          "#8a8d93",
+          "#bcbfc4",
+          "#e7e8ea"
+        ],
+        "note": "Tambem a cor da arte da faixa de boot, do rotulo WARNING: e da regua esquerda do aviso — o unico filete da folha que usa a cor do texto em vez de --line."
       },
       "muted": {
         "role": "neutral",
         "displayName": "Cinza de Apoio",
         "canonical": "#6e7178",
         "darkValue": "#8b8f97",
-        "tonalRamp": ["#181a1d", "#2b2d31", "#3e4146", "#53565c", "#6e7178", "#8b8f97", "#b4b7bc", "#dcdee1"]
+        "tonalRamp": [
+          "#181a1d",
+          "#2b2d31",
+          "#3e4146",
+          "#53565c",
+          "#6e7178",
+          "#8b8f97",
+          "#b4b7bc",
+          "#dcdee1"
+        ]
       },
       "line": {
         "role": "neutral",
         "displayName": "Linha de Divisa",
         "canonical": "#e6e7e9",
         "darkValue": "#26282d",
-        "tonalRamp": ["#16171a", "#26282d", "#3a3d42", "#55585e", "#7b7e85", "#a8abb0", "#cfd1d4", "#e6e7e9"]
+        "tonalRamp": [
+          "#16171a",
+          "#26282d",
+          "#3a3d42",
+          "#55585e",
+          "#7b7e85",
+          "#a8abb0",
+          "#cfd1d4",
+          "#e6e7e9"
+        ]
       },
       "accent": {
         "role": "primary",
         "displayName": "Azul de Estado",
         "canonical": "#1a4fd6",
         "darkValue": "#8fb0ff",
-        "tonalRamp": ["#07143c", "#0d2470", "#12379f", "#1a4fd6", "#3f6ee6", "#6b93f3", "#8fb0ff", "#c9d9ff"]
+        "tonalRamp": [
+          "#07143c",
+          "#0d2470",
+          "#12379f",
+          "#1a4fd6",
+          "#3f6ee6",
+          "#6b93f3",
+          "#8fb0ff",
+          "#c9d9ff"
+        ]
       },
       "realce": {
         "role": "primary",
@@ -48,20 +95,64 @@
       }
     },
     "typographyMeta": {
-      "display": { "displayName": "Contagem", "purpose": "O numeral de acervo dentro da caixa. Maior corpo da página e primeiro elemento de leitura de cada seção. 1.875rem abaixo de 40rem." },
-      "headline": { "displayName": "Título de documento", "purpose": "O h1 das páginas geradas dos .md. Sem caixa alta e sem tracking, de propósito." },
-      "title": { "displayName": "Marca do índice", "purpose": "\"Fursec\" no topo do índice, em caixa alta com tracking .14em. O mesmo corpo sem tracking serve o h2 de documento." },
-      "body": { "displayName": "Corpo", "purpose": "Texto corrido e título de item de catálogo. 1.65 de entrelinha nas páginas de documento." },
-      "campo": { "displayName": "Campo de busca", "purpose": "Um corpo acima do texto corrido, sem moldura: lê como linha de prosa." },
-      "label": { "displayName": "Rótulo de seção", "purpose": "O mesmo corpo nas dez caixas. Hierarquia entre seções nunca é tamanho de letra." },
-      "meta": { "displayName": "Apoio", "purpose": "Descrição de item, unidade da contagem, contagem de resultados, links de sublista." },
-      "micro": { "displayName": "Micro", "purpose": "O summary de \"N seções\". Tecla de atalho desce a .6875rem; migalha a .8rem em caixa alta." }
+      "display": {
+        "displayName": "Contagem",
+        "purpose": "O numeral de acervo dentro da caixa. Maior corpo da página e primeiro elemento de leitura de cada seção. 1.875rem abaixo de 40rem."
+      },
+      "headline": {
+        "displayName": "Título de documento",
+        "purpose": "O h1 das páginas geradas dos .md. Sem caixa alta e sem tracking, de propósito."
+      },
+      "title": {
+        "displayName": "Marca do índice",
+        "purpose": "\"Fursec\" no topo do índice, em caixa alta com tracking .14em. O mesmo corpo sem tracking serve o h2 de documento."
+      },
+      "body": {
+        "displayName": "Corpo",
+        "purpose": "Texto corrido e título de item de catálogo. 1.65 de entrelinha nas páginas de documento."
+      },
+      "campo": {
+        "displayName": "Campo de busca",
+        "purpose": "Um corpo acima do texto corrido, sem moldura: lê como linha de prosa."
+      },
+      "label": {
+        "displayName": "Rótulo de seção",
+        "purpose": "O mesmo corpo nas dez caixas. Hierarquia entre seções nunca é tamanho de letra."
+      },
+      "meta": {
+        "displayName": "Apoio",
+        "purpose": "Descrição de item, unidade da contagem, contagem de resultados, links de sublista."
+      },
+      "micro": {
+        "displayName": "Micro",
+        "purpose": "O summary de \"N seções\". Tecla de atalho desce a .6875rem; migalha a .8rem em caixa alta."
+      },
+      "displayCompact": {
+        "displayName": "Contagem compacta",
+        "purpose": "A mesma contagem abaixo de 40rem, a 1.875rem."
+      },
+      "arte": {
+        "displayName": "Arte de boot",
+        "purpose": "O <pre> da faixa de boot: raposa em bloco cheio + logotipo FURSEC em ASCII de bloco. Mono do sistema por requisito de largura fixa; clamp(5.5px, 2.2vw, 11px) mantem as 64 colunas dentro de 390px; line-height 1 e requisito (com 1.25 o logotipo esfarrapa)."
+      },
+      "prompt": {
+        "displayName": "Prompt da busca",
+        "purpose": "fursec# a esquerda do campo, em mono .875rem. Substituiu o SVG de lupa: carrega identidade onde o icone nao carregava."
+      },
+      "avisoRotulo": {
+        "displayName": "Rotulo de aviso",
+        "purpose": "WARNING: em mono .75rem caixa alta. Sai em 700, o bold nativo do <b>, sem declaracao de peso — desvio herdado da Regra dos Dois Pesos, registrado e nao canonizado."
+      },
+      "tag": {
+        "displayName": "Etiqueta de catalogo",
+        "purpose": "As etiquetas escritas das tabelas (GRATIS, PAGO, CERT, LAB, PT, EN, nivel de risco) que o build gera a partir do emoji do markdown. Sans, nao mono."
+      }
     },
     "shadows": [
       {
         "name": "nenhuma",
         "value": "none",
-        "purpose": "O sistema é plano. Nenhuma superfície levanta: profundidade vem de borda de 1px, régua a 60% do token e a camada de fundo em opacidade .06/.05."
+        "purpose": "O sistema e plano. Nenhuma superficie levanta: profundidade vem de borda de 1px, regua a 60% do token e preenchimento tonal por color-mix. A camada de fundo em opacidade foi removida junto com a foto do mascote."
       },
       {
         "name": "regua-de-foco",
@@ -70,40 +161,157 @@
       }
     ],
     "motion": [
-      { "name": "divisa", "value": "transform .18s cubic-bezier(.2, .8, .2, 1)", "purpose": "A divisa de borda CSS do <details> girando de -45° para 45° ao abrir." },
-      { "name": "parallax-fundo", "value": "translate3d(0, var(--py), 0) — --py = -(progresso * innerHeight * 0.15)", "purpose": "O mascote de fundo desliza por PROGRESSO do scroll, não por scroll absoluto: o curso disponível é a folga de 15% do inset." },
-      { "name": "reduced-motion", "value": "@media (prefers-reduced-motion: reduce) { transform: none !important; * { animation-duration: .01ms !important; transition-duration: .01ms !important } }", "purpose": "Desliga parallax e toda transição. Todo movimento novo respeita a mesma consulta." }
+      {
+        "name": "divisa",
+        "value": "transform .18s cubic-bezier(.2, .8, .2, 1)",
+        "purpose": "A divisa de borda CSS do <details> girando de -45 para 45 graus ao abrir. E o unico movimento persistente que restou na pagina."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "@media (prefers-reduced-motion: reduce) { * { animation-duration: .01ms !important; transition-duration: .01ms !important } }",
+        "purpose": "Desliga toda transicao. Todo movimento novo respeita a mesma consulta."
+      }
     ],
     "breakpoints": [
-      { "name": "grade-dupla", "value": "62rem", "purpose": "Abaixo: a grade de 12 vira duas colunas (span 6); Roadmap passa a 3 fases por linha; a banda de entrada trava em 2 colunas. As bandas precisam de span 12 reafirmado aqui." },
-      { "name": "coluna-unica", "value": "40rem", "purpose": "Abaixo: tudo empilha (span 12), cabeçalho em bloco, tecla de atalho oculta, contagem em linha própria, numeral a 1.875rem." },
-      { "name": "unidade-quebrada", "value": "62.0625rem (min-width)", "purpose": "Acima: na faixa estreita a unidade da contagem quebra para a linha inteira. Atada à largura, não à classe." }
+      {
+        "name": "grade-dupla",
+        "value": "62rem",
+        "purpose": "Abaixo: a grade de 12 vira duas colunas (span 6); Roadmap passa a 3 fases por linha; a banda de entrada trava em 2 colunas. As bandas precisam de span 12 reafirmado aqui."
+      },
+      {
+        "name": "coluna-unica",
+        "value": "40rem",
+        "purpose": "Abaixo: tudo empilha (span 12), cabeçalho em bloco, tecla de atalho oculta, contagem em linha própria, numeral a 1.875rem."
+      },
+      {
+        "name": "unidade-quebrada",
+        "value": "62.0625rem (min-width)",
+        "purpose": "Acima: na faixa estreita a unidade da contagem quebra para a linha inteira. Atada à largura, não à classe."
+      }
     ],
     "containers": [
-      { "name": "documento", "value": "46rem", "purpose": "Páginas geradas dos .md: manda a medida de leitura." },
-      { "name": "indice", "value": "64rem", "purpose": "body.inicio: a grade de caixas pede largura." }
+      {
+        "name": "documento",
+        "value": "46rem",
+        "purpose": "Páginas geradas dos .md: manda a medida de leitura."
+      },
+      {
+        "name": "indice",
+        "value": "64rem",
+        "purpose": "body.inicio: a grade de caixas pede largura."
+      },
+      {
+        "name": "arte",
+        "value": "64 colunas de caractere",
+        "purpose": "A faixa de boot e medida em colunas de caractere, nao em rem: flex 0 0 100% dentro do cabecalho, overflow hidden, e o corpo escala por clamp para caber em 390px."
+      }
     ],
     "grid": {
       "columns": 12,
       "gap": "1.25rem",
       "alignItems": "start",
       "bands": [
-        { "name": "banda", "span": 12, "purpose": "Bandas de orientação: Comece aqui e Roadmap. Fora da fila de contagem." },
-        { "name": "larga", "span": 6, "purpose": "Catálogos com muitos documentos a dispor." },
-        { "name": "estreita", "span": 3, "purpose": "Seções com poucos documentos." }
+        {
+          "name": "banda",
+          "span": 12,
+          "purpose": "Bandas de orientação: Comece aqui e Roadmap. Fora da fila de contagem."
+        },
+        {
+          "name": "larga",
+          "span": 6,
+          "purpose": "Catálogos com muitos documentos a dispor."
+        },
+        {
+          "name": "estreita",
+          "span": 3,
+          "purpose": "Seções com poucos documentos."
+        }
       ],
       "orderingRule": "A ORDEM das caixas é a contagem do acervo, estritamente decrescente (172, 80, 45, 33, 26, 22, 4, 2). A LARGURA é quantos documentos a caixa tem para dispor. Posto se lê pela ordem de leitura; a área lê volume de layout."
     },
     "reviewCoverage": {
-      "verdict": "ship (três rodadas)",
-      "covered": ["index.html a 1440 claro/escuro", "index.html a 768", "index.html a 390 claro/escuro", "dois primeiros-viewport 1440x900", "dois estados de filtro"],
-      "notCovered": ["as páginas de documento geradas pelo tools/build-site.py (.md), que compartilham esta folha e nunca entraram em matriz de fidelidade"],
-      "requiredCaptures": ["1440", "768", "390"],
-      "why768": "A faixa 40–62rem esconde defeito de colapso de banda e não é interpolável pelos extremos: passou por todas as rodadas invisível enquanto só 1440 e 390 eram capturados."
+      "verdict": "ship (tres rodadas) — VENCIDO para o indice atual",
+      "covered": [
+        "index.html a 1440 claro/escuro",
+        "index.html a 768",
+        "index.html a 390 claro/escuro",
+        "dois primeiros-viewport 1440x900",
+        "dois estados de filtro"
+      ],
+      "notCovered": [
+        "as paginas de documento geradas pelo tools/build-site.py (.md), que compartilham esta folha e nunca entraram em matriz de fidelidade — explicitamente fora do veredito",
+        "o indice como esta hoje: depois do veredito, a camada fotografica de fundo e o parallax sairam e entraram a faixa de boot em ASCII, o aviso de etica e o prompt fursec#. Essas mudancas NAO passaram por revisao de fecho nova."
+      ],
+      "requiredCaptures": [
+        "1440",
+        "768",
+        "390"
+      ],
+      "why768": "A faixa 40–62rem esconde defeito de colapso de banda e nao e interpolavel pelos extremos: passou por todas as rodadas invisivel enquanto so 1440 e 390 eram capturados."
     },
     "rasters": [
-      { "path": "assets/mascote.jpg", "provenance": "pré-existente ao trabalho; não produzido nem modificado nesta passagem. Nenhum raster foi gerado.", "usage": "background decorativo de body.inicio::before, cinza .55, opacidade .06 claro / .05 escuro. Nunca <img>." }
-    ]
+      {
+        "path": "assets/mascote.jpg",
+        "provenance": "pre-existente ao trabalho; nao produzido nem modificado nesta passagem. Nenhum raster foi gerado.",
+        "usage": "NAO REFERENCIADO. Nem pela folha (zero url()) nem pelo index.html, desde a remocao de body.inicio::before. Ativo de marca retido de proposito, nao dependencia viva desta superficie."
+      }
+    ],
+    "fontStacks": [
+      {
+        "name": "leitura",
+        "value": "ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+        "purpose": "Face unica de leitura. Pilha do sistema, nenhuma face self-hosted, nenhuma face de display."
+      },
+      {
+        "name": "mono-funcional",
+        "value": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "purpose": "Pilha mono do sistema. Funcional, nao segunda voz: so em .arte (grade de caractere), .busca .prompt e .aviso b. Nunca em titulo, corpo, rotulo ou etiqueta."
+      }
+    ],
+    "removed": [
+      {
+        "name": "fundo-fotografico",
+        "was": "body.inicio::before com url(\"mascote.jpg\"), grayscale(.55), opacity .06/.05, z-index -1",
+        "purpose": "Removido no shipped. Nao ha camada de fundo, nao ha url() na folha, e o mascote passou a ser grafado em caractere na faixa de boot."
+      },
+      {
+        "name": "parallax-fundo",
+        "was": "translate3d(0, var(--py), 0) com --py escrito por script de progresso de rolagem, mais will-change",
+        "purpose": "Removido junto com a foto, script incluido. Nao reintroduzir: o fundo e chapado."
+      },
+      {
+        "name": "lupa-svg",
+        "was": ".busca .lupa, SVG inline de circulo + segmento a stroke-width 1.5",
+        "purpose": "Substituida por span.prompt com o texto fursec#. A classe .lupa nao existe mais na folha."
+      }
+    ],
+    "buildTransform": {
+      "file": "tools/build-site.py",
+      "purpose": "O sistema alcanca as 48 paginas geradas por uma camada de build, nao so por CSS: o emoji da legenda do markdown vira etiqueta escrita antes de a pagina existir.",
+      "labels": [
+        "grátis (tag--gratis)",
+        "pago",
+        "cert",
+        "lab",
+        "PT",
+        "EN",
+        "crítico (tag--prioridade)",
+        "alto",
+        "médio",
+        "baixo",
+        "a fazer"
+      ],
+      "emphasis": "destaca_prioridade(): ⭐ numa celula vira <strong class=\"prio\"> no nome do item. Como etiqueta a estrela pesava mais que o curso que qualificava; peso no nome e o eixo que a pagina ja usa.",
+      "skips": "fora_de_pre(): nada e aplicado dentro de <pre>. Emoji em bloco de codigo e conteudo (as arvores de diretorio de docs/ desenham com 📁 e 📌).",
+      "sourceUntouched": "O markdown continua com emoji, para ler bem no GitHub. Tirar emoji da cromia e regra da SUPERFICIE, aplicada na geracao, nao edicao do acervo."
+    },
+    "detectorException": {
+      "rule": "tight-leading",
+      "where": ".arte (e .quant, numeral de uma linha)",
+      "why": "A arte ASCII nao e texto para ler, e um desenho feito de caracteres: as fileiras de bloco so se encostam com line-height 1. Com 1.25 o logotipo FURSEC ganha faixas brancas horizontais e se esfarrapa. A regra deve seguir disparando.",
+      "currentSuppression": ".impeccable/config.json carrega ignoreValues com rule tight-leading, value \"*\", escopado a index.html. Criado por DECISAO DO ASSISTENTE, nao confirmada pelo usuario; custo assumido: a entrelinha de prosa do index.html deixa de ser coberta.",
+      "preferred": "Excecao por valor e por seletor, nao curinga por arquivo. Nao copiar este padrao para outro arquivo, e nao 'consertar' a arte afrouxando a entrelinha."
+    }
   },
   "components": [
     {
@@ -123,12 +331,28 @@
       "css": ".ds-caixa { padding: 1.25rem 1.25rem 1.5rem; background: var(--bg, #fff); color: var(--fg, #16171a); border: 1px solid var(--line, #e6e7e9); border-radius: 0; font: 15px/1.6 ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; } .ds-caixa-rotulo { margin: 0; color: var(--muted, #6e7178); font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; } .ds-caixa-quant { margin: .5rem 0 1rem; display: flex; align-items: baseline; gap: .4rem; line-height: 1; } .ds-caixa-quant b { font-size: 2.125rem; font-weight: 600; letter-spacing: -.03em; font-variant-numeric: tabular-nums; } .ds-caixa-quant span { color: var(--muted, #6e7178); font-size: .8125rem; } .ds-banda-lista { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1.25rem 2rem; } .ds-banda-item { display: block; width: fit-content; max-width: 100%; font-weight: 600; color: var(--fg, #16171a); text-decoration: none; border-bottom: 1px solid transparent; } .ds-banda-item:hover, .ds-banda-item:focus-visible { color: var(--accent, #1a4fd6); border-bottom-color: var(--accent, #1a4fd6); } .ds-caixa-desc { display: block; margin-top: .1rem; color: var(--muted, #6e7178); font-size: .8125rem; line-height: 1.5; } @media (max-width: 40rem) { .ds-banda-lista { grid-template-columns: 1fr; } }"
     },
     {
+      "name": "Faixa de boot",
+      "kind": "custom",
+      "refersTo": "faixa-boot",
+      "description": "A expressao de marca do indice: raposa em bloco cheio e o logotipo FURSEC em ASCII de bloco, o mesmo do README.md. Substituiu a camada fotografica de mascote. Decorativa por definicao (aria-hidden); o nome vive num h1 visualmente oculto.",
+      "html": "<pre class=\"ds-arte-demo\" aria-hidden=\"true\">██       ██  ███████╗██╗   ██╗██████╗ ███████╗███████╗ ██████╗\n████   ████  ██╔════╝██║   ██║██╔══██╗██╔════╝██╔════╝██╔════╝\n███████████  █████╗  ██║   ██║██████╔╝███████╗█████╗  ██║</pre>",
+      "css": ".ds-arte-demo { margin: 0 0 1rem; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: clamp(5.5px, 2.2vw, 11px); line-height: 1; color: var(--fg, #16171a); white-space: pre; overflow: hidden; } @media (max-width: 62rem) { .ds-arte-demo { margin-bottom: .75rem; } }"
+    },
+    {
+      "name": "Aviso de ética",
+      "kind": "custom",
+      "refersTo": "aviso",
+      "description": "Aviso de maquina, nao banner de alerta: regua esquerda de 1px em --fg, rotulo WARNING: em mono caixa alta, corpo em --muted. Severidade por marca, nao por matiz — a paleta nao tem cor de alerta.",
+      "html": "<p class=\"ds-aviso\"><b>WARNING:</b> testar sistema de terceiros sem autorização é crime — Lei 12.737/2012, Art. 154-A do Código Penal. <a href=\"#\">Leia as regras de ética antes de qualquer projeto.</a></p>",
+      "css": ".ds-aviso { margin: 1.25rem 0 0; padding: .7rem 0 .7rem .9rem; border-left: 1px solid var(--fg, #16171a); color: var(--muted, #6e7178); font: 400 .8125rem/1.55 ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; } .ds-aviso b { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .75rem; letter-spacing: .06em; color: var(--fg, #16171a); } .ds-aviso a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line, #e6e7e9); } .ds-aviso a:hover, .ds-aviso a:focus-visible { color: var(--accent, #1a4fd6); border-bottom-color: var(--accent, #1a4fd6); }"
+    },
+    {
       "name": "Linha de busca",
       "kind": "input",
       "refersTo": "busca-campo",
-      "description": "Campo transparente de borda única com lupa desenhada, tecla de atalho e contagem ao vivo. O foco acende a linha inteira, não um anel em volta do campo.",
-      "html": "<div class=\"ds-busca\"><svg class=\"ds-busca-lupa\" width=\"15\" height=\"15\" viewBox=\"0 0 15 15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" aria-hidden=\"true\"><circle cx=\"6.5\" cy=\"6.5\" r=\"4.25\"/><path d=\"M9.7 9.7 13 13\"/></svg><input class=\"ds-busca-campo\" type=\"search\" placeholder=\"Filtrar por título, descrição ou seção…\" aria-label=\"Filtrar o catálogo\"><span class=\"ds-busca-atalho\" aria-hidden=\"true\">/</span><output class=\"ds-busca-conta\">1284 entradas no índice</output></div>",
-      "css": ".ds-busca { display: flex; align-items: center; gap: .6rem; border-bottom: 1px solid var(--line, #e6e7e9); font: 15px/1.6 ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; color: var(--fg, #16171a); } .ds-busca:focus-within { border-bottom-color: var(--accent, #1a4fd6); box-shadow: 0 1px 0 var(--accent, #1a4fd6); } .ds-busca-lupa { flex: 0 0 auto; color: var(--muted, #6e7178); } .ds-busca:focus-within .ds-busca-lupa { color: var(--accent, #1a4fd6); } .ds-busca-campo { flex: 1; min-width: 0; padding: .7rem 0; background: transparent; color: var(--fg, #16171a); border: 0; font: inherit; font-size: 1.0625rem; } .ds-busca-campo:focus { outline: none; } .ds-busca-campo::placeholder { color: var(--muted, #6e7178); } .ds-busca-atalho { flex: 0 0 auto; padding: .1rem .35rem; border: 1px solid var(--line, #e6e7e9); border-radius: 3px; color: var(--muted, #6e7178); font-size: .6875rem; line-height: 1.4; } .ds-busca:focus-within .ds-busca-atalho { visibility: hidden; } .ds-busca-conta { flex: 0 0 auto; color: var(--muted, #6e7178); font-size: .8125rem; font-variant-numeric: tabular-nums; white-space: nowrap; }"
+      "description": "Campo transparente de borda unica com o prompt fursec# em mono, tecla de atalho e contagem ao vivo. O foco acende a linha inteira, nao um anel em volta do campo.",
+      "html": "<div class=\"ds-busca\"><span class=\"ds-busca-prompt\" aria-hidden=\"true\">fursec#</span><input class=\"ds-busca-campo\" type=\"search\" placeholder=\"Filtrar por título, descrição ou seção…\" aria-label=\"Filtrar o catálogo\"><span class=\"ds-busca-atalho\" aria-hidden=\"true\">/</span><output class=\"ds-busca-conta\">1284 entradas no índice</output></div>",
+      "css": ".ds-busca { display: flex; align-items: center; gap: .6rem; border-bottom: 1px solid var(--line, #e6e7e9); font: 15px/1.6 ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; color: var(--fg, #16171a); } .ds-busca:focus-within { border-bottom-color: var(--accent, #1a4fd6); box-shadow: 0 1px 0 var(--accent, #1a4fd6); } .ds-busca-prompt { flex: 0 0 auto; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .875rem; color: var(--muted, #6e7178); user-select: none; } .ds-busca:focus-within .ds-busca-prompt { color: var(--accent, #1a4fd6); } .ds-busca-campo { flex: 1; min-width: 0; padding: .7rem 0; background: transparent; color: var(--fg, #16171a); border: 0; font: inherit; font-size: 1.0625rem; } .ds-busca-campo:focus { outline: none; } .ds-busca-campo::placeholder { color: var(--muted, #6e7178); } .ds-busca-atalho { flex: 0 0 auto; padding: .1rem .35rem; border: 1px solid var(--line, #e6e7e9); border-radius: 3px; color: var(--muted, #6e7178); font-size: .6875rem; line-height: 1.4; } .ds-busca:focus-within .ds-busca-atalho { visibility: hidden; } .ds-busca-conta { flex: 0 0 auto; color: var(--muted, #6e7178); font-size: .8125rem; font-variant-numeric: tabular-nums; white-space: nowrap; }"
     },
     {
       "name": "Seção recolhida",
@@ -142,9 +366,9 @@
       "name": "Cabeçalho do índice",
       "kind": "nav",
       "refersTo": "caixa-rotulo",
-      "description": "Marca em caixa alta com tracking, a frase do que é, e o endereço do repositório empurrado para a direita com filete inferior que acende no acento.",
-      "html": "<header class=\"ds-topo\"><h1 class=\"ds-topo-marca\">Fursec</h1><p class=\"ds-topo-sub\">Trilha de cibersegurança com material gratuito.</p><a class=\"ds-topo-repo\" href=\"#\">github.com/bunnyiesart/Fursec</a></header>",
-      "css": ".ds-topo { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem 1.25rem; font: 15px/1.6 ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; color: var(--fg, #16171a); } .ds-topo-marca { margin: 0; font-size: 1.05rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; } .ds-topo-sub { margin: 0; color: var(--muted, #6e7178); } .ds-topo-repo { margin-left: auto; color: var(--muted, #6e7178); font-size: .8125rem; text-decoration: none; border-bottom: 1px solid var(--line, #e6e7e9); } .ds-topo-repo:hover, .ds-topo-repo:focus-visible { color: var(--accent, #1a4fd6); border-bottom-color: var(--accent, #1a4fd6); } @media (max-width: 40rem) { .ds-topo { display: block; } .ds-topo-sub { margin: .35rem 0 0; } .ds-topo-repo { display: inline-block; margin: .5rem 0 0; } }"
+      "description": "Faixa de boot de largura inteira, o nome acessivel num h1 visualmente oculto, a frase do que e, e o endereco do repositorio empurrado para a direita com filete inferior que acende no acento.",
+      "html": "<header class=\"ds-topo\"><pre class=\"ds-arte\" aria-hidden=\"true\">██       ██  ███████╗██╗   ██╗██████╗ ███████╗███████╗ ██████╗\n████   ████  ██╔════╝██║   ██║██╔══██╗██╔════╝██╔════╝██╔════╝\n███████████  █████╗  ██║   ██║██████╔╝███████╗█████╗  ██║</pre><h1 class=\"ds-topo-marca\">Fursec</h1><p class=\"ds-topo-sub\">Trilha de cibersegurança com material gratuito.</p><a class=\"ds-topo-repo\" href=\"#\">github.com/bunnyiesart/Fursec</a></header>",
+      "css": ".ds-topo { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem 1.25rem; font: 15px/1.6 ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; color: var(--fg, #16171a); } .ds-arte { flex: 0 0 100%; margin: 0 0 1rem; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: clamp(5.5px, 2.2vw, 11px); line-height: 1; color: var(--fg, #16171a); white-space: pre; overflow: hidden; } .ds-topo-marca { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; font-size: 1.05rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; } .ds-topo-sub { margin: 0; color: var(--muted, #6e7178); } .ds-topo-repo { margin-left: auto; color: var(--muted, #6e7178); font-size: .8125rem; text-decoration: none; border-bottom: 1px solid var(--line, #e6e7e9); } .ds-topo-repo:hover, .ds-topo-repo:focus-visible { color: var(--accent, #1a4fd6); border-bottom-color: var(--accent, #1a4fd6); } @media (max-width: 40rem) { .ds-topo { display: block; } .ds-topo-sub { margin: .35rem 0 0; } .ds-topo-repo { display: inline-block; margin: .5rem 0 0; } }"
     },
     {
       "name": "Página de documento",
@@ -153,6 +377,14 @@
       "description": "Envelope de leitura das páginas geradas dos .md: migalha em caixa alta, h1 sem tracking, h2 com filete, link de corpo no acento com sublinhado a 35%. Superfície ainda não verificada em matriz de fidelidade.",
       "html": "<div class=\"ds-doc\"><p class=\"ds-crumb\"><a href=\"#\">&lsaquo; Fursec</a></p><article class=\"ds-md\"><h1>Método de estudo</h1><h2>Como reter</h2><p>Vídeo passivo retém cerca de 29%; <a href=\"#\">testar-se</a> chega a 57%. Use <code>spaced repetition</code>.</p><blockquote>Metade do tempo tem de ser lab.</blockquote></article></div>",
       "css": ".ds-doc { max-width: 46rem; font: 15px/1.6 ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; color: var(--fg, #16171a); text-underline-offset: .2em; } .ds-crumb { margin: 0 0 2.5rem; color: var(--muted, #6e7178); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; } .ds-crumb a { color: inherit; text-decoration: none; } .ds-crumb a:hover { color: var(--accent, #1a4fd6); } .ds-md { overflow-wrap: break-word; } .ds-md h1 { margin: 0 0 1.5rem; font-size: 1.5rem; line-height: 1.25; letter-spacing: normal; text-transform: none; font-weight: 600; text-wrap: balance; } .ds-md h2 { margin: 2.5rem 0 .9rem; padding-bottom: .5rem; border-bottom: 1px solid var(--line, #e6e7e9); font-size: 1.05rem; letter-spacing: 0; text-wrap: balance; } .ds-md p { line-height: 1.65; } .ds-md a { color: var(--accent, #1a4fd6); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--accent, #1a4fd6) 35%, transparent); } .ds-md a:hover { border-bottom-color: var(--accent, #1a4fd6); } .ds-md code { font-size: .875em; padding: .15em .35em; border-radius: 3px; background: color-mix(in srgb, var(--fg, #16171a) 8%, transparent); } .ds-md blockquote { margin: 1.25rem 0; padding: .1rem 0 .1rem 1rem; border-left: 1px solid var(--line, #e6e7e9); color: var(--muted, #6e7178); }"
+    },
+    {
+      "name": "Etiqueta de catálogo",
+      "kind": "chip",
+      "refersTo": "documento-tag",
+      "description": "As etiquetas escritas que o build gera a partir do emoji do markdown (GRATIS, PAGO, CERT, LAB, PT, EN, nivel de risco). Diferenciacao por PESO, nunca por matiz: gratis e prioridade sobem para --fg com borda a 22% de --fg.",
+      "html": "<p class=\"ds-tag-demo\"><strong class=\"ds-prio\" title=\"Prioridade alta\">Fundamentos de redes</strong> <span class=\"ds-tag ds-tag--gratis\">grátis</span><span class=\"ds-tag\">cert</span><span class=\"ds-tag\">PT</span><span class=\"ds-tag ds-tag--prioridade\">crítico</span></p>",
+      "css": ".ds-tag-demo { margin: 0; font: 400 .8125rem/1.6 ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; color: var(--fg, #16171a); } .ds-prio { font-weight: 600; color: var(--fg, #16171a); } .ds-tag { display: inline-block; padding: .1em .4em; border: 1px solid var(--line, #e6e7e9); border-radius: 3px; color: var(--muted, #6e7178); font-size: .625rem; line-height: 1.5; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; vertical-align: .1em; } .ds-tag + .ds-tag { margin-left: .25em; } .ds-tag--gratis, .ds-tag--prioridade { color: var(--fg, #16171a); border-color: color-mix(in srgb, var(--fg, #16171a) 22%, transparent); }"
     },
     {
       "name": "Estado vazio do filtro",
@@ -165,28 +397,83 @@
   ],
   "narrative": {
     "northStar": "O Acervo Medido",
-    "overview": "Este sistema não tem cor nem face para gastar. A paleta de cinco tokens e a pilha de fonte de sistema estão fixadas pelo usuário como intocáveis, e é dessa restrição que todo o resto nasce: a hierarquia é carregada por escala, peso, espaço e área, e o acento existe só em hover, foco e estado. Onde outro sistema pintaria uma seção de destaque, este a faz maior; onde outro trocaria de face, este muda o corpo do numeral.\n\nA personalidade é de catálogo conferido, não de brochura. A página se declara pela dimensão antes de se declarar pelo conteúdo: cada caixa abre com sua contagem real em numeral tabular de corpo grande, e é a contagem que o olho pega primeiro — o rótulo vem acima dela, menor. Recusa explícita, confirmada no build: a lista corrida de links anotados que trata 172 cursos e 2 arquivos de progresso como se pesassem igual, e a grade de cartões idênticos de ícone-título-texto. A caixa tem o tamanho do que carrega.\n\nDensidade alta, moldura mínima, movimento quase nulo. A única moldura é a borda de 1px de --line; o único movimento persistente é a divisa do <details> girando em 180ms e um parallax de fundo em 15% do curso da janela, ambos desligados por prefers-reduced-motion. A folha é única e serve duas superfícies: o índice (grade de caixas, 64rem) e as páginas de documento geradas dos .md (coluna de leitura, 46rem).",
+    "overview": "Este sistema não tem cor nem face para gastar. A paleta de cinco tokens e a pilha de fonte de sistema estão fixadas pelo usuário como intocáveis, e é dessa restrição que todo o resto nasce: a hierarquia é carregada por escala, peso, espaço e área, e o acento existe só em hover, foco e estado. Onde outro sistema pintaria uma seção de destaque, este a faz maior; onde outro trocaria de face, este muda o corpo do numeral.\n\nA personalidade é de catálogo conferido, não de brochura. A página se declara pela dimensão antes de se declarar pelo conteúdo: cada caixa abre com sua contagem real em numeral tabular de corpo grande, e é a contagem que o olho pega primeiro — o rótulo vem acima dela, menor. Recusa explícita, confirmada no build: a lista corrida de links anotados que trata 172 cursos e 2 arquivos de progresso como se pesassem igual, e a grade de cartões idênticos de ícone-título-texto. A caixa tem o tamanho do que carrega.\n\nO mascote não entra mais como imagem. A expressão de marca do índice é a faixa de boot: um <pre aria-hidden> com a cabeça de raposa desenhada em caracteres de bloco cheio ao lado do logotipo FURSEC em ASCII de bloco, o mesmo do README.md. A folha shipped não tem nenhum url(); a camada de fundo fotográfica, o parallax de rolagem e o script que o movia foram removidos. O que sobrou de movimento persistente é só a divisa do <details> girando em 180ms, desligada por prefers-reduced-motion. Densidade alta, moldura mínima, movimento quase nulo: a única moldura é a borda de 1px de --line. A folha é única e serve duas superfícies: o índice (grade de caixas, 64rem) e as 48 páginas de documento geradas dos .md (coluna de leitura, 46rem).",
     "keyCharacteristics": [
       "Cinco tokens de cor, um derivado por color-mix, nenhum sexto — em claro e escuro.",
-      "Fonte de sistema única; nenhuma face self-hosted, nenhum peso acima de 600.",
+      "Uma face de leitura só: a pilha sans do sistema. A mono é pilha do sistema e funcional, não segunda voz de display.",
+      "Zero raster: nenhum url() na folha. Marca desenhada em caractere, borda CSS ou path autoral.",
       "Contagem em numeral tabular como primeiro elemento de leitura de cada caixa.",
       "Rótulo de seção em corpo fixo nas dez caixas; a diferença entre elas é área.",
       "Borda de 1px e régua de 1px como único recurso de separação. Zero sombra.",
-      "Ícone é desenhado (borda CSS, SVG inline, path autoral), nunca glifo nem emoji.",
+      "Ícone é desenhado (borda CSS, path autoral) ou substituído por texto; nunca glifo decorativo nem emoji na cromia da interface.",
       "Superfícies do navegador — seleção, caret, barra de rolagem, anel de foco — puxadas dos mesmos tokens."
     ],
     "rules": [
-      { "name": "A Regra dos Cinco", "body": "A paleta é fechada em cinco tokens mais derivados por color-mix dos mesmos tokens. Uma sexta cor é proibida, em claro e em escuro. Precisar de uma cor nova significa que a hierarquia foi resolvida errada: resolva por escala, peso, espaço ou área.", "section": "colors" },
-      { "name": "A Regra do Acento Reativo", "body": "O acento não decora: ele responde. Só pode aparecer em hover, :focus-visible, caret, estado ativo e corpo de link de documento. Um acento em repouso na superfície do índice é violação.", "section": "colors" },
-      { "name": "A Regra de Estado é Marca, Não Matiz", "body": "Com um acento só, o que diferencia uma caixa da outra nunca é cor. Diferença se expressa por área, ordem e peso.", "section": "colors" },
-      { "name": "A Regra do Rótulo Fixo", "body": "Os dez rótulos de seção saem todos no mesmo corpo (.7rem). Hierarquia entre seções se lê pela área que a caixa ocupa e pela ordem em que aparece — nunca pelo tamanho da letra. Teste: se dois rótulos de seção têm corpos diferentes, a composição falhou.", "section": "typography" },
-      { "name": "A Regra do Numeral Tabular", "body": "Todo número que o leitor possa comparar — contagem da caixa, resultado do filtro, \"N seções\", coluna de horas e de preço nas tabelas — sai com font-variant-numeric: tabular-nums.", "section": "typography" },
-      { "name": "A Regra dos Dois Pesos", "body": "400 e 600, nada mais. O peso 600 é reservado a título, rótulo, contagem, th e à única caixa de entrada (\"Comece aqui\"), que é a ação primária de quem chega.", "section": "typography" },
-      { "name": "A Regra da Caixa Medida", "body": "A caixa tem o tamanho do que carrega: align-items: start no eixo vertical e a faixa de largura pelo volume de documentos no horizontal. Nenhuma caixa é esticada para casar com a vizinha.", "section": "layout" },
-      { "name": "A Regra da Banda Restaurada", "body": "Reescrever o span de .caixa numa media query obriga a reafirmar o span 12 das bandas na mesma query.", "section": "layout" },
-      { "name": "A Regra de Zero Sombra", "body": "Nenhuma superfície levanta. Se um elemento precisa se destacar, ele ganha contorno, área ou espaço — não sombra, não gradiente, não deslocamento.", "section": "elevation" },
-      { "name": "A Regra do Ícone Desenhado", "body": "Ícone é desenhado ou não existe. Borda CSS, SVG inline ou path autoral, sempre a 1.5px e em currentColor. Glifo tipográfico, fonte de ícone e emoji na cromia da interface são proibidos.", "section": "shapes" },
-      { "name": "A Regra do Canto Vivo", "body": "Contêiner não arredonda. O raio é reservado a superfície de navegador e a marcação inline de código.", "section": "shapes" }
+      {
+        "name": "A Regra dos Cinco",
+        "body": "A paleta é fechada em cinco tokens mais derivados por color-mix dos mesmos tokens. Uma sexta cor é proibida, em claro e em escuro. Precisar de uma cor nova significa que a hierarquia foi resolvida errada: resolva por escala, peso, espaço ou área.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Acento Reativo",
+        "body": "O acento não decora: ele responde. Só pode aparecer em hover, :focus-visible, caret, estado ativo e corpo de link de documento. Um acento em repouso na superfície do índice é violação.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra de Estado é Marca, Não Matiz",
+        "body": "Com um acento só, o que diferencia uma caixa da outra nunca é cor. Diferença se expressa por área, ordem e peso. Vale inclusive para severidade: o aviso de ética é marcado por filete e caixa alta, não por vermelho.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Rótulo Fixo",
+        "body": "Os dez rótulos de seção saem todos no mesmo corpo (.7rem). Hierarquia entre seções se lê pela área que a caixa ocupa e pela ordem em que aparece — nunca pelo tamanho da letra. Teste: se dois rótulos de seção têm corpos diferentes, a composição falhou.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra do Numeral Tabular",
+        "body": "Todo número que o leitor possa comparar — contagem da caixa, resultado do filtro, \"N seções\", coluna de horas e de preço nas tabelas — sai com font-variant-numeric: tabular-nums.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra dos Dois Pesos",
+        "body": "400 e 600 são os pesos do sistema. O peso 600 é reservado a título, rótulo, contagem, th, etiqueta de peso alto, nome com prioridade (.prio) e à única caixa de entrada (\"Comece aqui\"), que é a ação primária de quem chega. O 700 do <b> de WARNING: é o único valor fora dessa dupla no shipped e é desvio herdado, não licença: peso novo se declara em 600.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Mono Funcional",
+        "body": "A monoespaçada só entra onde a largura fixa do caractere é o requisito — grade de caracteres, prompt, rótulo curto de máquina. Nunca como face de voz, nunca em texto corrido, e sempre da pilha do sistema: nenhuma face self-hosted entra neste sistema.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Caixa Medida",
+        "body": "A caixa tem o tamanho do que carrega: align-items: start no eixo vertical e a faixa de largura pelo volume de documentos no horizontal. Nenhuma caixa é esticada para casar com a vizinha.",
+        "section": "layout"
+      },
+      {
+        "name": "A Regra da Banda Restaurada",
+        "body": "Reescrever o span de .caixa numa media query obriga a reafirmar o span 12 das bandas na mesma query.",
+        "section": "layout"
+      },
+      {
+        "name": "A Regra de Zero Sombra",
+        "body": "Nenhuma superfície levanta. Se um elemento precisa se destacar, ele ganha contorno, área ou espaço — não sombra, não gradiente, não deslocamento.",
+        "section": "elevation"
+      },
+      {
+        "name": "A Regra do Fundo Vazio",
+        "body": "O fundo é chapado em --bg. Sem imagem, sem gradiente, sem camada atmosférica: a folha shipped tem zero url() e a atmosfera, quando a marca precisa dela, é grafada em primeiro plano como caractere.",
+        "section": "elevation"
+      },
+      {
+        "name": "A Regra do Ícone Desenhado",
+        "body": "Ícone é desenhado, escrito ou não existe. Borda CSS, SVG inline a 1.5px em currentColor, path autoral, ou uma palavra em mono no lugar do pictograma. Glifo tipográfico decorativo, fonte de ícone e emoji na cromia da interface são proibidos.",
+        "section": "shapes"
+      },
+      {
+        "name": "A Regra do Canto Vivo",
+        "body": "Contêiner não arredonda. O raio é reservado a superfície de navegador, marcação de código e etiqueta.",
+        "section": "shapes"
+      }
     ],
     "dos": [
       "Do resolver hierarquia por escala, peso (400/600), espaço e área. A paleta e a face são intocáveis; toda diferenciação nova sai dessas quatro alavancas.",
@@ -195,24 +482,35 @@
       "Do abrir toda caixa pela contagem real em numeral tabular, com a unidade em --muted ao lado.",
       "Do ordenar caixas de catálogo de forma estritamente decrescente pela contagem do acervo, e dimensionar a largura pelo volume de documentos que a caixa dispõe. Ordem é posto; área é volume.",
       "Do restaurar .caixa--banda { grid-column: span 12; } dentro de qualquer media query que reescreva o span de .caixa.",
-      "Do desenhar todo ícone — borda CSS, SVG inline ou path autoral — a 1.5px em currentColor.",
-      "Do derivar tons novos com color-mix sobre os cinco tokens existentes, como já fazem o realce da seleção, a régua a 60% e os fundos de código.",
+      "Do desenhar todo ícone — borda CSS, SVG inline ou path autoral — a 1.5px em currentColor, ou substituí-lo por uma palavra, como o prompt fursec# fez com a lupa.",
+      "Do usar a mono do sistema só onde a largura fixa do caractere é requisito: grade de caracteres, prompt, rótulo curto de máquina.",
+      "Do manter a arte em <pre aria-hidden> com o nome acessível num <h1> visualmente oculto, sempre que a marca aparecer como desenho.",
+      "Do derivar tons novos com color-mix sobre os cinco tokens existentes, como já fazem o realce da seleção, a régua a 60%, os fundos de código e a borda da etiqueta de peso alto.",
       "Do dar contraparte escura a todo token e a todo valor de opacidade; ambos os temas são obrigatórios.",
-      "Do submeter qualquer movimento novo a prefers-reduced-motion: reduce, como já fazem o parallax e a transição da divisa.",
+      "Do submeter qualquer movimento novo a prefers-reduced-motion: reduce, como já faz a transição da divisa do <details> — o único movimento persistente que restou na página.",
+      "Do converter emoji de conteúdo em etiqueta escrita na camada de build, deixando o markdown intacto e pulando <pre>.",
       "Do capturar 1440, 768 e 390 em claro e escuro ao revisar. A faixa 40–62rem não é interpolável pelos extremos: foi ali que a banda colapsada passou por várias rodadas de revisão sem ser vista."
     ],
     "donts": [
       "Don't introduzir uma sexta cor, um gradiente ou uma face tipográfica nova. Nem no claro, nem no escuro, nem \"só para este componente\".",
-      "Don't usar emoji na cromia da interface. (A legenda de tags nas tabelas dos catálogos é dado funcional do conteúdo, não interface, e permanece.)",
-      "Don't usar glifo tipográfico ou fonte de ícone onde cabe um traço desenhado.",
+      "Don't trazer face self-hosted, nem promover a mono a segunda voz de display. Ela é pilha do sistema e é funcional.",
+      "Don't reintroduzir imagem de fundo, url(), camada atmosférica ou parallax de rolagem. O fundo é chapado; a folha shipped tem zero url().",
+      "Don't usar emoji na cromia da interface. (Nas tabelas dos catálogos o dado permanece, mas escrito: o build o converte em etiqueta.)",
+      "Don't usar glifo tipográfico ou fonte de ícone onde cabe um traço desenhado ou uma palavra.",
       "Don't adicionar box-shadow de elevação, nem gradiente, nem deslocamento de profundidade. O sistema é plano por contorno.",
       "Don't diferenciar uma caixa por cor de fundo, cor de borda ou tamanho de rótulo.",
-      "Don't arredondar contêiner. O raio pertence a anel de foco, marcação de código e superfície de navegador.",
+      "Don't marcar severidade por cor. Aviso se marca por filete em --fg e rótulo em caixa alta; não há cor de alerta na paleta.",
+      "Don't arredondar contêiner. O raio pertence a anel de foco, marcação de código, etiqueta e superfície de navegador.",
       "Don't escrever outline: none num link. O único outline: none autorizado da folha é o do campo de busca, cujo foco está desenhado no filete da linha inteira.",
-      "Don't trazer o mascote como <img>. Ele é decorativo por definição e entra como background, para que o leitor de tela o ignore em vez de anunciar descrição no meio da navegação.",
+      "Don't trazer o mascote como <img> nem como background. Ele entra grafado em caractere, decorativo e aria-hidden, para que o leitor de tela o ignore em vez de anunciar descrição no meio da navegação.",
       "Don't esticar uma caixa para casar com a altura da vizinha, nem remover align-items: start.",
       "Don't fixar contagem em HTML. Número que o leitor confere é escrito pelo script ou vem do .md.",
-      "Don't reduzir o corpo do texto para ganhar colunas em tela estreita. A caixa perde colunas, nunca corpo de letra."
+      "Don't reduzir o corpo do texto para ganhar colunas em tela estreita. A caixa perde colunas, nunca corpo de letra. A arte é a única exceção: ela escala porque é grade de caractere, não texto."
+    ],
+    "notCanonized": [
+      "O 700 do <b> em WARNING: fica fora da dupla 400/600. Registrado como desvio herdado do shipped, nao como licenca de peso novo.",
+      "O ignoreValues de tight-leading com curinga por arquivo em index.html foi decisao do assistente, nao confirmada pelo usuario, e e mais largo que o recomendado. Registrado como pendencia, nao como padrao.",
+      "assets/mascote.jpg nao e referenciado por nada; retido como ativo de marca, nao documentado como dependencia."
     ]
   }
 }

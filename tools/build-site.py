@@ -25,6 +25,11 @@ REPO = os.environ.get("GITHUB_REPOSITORY", "bunnyiesart/Fursec")
 # Domínio próprio servido pelo Pages. Vazio = publica no endereço do GitHub.
 DOMINIO = os.environ.get("FURSEC_DOMINIO", "furrsec.com")
 API = f"https://api.github.com/repos/{REPO}/contents/"
+# Ref a renderizar. Vazio = branch default do repositorio, que e o que a
+# publicacao quer. Num pull request isso renderizaria a main em vez do PR,
+# entao o CI passa o SHA do PR aqui — sem isso, conferir um PR e conferir
+# o conteudo errado.
+REF = os.environ.get("FURSEC_REF", "")
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Não vira página: o índice do site já cumpre esse papel, e os artefatos de
@@ -76,7 +81,7 @@ def versionados():
 
 def render(caminho, token):
     req = urllib.request.Request(
-        API + caminho,
+        API + caminho + (f"?ref={REF}" if REF else ""),
         headers={"Accept": "application/vnd.github.html",
                  "User-Agent": "fursec-build",
                  **({"Authorization": f"Bearer {token}"} if token else {})})

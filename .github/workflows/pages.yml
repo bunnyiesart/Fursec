@@ -3,6 +3,11 @@ name: Publicar site
 on:
   push:
     branches: [main]
+  # Em pull request o site e construido e conferido, mas NAO publicado. Sem
+  # isto, pagina orfa e ancora morta so aparecem depois do merge, com o site
+  # congelado na versao anterior — foi o que aconteceu com DESIGN.md e
+  # PRODUCT.md, pegos por build manual e nao pelo CI.
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -27,6 +32,9 @@ jobs:
           # O build pede a cada .md renderizado à API do próprio repositório.
           # Sem token seriam 60 requisições/hora por IP — o runner estoura.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Num PR, renderiza o conteúdo DO PR. Vazio num push, onde o branch
+          # default já é o alvo certo.
+          FURSEC_REF: ${{ github.event.pull_request.head.sha }}
         run: python3 tools/build-site.py
 
       - name: Conferir que nenhum link interno quebrou
@@ -38,6 +46,8 @@ jobs:
           path: _site
 
   deploy:
+    # Pull request confere e para aqui: publicar sai só de push na main.
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:
