@@ -43,6 +43,12 @@ Os catálogos são tabelas markdown. Copie o formato do arquivo em que você est
 
 Qualificadores que acompanham o `🆓` quando a gratuidade tem ressalva: `parcial`, `tier`, `audit`, `via Financial Aid`.
 
+> **No site, estas tags saem escritas.** O build converte cada emoji em
+> etiqueta de texto — `🆓` vira `GRÁTIS`, `🎓` vira `CERT`, `🧪` vira `LAB`,
+> as bandeiras viram `PT` e `EN`, e o `⭐` vira negrito no nome do item.
+> Continue usando emoji no markdown: é o que funciona no GitHub, e a
+> conversão é só na camada de publicação.
+
 ### Regras de link
 
 - **Aponte para a página do curso, não para a home do provedor.** `provedor.com/cursos/nome-do-curso` em vez de `provedor.com`. Um link genérico obriga a pessoa a caçar.

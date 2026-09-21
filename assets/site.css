@@ -416,6 +416,35 @@ footer a:hover, footer a:focus { color: var(--accent); }
 /* Coluna de horas e de preço fica legível quando o dígito tem largura fixa. */
 .md td { font-variant-numeric: tabular-nums; }
 
+/* Etiquetas de catálogo. Substituem os emoji da legenda, que o build
+   converte: o dado continua (idioma, gratuidade, certificado, prático,
+   prioridade), mas escrito, na paleta da casa e num corpo só.
+   Diferenciação por PESO, nunca por matiz — não há cor a gastar. */
+.md .tag {
+  display: inline-block;
+  padding: .1em .4em;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--muted);
+  font-size: .625rem;
+  line-height: 1.5;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: .1em;
+}
+.md td .tag + .tag, .md li .tag + .tag { margin-left: .25em; }
+/* "Gratuito primeiro" é princípio do produto, então grátis tem o peso do
+   texto principal e o resto fica recuado. */
+.md .tag--gratis,
+.md .tag--prioridade {
+  color: var(--fg);
+  border-color: color-mix(in srgb, var(--fg) 22%, transparent);
+}
+/* Prioridade: "comece por estes". É peso no nome, não etiqueta — como
+   etiqueta ela pesava mais que o curso que qualificava. */
+.md .prio { font-weight: 600; color: var(--fg); }
+
 .md .task-list-item { list-style: none; }
 .md .contains-task-list { padding-left: .2rem; }
 .md input[type="checkbox"] { margin-right: .5rem; accent-color: var(--accent); }

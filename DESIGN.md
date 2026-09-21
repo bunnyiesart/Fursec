@@ -59,6 +59,12 @@ typography:
     fontWeight: 400
     lineHeight: 1.5
     letterSpacing: "normal"
+  tag:
+    fontFamily: "ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif"
+    fontSize: ".625rem"
+    fontWeight: 400
+    lineHeight: 1.5
+    letterSpacing: ".06em"
   micro:
     fontFamily: "ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif"
     fontSize: ".75rem"
