@@ -116,6 +116,7 @@ h1 {
 }
 .aviso b {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 600;
   font-size: .75rem;
   letter-spacing: .06em;
   color: var(--fg);
