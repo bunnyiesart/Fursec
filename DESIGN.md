@@ -319,6 +319,18 @@ Digitar recalcula a contagem de entradas ao vivo (`N de M entradas`), esconde as
 
 Com paleta fixa, é aqui que se lê que a página foi construída e não montada. Todas puxadas dos tokens: `::selection` no realce derivado, `caret-color` no acento, polegar da barra de rolagem em `--line` com borda interna de 3px na cor do fundo (o que o faz parecer mais fino do que é), `:focus-visible` como anel de 2px do acento com 2px de deslocamento e raio 2px, `text-underline-offset: .2em`, `font-variant-numeric: tabular-nums` nas contagens.
 
+## Exceção conhecida do detector
+
+`tight-leading` dispara em `.arte` e **fica disparando de propósito**. A regra
+existe para texto corrido de várias linhas; a arte ASCII não é texto para ler,
+é um desenho feito de caracteres, e as fileiras de bloco só se encostam com
+`line-height: 1`. Com 1.25 o logotipo FURSEC ganha faixas brancas horizontais
+e se esfarrapa — foi o defeito corrigido no commit que introduziu a faixa.
+
+Não suprima a regra por glob de arquivo: isso a apagaria para a folha inteira
+e perderíamos a cobertura de entrelinha em texto corrido, que é onde ela vale.
+E não "conserte" a arte afrouxando a entrelinha.
+
 ## Do's and Don'ts
 
 ### Do:
