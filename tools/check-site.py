@@ -53,6 +53,7 @@ def main():
                 continue
             total += 1
             arq, _, frag = href.partition("#")
+            frag = urllib.parse.unquote(frag)
             alvo = (os.path.normpath(os.path.join(base, urllib.parse.unquote(arq)))
                     if arq else os.path.normpath(p))
             if not os.path.exists(alvo):
