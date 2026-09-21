@@ -11,7 +11,7 @@
 
 Cada fase tem um **orçamento de horas**. Converta em tempo de calendário usando o seu próprio ritmo:
 
-| Seu ritmo | Fases 0+1 (~180h) | Até a Fase 3 (~450h) | Roadmap completo (~650h) |
+| Seu ritmo | Fases 0+1 (~180h) | Até a Fase 3 (~450h) | Roadmap completo (~550h) |
 |---|---|---|---|
 | 5 h/semana | ~9 meses | ~21 meses | ~30 meses |
 | 10 h/semana | ~4,5 meses | ~11 meses | ~15 meses |
@@ -62,7 +62,7 @@ Tudo aqui é comum às quatro trilhas. **Não se especialize ainda.**
 
 ---
 
-## Fase 2 — A bifurcação: prática por trilha (~120h cada)
+## Fase 2 — A bifurcação: prática por trilha (~90–120h)
 
 Escolha **uma** trilha principal agora. Se todas te interessam, tudo bem — mas faça **em sequência**, não em paralelo. Ordem que eu recomendo: **Blue Team → Cloud → Red Team → GRC** (blue team contrata mais rápido, cloud paga melhor, red team é a entrada mais concorrida, e GRC premia experiência que você ainda não tem).
 

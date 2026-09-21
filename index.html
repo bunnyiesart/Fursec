@@ -11,15 +11,21 @@
 <body class="inicio">
 
 <header class="topo">
+  <pre class="arte" aria-hidden="true">   /\   /\     ███████╗██╗   ██╗██████╗ ███████╗███████╗ ██████╗
+  /  \_/  \    ██╔════╝██║   ██║██╔══██╗██╔════╝██╔════╝██╔════╝
+ |  o   o  |   █████╗  ██║   ██║██████╔╝███████╗█████╗  ██║
+ |    ^    |   ██╔══╝  ██║   ██║██╔══██╗╚════██║██╔══╝  ██║
+  \  \_/  /    ██║     ╚██████╔╝██║  ██║███████║███████╗╚██████╗
+   \_____/     ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝</pre>
   <h1>Fursec</h1>
   <p class="sub">Trilha de cibersegurança com material gratuito.</p>
   <a class="repo" href="https://github.com/bunnyiesart/Fursec">github.com/bunnyiesart/Fursec</a>
 </header>
 
+<p class="aviso"><b>WARNING:</b> testar sistema de terceiros sem autorização é crime — Lei 12.737/2012, Art. 154-A do Código Penal. <a href="https://github.com/bunnyiesart/Fursec/blob/main/projetos/00-regras.md">Leia as regras de ética antes de qualquer projeto.</a></p>
+
 <div class="busca" id="busca">
-  <svg class="lupa" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
-    <circle cx="6.5" cy="6.5" r="4.25"/><path d="M9.7 9.7 13 13"/>
-  </svg>
+  <span class="prompt" aria-hidden="true">fursec#</span>
   <input id="f" type="search" placeholder="Filtrar por título, descrição ou seção…" autocomplete="off" aria-label="Filtrar o catálogo" aria-describedby="conta">
   <span class="atalho" aria-hidden="true">/</span>
   <output class="conta" id="conta" for="f"></output>
@@ -184,7 +190,7 @@
     <ul class="fases">
       <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-0--fundamentos-70h">Fase 0 — Fundamentos</a><span>~70h · Redes, Linux, Windows.</span></li>
       <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-1--núcleo-de-segurança-110h">Fase 1 — Núcleo de segurança</a><span>~110h · Comum a todas as trilhas.</span></li>
-      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-2--a-bifurcação-prática-por-trilha-120h-cada">Fase 2 — A bifurcação: prática por trilha</a><span>~120h por trilha · Escolha uma.</span></li>
+      <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-2--a-bifurcação-prática-por-trilha-90120h">Fase 2 — A bifurcação: prática por trilha</a><span>~90–120h por trilha · Escolha uma.</span></li>
       <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-3--profundidade-e-prova-150h">Fase 3 — Profundidade e prova</a><span>~150h · Especialização e portfólio.</span></li>
       <li><a class="item" href="https://github.com/bunnyiesart/Fursec/blob/main/ROADMAP.md#fase-4--pronto-para-o-mercado-100h-contínuo">Fase 4 — Pronto para o mercado</a><span>~100h · Currículo e entrevista.</span></li>
     </ul>
@@ -304,30 +310,6 @@
   <a href="https://github.com/bunnyiesart/Fursec/blob/main/CONTRIBUTING.md">contribuir</a> ·
   MIT
 </footer>
-
-<!-- Parallax do fundo: ele desliza mais devagar que o texto, dando profundidade.
-     Apague este bloco e o fundo simplesmente fica parado. -->
-<script>
-(() => {
-  // respeita quem pediu menos movimento no sistema
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const raiz = document.documentElement;
-  let pendente = false;
-  const mover = () => {
-    pendente = false;
-    // Desloca por PROGRESSO do scroll, não pelo scroll absoluto: o curso
-    // disponível é a folga de 15% do CSS, e multiplicar o scroll bruto
-    // arrastaria o fundo para fora da tela numa página longa.
-    const rolavel = raiz.scrollHeight - innerHeight;
-    const prog = rolavel > 0 ? Math.min(scrollY / rolavel, 1) : 0;
-    raiz.style.setProperty('--py', `${-(prog * innerHeight * 0.15).toFixed(1)}px`);
-  };
-  addEventListener('scroll', () => {
-    if (!pendente) { pendente = true; requestAnimationFrame(mover); }
-  }, { passive: true });
-  mover();
-})();
-</script>
 
 <!-- Filtro. Apague este script e a <div class="busca"> lá em cima se não quiser. -->
 <script>

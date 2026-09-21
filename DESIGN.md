@@ -59,6 +59,24 @@ typography:
     fontWeight: 400
     lineHeight: 1.5
     letterSpacing: "normal"
+  arte:
+    fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+    fontSize: "clamp(5.5px, 2.3vw, 11px)"
+    fontWeight: 400
+    lineHeight: 1.25
+    letterSpacing: "normal"
+  prompt:
+    fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+    fontSize: ".875rem"
+    fontWeight: 400
+    lineHeight: 1.6
+    letterSpacing: "normal"
+  avisoRotulo:
+    fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+    fontSize: ".75rem"
+    fontWeight: 700
+    lineHeight: 1.55
+    letterSpacing: ".06em"
   tag:
     fontFamily: "ui-sans-serif, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif"
     fontSize: ".625rem"

@@ -3,6 +3,14 @@ notas-pessoais/
 *.local.md
 .obsidian/
 
+# Arquivos do harness, ligados por symlink ao perfil. Sem isto um `git add -A`
+# os versiona, e o build tenta renderizar um .md que não existe no remoto — 404
+# e publicação quebrada.
+CLAUDE.md
+CLAUDE.local.md
+.mcp.json
+.claudio
+
 # Sistema
 .DS_Store
 Thumbs.db
