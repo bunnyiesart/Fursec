@@ -22,6 +22,8 @@ import urllib.error
 import urllib.request
 
 REPO = os.environ.get("GITHUB_REPOSITORY", "bunnyiesart/Fursec")
+# Domínio próprio servido pelo Pages. Vazio = publica no endereço do GitHub.
+DOMINIO = os.environ.get("FURSEC_DOMINIO", "furrsec.com")
 API = f"https://api.github.com/repos/{REPO}/contents/"
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -266,6 +268,14 @@ def main():
 
     shutil.copytree(os.path.join(RAIZ, "assets"), os.path.join(saida, "assets"))
     open(os.path.join(saida, ".nojekyll"), "w").close()
+
+    # Domínio próprio. A publicação por workflow guarda o domínio na
+    # configuração do Pages, então este arquivo é cinto e suspensório: se a
+    # configuração for perdida, o CNAME no artefato a restabelece. Um arquivo
+    # a mais é mais barato que um site fora do ar por um dia.
+    if DOMINIO:
+        with open(os.path.join(saida, "CNAME"), "w", encoding="utf-8") as f:
+            f.write(DOMINIO + "\n")
 
     print(f"{paginas} páginas + índice ({n} links locais) em {args.saida}/")
     return 0
