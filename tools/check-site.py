@@ -28,6 +28,21 @@ SRC = re.compile(r'src="([^"]+)"')
 CSSURL = re.compile(r'url\(\s*["\']?([^"\')]+)["\']?\s*\)')
 
 
+def resolve(alvo):
+    """O arquivo que o servidor entrega para este caminho, ou None.
+
+    As URLs do site não têm .html, então conferir `os.path.exists` no caminho
+    do href acusaria tudo como quebrado. Aqui valem as mesmas duas regras do
+    GitHub Pages: /x/ entrega /x/index.html, e /x entrega /x.html.
+    """
+    if os.path.isdir(alvo):
+        indice = os.path.join(alvo, "index.html")
+        return indice if os.path.isfile(indice) else None
+    if os.path.isfile(alvo):
+        return alvo
+    return alvo + ".html" if os.path.isfile(alvo + ".html") else None
+
+
 def main():
     raiz = sys.argv[1] if len(sys.argv) > 1 else "_site"
     if not os.path.isdir(raiz):
@@ -56,9 +71,10 @@ def main():
             frag = urllib.parse.unquote(frag)
             alvo = (os.path.normpath(os.path.join(base, urllib.parse.unquote(arq)))
                     if arq else os.path.normpath(p))
-            if not os.path.exists(alvo):
+            servido = resolve(alvo)
+            if servido is None:
                 problemas.append(f"{p}: página inexistente -> {href}")
-            elif frag and frag not in ids.get(alvo, set()):
+            elif frag and frag not in ids.get(os.path.normpath(servido), set()):
                 problemas.append(f"{p}: âncora inexistente -> {href}")
 
     # Recursos: src= no HTML e url() dentro do CSS. O url() resolve a partir
@@ -98,10 +114,12 @@ def main():
         for href in HREF.findall(open(atual, encoding="utf-8").read()):
             if href.startswith(("http://", "https://", "mailto:", "data:", "#")):
                 continue
-            alvo = os.path.normpath(
-                os.path.join(base, urllib.parse.unquote(href.split("#")[0])))
-            if alvo.endswith(".html"):
-                fila.append(alvo)
+            servido = resolve(os.path.normpath(
+                os.path.join(base, urllib.parse.unquote(href.split("#")[0]))))
+            # Só página conta para alcançabilidade: href também aparece em
+            # <link rel="stylesheet">, e folha de estilo não é página.
+            if servido and servido.endswith(".html"):
+                fila.append(os.path.normpath(servido))
     orfas = sorted(set(map(os.path.normpath, paginas)) - alcancadas)
     problemas += [f"{o}: página órfã, não se chega nela a partir do índice"
                   for o in orfas]

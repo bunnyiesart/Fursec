@@ -7,6 +7,12 @@ HTML vem da própria API do GitHub (`Accept: application/vnd.github.html`), que
 e âncora saem idênticos ao que a pessoa vê no GitHub, sem depender de uma
 biblioteca de markdown que renderize diferente.
 
+As URLs não levam .html: /projetos/05-grc e /trilhas/. Quem faz isso é o
+GitHub Pages, que entrega /x.html para /x e /x/index.html para /x/. Os
+arquivos no disco continuam .html — só os links deixam de mostrar a extensão.
+Para conferir localmente é preciso um servidor com a mesma regra; o
+`python3 -m http.server` resolve a pasta, mas não o /x sem extensão.
+
 Uso:
     GITHUB_TOKEN=... python3 tools/build-site.py [--saida _site]
 """
@@ -29,16 +35,16 @@ DOMINIO = os.environ.get("FURSEC_DOMINIO", "furrsec.com")
 # que o índice as apresenta. A chave é a pasta, usada para marcar em qual
 # seção a página atual está.
 SECOES = [
-    ("trilhas", "Trilhas", "trilhas/README.html"),
-    ("", "Roadmap", "ROADMAP.html"),
-    ("cursos", "Cursos", "cursos/README.html"),
-    ("labs", "Labs", "labs/README.html"),
-    ("projetos", "Projetos", "projetos/README.html"),
-    ("repositorios", "Repositórios", "repositorios/README.html"),
-    ("livros", "Livros", "livros/README.html"),
-    ("docs", "Documentação", "docs/README.html"),
-    ("recursos", "Recursos", "recursos/README.html"),
-    ("progresso", "Progresso", "progresso/README.html"),
+    ("trilhas", "Trilhas", "trilhas/"),
+    ("", "Roadmap", "ROADMAP"),
+    ("cursos", "Cursos", "cursos/"),
+    ("labs", "Labs", "labs/"),
+    ("projetos", "Projetos", "projetos/"),
+    ("repositorios", "Repositórios", "repositorios/"),
+    ("livros", "Livros", "livros/"),
+    ("docs", "Documentação", "docs/"),
+    ("recursos", "Recursos", "recursos/"),
+    ("progresso", "Progresso", "progresso/"),
 ]
 API = f"https://api.github.com/repos/{REPO}/contents/"
 # Ref a renderizar. Vazio = branch default do repositorio, que e o que a
@@ -106,7 +112,28 @@ def render(caminho, token):
 
 
 def destino(caminho):
+    """Arquivo no disco.
+
+    O README de uma pasta vira o index.html dela, e é isso que faz a pasta
+    ter endereço próprio: /trilhas/ em vez de /trilhas/README.html.
+    """
+    if caminho.endswith("/README.md"):
+        return caminho[:-len("README.md")] + "index.html"
     return caminho[:-3] + ".html"
+
+
+def url(arq):
+    """Endereço público de um .md, sem extensão.
+
+    O GitHub Pages serve /x quando existe /x.html, e /x/ quando existe
+    /x/index.html. Então o .html no fim da URL é ruído: some daqui, e o
+    arquivo no disco continua o mesmo.
+    """
+    if arq == "README.md":
+        return "./"
+    if arq.endswith("/README.md"):
+        return arq[:-len("README.md")]
+    return arq[:-3]
 
 
 def fora_de_pre(html_, fn):
@@ -160,7 +187,7 @@ def reescreve(corpo, caminho):
     # 2. Sobram os ids de âncoras escritas à mão no markdown; mesmo prefixo.
     corpo = corpo.replace('id="user-content-', 'id="')
 
-    # 3. Links entre documentos: .md -> .html. README.md é o índice do site.
+    # 3. Links entre documentos: .md -> URL sem extensão (ver url()).
     def link(m):
         alvo = m.group(1)
         if alvo.startswith(("http://", "https://", "#", "mailto:")):
@@ -171,14 +198,14 @@ def reescreve(corpo, caminho):
             # "../README.md" a partir de qualquer pasta = índice do site
             base = os.path.normpath(os.path.join(os.path.dirname(caminho), arq))
             if base == "README.md":
-                return f'href="{subir or "./"}index.html{frag}"'
+                return f'href="{subir or "./"}{frag}"'
         if arq.endswith(".md"):
-            return f'href="{arq[:-3]}.html{frag}"'
+            return f'href="{url(arq)}{frag}"'
         resolvido = os.path.normpath(os.path.join(os.path.dirname(caminho), arq))
         # Link para pasta: no site quem faz esse papel é o README dela.
         if os.path.isdir(os.path.join(RAIZ, resolvido)) and \
            os.path.exists(os.path.join(RAIZ, resolvido, "README.md")):
-            return f'href="{arq.rstrip("/")}/README.html{frag}"'
+            return f'href="{arq.rstrip("/")}/{frag}"'
         # Relativo para algo que não é .md nem pasta com índice (workflow,
         # .lycheeignore): não existe no site, então aponta para o GitHub.
         return f'href="https://github.com/{REPO}/blob/main/{resolvido}{frag}"'
@@ -257,7 +284,7 @@ def lateral_de(caminho, subir, corpo):
         aqui = ' aria-current="true"' if chave == pasta else ""
         links.append(f'<li><a href="{subir}{destino}"{aqui}>{rotulo}</a></li>')
     return (
-        f'<a class="marca" href="{subir}index.html">Fursec</a>'
+        f'<a class="marca" href="{subir or "./"}">Fursec</a>'
         f'<ul class="secoes">{"".join(links)}</ul>'
         + sumario_de(corpo))
 
@@ -341,7 +368,7 @@ def main():
         arq, _, frag = alvo.partition("#")
         if not arq.endswith(".md"):
             return m.group(0)
-        return f'href="{arq[:-3]}.html{"#" + frag if frag else ""}"'
+        return f'href="{url(arq)}{"#" + frag if frag else ""}"'
     idx, n = re.subn(rf'href="({re.escape(prefixo)}[^"]+)"', local, idx)
     open(os.path.join(saida, "index.html"), "w", encoding="utf-8").write(idx)
 
