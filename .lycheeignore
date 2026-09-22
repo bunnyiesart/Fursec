@@ -16,3 +16,13 @@
 # Histórico: virtualbox.org (502 na origem) e opnsense.org (timeout no
 # runner) estiveram aqui em ago/2026. Ambos voltaram a ser verificáveis
 # (200 no caminho real, 404 no inventado) e foram removidos.
+#
+# crt.sh — adicionado em 22/09/2026. Medido no dia: a raiz https://crt.sh/
+# devolve 502 em três tentativas seguidas, E um caminho inventado
+# (/caminho-inventado-xyz) devolve 502 também. Ou seja, enquanto o serviço
+# está assim, nenhuma automação distingue link vivo de link morto ali, que é
+# exatamente o critério acima. É serviço de Certificate Transparency
+# notoriamente sobrecarregado; ele respondeu 200 mais cedo nesta mesma
+# semana. REMOVA quando voltar a distinguir (200 no caminho real, erro no
+# inventado) — medir antes de remover.
+crt\.sh
