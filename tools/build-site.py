@@ -24,6 +24,22 @@ import urllib.request
 REPO = os.environ.get("GITHUB_REPOSITORY", "bunnyiesart/Fursec")
 # Domínio próprio servido pelo Pages. Vazio = publica no endereço do GitHub.
 DOMINIO = os.environ.get("FURSEC_DOMINIO", "furrsec.com")
+
+# As seções que aparecem na lateral de toda página de documento, na ordem em
+# que o índice as apresenta. A chave é a pasta, usada para marcar em qual
+# seção a página atual está.
+SECOES = [
+    ("trilhas", "Trilhas", "trilhas/README.html"),
+    ("", "Roadmap", "ROADMAP.html"),
+    ("cursos", "Cursos", "cursos/README.html"),
+    ("labs", "Labs", "labs/README.html"),
+    ("projetos", "Projetos", "projetos/README.html"),
+    ("repositorios", "Repositórios", "repositorios/README.html"),
+    ("livros", "Livros", "livros/README.html"),
+    ("docs", "Documentação", "docs/README.html"),
+    ("recursos", "Recursos", "recursos/README.html"),
+    ("progresso", "Progresso", "progresso/README.html"),
+]
 API = f"https://api.github.com/repos/{REPO}/contents/"
 # Ref a renderizar. Vazio = branch default do repositorio, que e o que a
 # publicacao quer. Num pull request isso renderizaria a main em vez do PR,
@@ -187,6 +203,13 @@ def reescreve(corpo, caminho):
     #    escrita ela não decodifica nada, e repetia duas linhas em 12 páginas.
     corpo = re.sub(r"<sub>\s*(<span class=\"tag[^\n]*?)</sub>\s*", "", corpo)
 
+    # 6b. O GitHub renderiza checkbox de tarefa desabilitado, porque lá ele
+    #     é só leitura. Aqui o assets/doc.js os torna um checklist com estado
+    #     salvo, então o disabled tem de sair.
+    corpo = corpo.replace(
+        ' disabled="" class="task-list-item-checkbox"',
+        ' class="task-list-item-checkbox"')
+
     # 7. O markdown traz "Voltar ao índice" no topo e no pé, porque no
     #    GitHub não existe migalha. Aqui existe, então o do topo era o
     #    terceiro elemento de navegação seguido antes de qualquer conteúdo.
@@ -196,6 +219,47 @@ def reescreve(corpo, caminho):
         "", corpo, count=1)
 
     return corpo
+
+
+def rotulo_curto(bruto):
+    """Limpa o texto de um heading para caber na lateral.
+
+    O checklist tem headings como "Fase 2 — Trilha primária: ______________",
+    e os sublinhados de preenchimento viram um traço solto na lateral.
+    """
+    txt = re.sub(r"<[^>]+>", "", bruto)
+    txt = re.sub(r"_{3,}", "", txt)          # campo de preencher à mão
+    txt = re.sub(r"[\s:—-]+$", "", txt)      # pontuação que sobra no fim
+    return re.sub(r"\s{2,}", " ", txt).strip()
+
+
+def sumario_de(corpo):
+    """Extrai os <h2> da página para o sumário da lateral.
+
+    Só h2: h3 em documento longo como o home-lab daria uma lista de 39 itens,
+    que deixa de ser sumário e passa a ser parede.
+    """
+    itens = re.findall(r'<h2 id="([^"]+)"[^>]*>(.*?)</h2>', corpo, re.S)
+    if len(itens) < 2:
+        return ""
+    linhas = "".join(
+        f'<li><a href="#{i}">{html.escape(rotulo_curto(txt))}</a></li>'
+        for i, txt in itens)
+    return ('<details class="sumario" open><summary>Nesta página</summary>'
+            f'<ul>{linhas}</ul></details>')
+
+
+def lateral_de(caminho, subir, corpo):
+    """Monta a navegação lateral, com a seção atual marcada."""
+    pasta = caminho.split("/")[0] if "/" in caminho else ""
+    links = []
+    for chave, rotulo, destino in SECOES:
+        aqui = ' aria-current="true"' if chave == pasta else ""
+        links.append(f'<li><a href="{subir}{destino}"{aqui}>{rotulo}</a></li>')
+    return (
+        f'<a class="marca" href="{subir}index.html">Fursec</a>'
+        f'<ul class="secoes">{"".join(links)}</ul>'
+        + sumario_de(corpo))
 
 
 LAYOUT = """<!doctype html>
@@ -208,14 +272,23 @@ LAYOUT = """<!doctype html>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><style>path{{fill:%2316171a}}@media(prefers-color-scheme:dark){{path{{fill:%23e7e8ea}}}}</style><path d='M8 14.6c-3.9 0-6.1-3-6.1-6.2V1.9l3.6 2.7A9 9 0 0 1 8 4.3c.9 0 1.7.1 2.5.3L14.1 1.9v6.5c0 3.2-2.2 6.2-6.1 6.2zm-2.2-6.9a.85.85 0 1 0 0 1.7.85.85 0 0 0 0-1.7zm4.4 0a.85.85 0 1 0 0 1.7.85.85 0 0 0 0-1.7zM8 10.8l-1.1 1.1h2.2z'/></svg>">
 <link rel="stylesheet" href="{subir}assets/site.css">
 </head>
-<body>
+<body class="doc">
 
-<p class="crumb"><a href="{subir}index.html">&lsaquo; Fursec</a></p>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
+<div class="pagina">
+<nav class="lateral" aria-label="Navegação do site">
+{lateral}
+</nav>
+
+<main class="conteudo" id="conteudo">
 <article class="md">
 {corpo}
 </article>
+</main>
+</div>
 
+<script src="{subir}assets/doc.js" defer></script>
 </body>
 </html>
 """
@@ -252,6 +325,7 @@ def main():
         os.makedirs(os.path.dirname(alvo), exist_ok=True)
         with open(alvo, "w", encoding="utf-8") as f:
             f.write(LAYOUT.format(
+                lateral=lateral_de(caminho, "../" * caminho.count("/"), corpo),
                 titulo=titulo,
                 desc=f"{titulo} — trilha de cibersegurança com material gratuito.",
                 subir="../" * caminho.count("/"),
