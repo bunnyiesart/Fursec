@@ -401,6 +401,136 @@ footer a { color: inherit; }
 footer a:hover, footer a:focus { color: var(--accent); }
 
 /* ─────────────────────────────────────────────────────────
+   Página de documento: lateral fixa + conteúdo
+   ───────────────────────────────────────────────────────── */
+
+/* A página de documento tem duas colunas, então ela precisa de mais largura
+   que os 46rem de leitura — a medida de leitura continua sendo do conteúdo,
+   não do contêiner. */
+body.doc { max-width: 74rem; }
+
+.pular {
+  position: absolute; left: -9999px;
+  background: var(--bg); color: var(--accent);
+  padding: .5rem .75rem; border: 1px solid var(--accent); border-radius: 3px;
+}
+.pular:focus { left: 1rem; top: 1rem; z-index: 10; }
+
+.pagina {
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.lateral {
+  position: sticky;
+  top: 2rem;
+  /* não deixa a lateral crescer além da tela num guia de 39 seções */
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  font-size: .8125rem;
+}
+.lateral .marca {
+  display: block;
+  margin-bottom: 1.25rem;
+  color: var(--fg);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.lateral .marca:hover, .lateral .marca:focus-visible { color: var(--accent); }
+
+.lateral .secoes { border-left: 1px solid var(--line); }
+.lateral .secoes a,
+.lateral .sumario a {
+  display: block;
+  padding: .28rem 0 .28rem .8rem;
+  margin-left: -1px;
+  border-left: 1px solid transparent;
+  color: var(--muted);
+  text-decoration: none;
+}
+.lateral .secoes a:hover, .lateral .secoes a:focus-visible,
+.lateral .sumario a:hover, .lateral .sumario a:focus-visible {
+  color: var(--accent); border-left-color: var(--accent);
+}
+/* A seção atual é marca, não matiz: filete e peso, sem cor de destaque. */
+.lateral .secoes a[aria-current] {
+  color: var(--fg); font-weight: 600; border-left-color: var(--fg);
+}
+
+.lateral .sumario { margin-top: 1.5rem; }
+.lateral .sumario > summary {
+  color: var(--muted);
+  font-size: .7rem; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  cursor: pointer; list-style: none;
+  margin-bottom: .4rem;
+}
+.lateral .sumario > summary::-webkit-details-marker { display: none; }
+.lateral .sumario ul { border-left: 1px solid var(--line); }
+
+/* ── medidor de progresso do checklist ──────────────────────────────────
+   O estado vive no localStorage do visitante: não sincroniza, não sai do
+   navegador e não chega a servidor nenhum. A página diz isso ao leitor. */
+.medidor {
+  display: flex; align-items: center; gap: .6rem;
+  margin: -.4rem 0 1.25rem;
+  font-size: .75rem;
+}
+.medidor .barra {
+  flex: 1; max-width: 16rem; height: 4px;
+  background: color-mix(in srgb, var(--fg) 10%, transparent);
+  border-radius: 2px; overflow: hidden;
+}
+.medidor .barra i {
+  display: block; height: 100%; width: 0;
+  background: var(--muted);
+  transition: width .25s cubic-bezier(.2, .8, .2, 1);
+}
+.medidor.completo .barra i { background: var(--fg); }
+.medidor b {
+  color: var(--muted); font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+.medidor.completo b { color: var(--fg); font-weight: 600; }
+
+.md .task-list-item.feito > * { color: var(--muted); }
+.md .task-list-item { cursor: default; }
+.md .task-list-item input[type="checkbox"]:not([disabled]) { cursor: pointer; }
+
+.aviso-local {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem 1rem;
+  margin: 1.5rem 0 0; padding: .7rem 0 .7rem .9rem;
+  border-left: 1px solid var(--line);
+  color: var(--muted); font-size: .8125rem;
+}
+.limpar-progresso {
+  background: transparent; border: 1px solid var(--line); border-radius: 3px;
+  padding: .2rem .5rem;
+  color: var(--muted); font: inherit; font-size: .75rem; cursor: pointer;
+}
+.limpar-progresso:hover { color: var(--accent); border-color: var(--accent); }
+
+@media (max-width: 62rem) {
+  .pagina { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .lateral {
+    position: static; max-height: none; overflow: visible;
+    padding-bottom: 1.5rem; border-bottom: 1px solid var(--line);
+  }
+  /* as dez seções viram uma linha que quebra, em vez de coluna */
+  .lateral .secoes {
+    display: flex; flex-wrap: wrap; gap: 0 1rem; border-left: 0;
+  }
+  .lateral .secoes a { padding: .2rem 0; margin-left: 0; border-left: 0; }
+  .lateral .secoes a[aria-current] { border-left: 0; text-decoration: underline; }
+}
+
+/* ─────────────────────────────────────────────────────────
    Conteúdo dos documentos (páginas geradas a partir dos .md)
    ───────────────────────────────────────────────────────── */
 .crumb { margin: 0 0 2.5rem; color: var(--muted); font-size: .8rem;
