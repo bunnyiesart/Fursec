@@ -87,8 +87,9 @@
   function pintar() {
     for (const [s, el] of medidores) {
       const feitos = s.itens.filter((li) => marcados.has(chaveDe(li))).length;
-      const pct = Math.round((feitos / s.itens.length) * 100);
-      el.querySelector('i').style.width = pct + '%';
+      const fracao = feitos / s.itens.length;
+      // scaleX em vez de width: largura recalcula layout a cada frame.
+      el.querySelector('i').style.transform = `scaleX(${fracao})`;
       el.querySelector('b').textContent = `${feitos}/${s.itens.length}`;
       el.classList.toggle('completo', feitos === s.itens.length);
     }
