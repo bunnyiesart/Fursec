@@ -17,6 +17,8 @@
 | [Coneds — OWASP Community Series](https://members.coneds.com.br/) | 🇧🇷 | Palestras gravadas |
 | [r/netsec](https://reddit.com/r/netsec) e [r/cybersecurity](https://reddit.com/r/cybersecurity) | 🇺🇸 | Comunidade |
 
+> Notícia diária, blog de pesquisa, fonte de vulnerabilidade e calendário de evento estão em [`noticias-e-fontes.md`](./noticias-e-fontes.md).
+
 ---
 
 [← Voltar ao índice](../README.md)
