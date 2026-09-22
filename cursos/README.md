@@ -4,9 +4,9 @@
 
 ---
 
-Catálogo com **267 cursos** por área — 262 gratuitos e 5 pagos.
+Catálogo com **278 cursos** por área — 272 gratuitos e 6 pagos.
 
-Os arquivos 00 a 07 são a trilha principal. De 08 a 17 são a camada paga e as áreas de especialização, que usam uma coluna **Nota** a mais.
+Os arquivos 00 a 07 são a trilha principal. De 08 a 18 são a camada paga e as áreas de especialização, que usam uma coluna **Nota** a mais.
 
 <sub>🇧🇷 português · 🇺🇸 inglês · 🆓 gratuito · 💸 pago · 🎓 emite certificado · 🧪 prático · ⭐ prioridade alta · *parcial / tier / audit / Financial Aid* = gratuito com ressalva</sub>
 
@@ -30,6 +30,7 @@ Os arquivos 00 a 07 são a trilha principal. De 08 a 17 são a camada paga e as 
 | [15-cripto-pki.md](./15-cripto-pki.md) | TLS, certificado, chave, cofre de segredo. |
 | [16-ia-llm.md](./16-ia-llm.md) | Injeção de prompt, agente, MCP, OWASP LLM Top 10. |
 | [17-automotivo.md](./17-automotivo.md) | CAN bus, UDS, ISO 21434, bancada barata. |
+| [18-antifraude-pagamentos.md](./18-antifraude-pagamentos.md) | Pix, Open Finance, PCI, passkeys, detecção de fraude. |
 
 > Só quer conteúdo em português? → [`docs/trilha-pt-br.md`](../docs/trilha-pt-br.md)
 
