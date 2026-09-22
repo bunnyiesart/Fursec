@@ -488,9 +488,11 @@ body.doc { max-width: 74rem; }
   border-radius: 2px; overflow: hidden;
 }
 .medidor .barra i {
-  display: block; height: 100%; width: 0;
+  display: block; height: 100%; width: 100%;
   background: var(--muted);
-  transition: width .25s cubic-bezier(.2, .8, .2, 1);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .25s cubic-bezier(.2, .8, .2, 1);
 }
 .medidor.completo .barra i { background: var(--fg); }
 .medidor b {
